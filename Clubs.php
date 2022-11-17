@@ -27,9 +27,7 @@
             <!-- Clubs Menu -->
 
             <div class="Clubs-content-menu">
-
                 
-
                 <h2>Wich <span>club</span> you are intrested in ?</h2>
                 
                 <div class="Menu-buttons">
@@ -68,7 +66,7 @@
                     
                     <input type="search" placeholder="Recherch un club" id="search"></input>
                     <i class="fa-solid fa-search Searchicon"></i>
-                   
+                
                     <div class="Clubs-checkbox">
 
                         <h2><span>C</span>aregories</h2>
@@ -115,7 +113,7 @@
                     <h2 class="Club-headers">Art Clubs</h2>
                     <div class="Art-clubs">
                     
-                        <div class="Art-clubs-single">
+                        <div class="Art-clubs-single before-singl">
                             
                             <img src="sass/images/art 3.png" alt="art">
 
