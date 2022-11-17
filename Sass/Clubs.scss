@@ -1,0 +1,647 @@
+/* == Variables for repeated parameters == */
+
+$base_color : #1877F2;
+$bg_color : #212429;
+$white : #ffff;
+
+/* == Fonts == */ 
+
+@font-face 
+{
+
+    font-family:Rock;
+    src: url(font/RocknRoll_One/RocknRollOne-Regular.ttf);
+
+}
+@font-face {
+
+    font-family: freehand;
+    src: url(font/freehand/Freehand/Freehand-Regular.ttf);
+
+}
+
+/* == General Styling == */ 
+body 
+{
+    background-color: $bg_color;
+
+
+}
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1120px;
+    margin: auto;
+
+
+
+    .clubs-header 
+    {
+        /* == Dimensions == */
+
+        width: 15rem;
+        height: 5.5rem;
+
+        /* == For position == */
+
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        background-color: $base_color;
+        text-align: center;
+
+        /* == |Clubs| header styling == */
+
+        h1 
+        {
+            height: 100%;
+            color: $white;
+            font-family: Rock;
+            font-weight: 300;
+        }
+    }
+       
+    /* == Clubs Content styling (Container) == */ 
+    .Clubs-conent
+    {
+        
+
+        margin-top: 4rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .Clubs-content-menu
+        {
+            /* == Normal styling == */
+            display: flex;
+            flex-direction: column;
+
+
+            /* == H2 styling == */
+            h2
+            {
+                font-family: freehand;
+                color: white;
+                margin-bottom: 3rem;
+
+                span 
+                {
+                    color: $base_color;
+                }
+            }
+
+            /* == Buttons styling ==*/
+            .Menu-select
+            {
+                display: none;
+                justify-content: center;
+                align-items: center;
+            }
+
+            
+            .Menu-buttons 
+            {
+
+                display: flex;
+                justify-content: space-around;
+                gap: 1rem;
+                margin-bottom: 3rem;
+                button 
+                {
+
+                    width: 11rem;
+                    height: 3.5rem;
+                    background-color: white;
+                    border-radius: 15px;
+                    font-family: Rock;
+                    
+                    
+                }
+                // While hovering on buttons 
+                button:hover
+                {
+                    background-color: $base_color;
+                    color: white;
+                    transition: all 200ms linear;
+                }
+            }
+            
+        }
+
+        .Clubs-content-preview 
+        {
+
+            color: white;
+            display: flex;
+
+            .Clubs-categories
+            {
+                width: 45%;
+                input 
+                {
+                    width: 90%;
+                    height: 2rem;
+                    border: none;
+                    border-radius: 5px;
+                }
+                i
+                {
+
+                    margin-left: -2rem;
+                    color: $bg_color;
+        
+                }
+                .Clubs-checkbox
+                {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 2rem;
+                    
+                    h2 
+                    {
+                        font-family: Rock;
+                        font-weight: 400;
+                        span 
+                        {
+                            color: $base_color;
+                        }
+                    }
+
+                    .Clubs-checkbox-child
+                    {
+
+                        display: flex;
+                        flex-direction:row;
+                        width: 80%;
+                        justify-content: space-between;                        
+                        
+                        input[type="checkbox"]
+                        {
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            cursor: pointer;
+                            
+                        }
+
+                        label 
+                        {
+                            font-family: Rock;
+                        }
+
+                        
+
+                    }
+
+                }
+                
+                
+            }
+
+            /* == Club section stlying == */
+
+            .Clubs-sections
+            {
+                /* == Art clubs styling == */
+                .Art-clubs 
+                {
+
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    position: relative;
+                    overflow: hidden;
+                    .line 
+                    {
+                        width: 100px;
+                        height: 100px;
+                        position: relative;
+                    }
+                    .line::before
+                    {
+                        content: "";
+                        background-image: conic-gradient(white 120deg, transparent 120deg);
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+
+                    } 
+
+                    .line::after 
+                    {
+                        content: "";
+                        width: 190px;
+                        height: 190px;
+                        background: #212429;
+                        position: absolute;
+                    }
+
+                    .Art-clubs-single 
+                    {
+                        width: calc(70% / 3);
+                        
+                
+                        .Club-content
+                        {
+                            margin-left: 0.7rem;
+                            margin-bottom: 2rem;
+                            
+
+                            
+                            h3 
+                            {
+                                font-size: 1rem;
+                                font-family: Rock;
+                                font-weight: 400;
+                                margin-top: 0.3rem;
+                                margin-bottom: -0.3rem;
+
+                            }
+
+                            p 
+                            {
+                                font-size: 0.8rem;
+                            }
+
+                            button 
+                            {
+                                width: 6rem;
+                                height: 2rem;
+                                border-radius: 1rem;
+
+                                background-color: $base_color;
+                                color: white;
+
+                                font-family: 500;
+                                cursor: pointer;
+
+                            }
+                            button:hover
+                            {
+                                color: $bg_color;
+                                background-color: white;
+                                transition: all 200ms linear;
+                            }
+                        }
+
+                    }
+
+                    
+                    
+                }                
+
+                
+
+                /* == Sport clubs styling == */
+
+                .Sport-clubs 
+                {
+                    
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+
+                    .Sport-clubs-single 
+                    {
+                        width: calc(70% / 3);
+                        
+                        
+
+                        /*img 
+                        {
+                            
+                        }
+                        */
+
+                        .Club-content
+                        {
+                            margin-left: 0.7rem;
+                            margin-bottom: 2rem;
+
+                            
+                            h3 
+                            {
+                                font-size: 1rem;
+                                font-family: Rock;
+                                font-weight: 400;
+                                margin-top: 0.3rem;
+                                margin-bottom: -0.3rem;
+
+                            }
+
+                            p 
+                            {
+                                font-size: 0.8rem;
+                            }
+
+                            button 
+                            {
+                                width: 6rem;
+                                height: 2rem;
+                                border-radius: 1rem;
+
+                                background-color: $base_color;
+                                color: white;
+
+                                font-family: 500;
+
+                            }
+
+                            button:hover
+                            {
+                                color: $bg_color;
+                                background-color: white;
+                                transition: all 200ms linear;
+                            }
+                        }
+
+                    }
+                    
+                }
+
+                /* == IT clubs styling == */
+
+                .IT-clubs 
+                {
+                    
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+
+                    .IT-clubs-single 
+                    {
+                        width: calc(70% / 3);
+                        
+
+                        /*img 
+                        {
+                            
+                        }
+                        */
+
+                        .Club-content
+                        {
+                            margin-left: 0.7rem;
+                            margin-bottom: 2rem;
+
+                            
+                            h3 
+                            {
+                                font-size: 1rem;
+                                font-family: Rock;
+                                font-weight: 400;
+                                margin-top: 0.3rem;
+                                margin-bottom: -0.3rem;
+
+                            }
+
+                            p 
+                            {
+                                font-size: 0.8rem;
+                            }
+
+                            button 
+                            {
+                                width: 6rem;
+                                height: 2rem;
+                                border-radius: 1rem;
+
+                                background-color: $base_color;
+                                color: white;
+
+                                font-family: 500;
+
+                            }
+
+                            button:hover
+                            {
+                                color: $bg_color;
+                                background-color: white;
+                                transition: all 200ms linear;
+                            }
+                        }
+
+                    }
+                    
+                }
+
+            }
+            
+
+        }
+
+        
+        
+
+        
+
+    }
+
+}
+@media screen and (max-width : 376px) {
+        
+    .container 
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        margin: auto;
+
+        .clubs-header 
+        {
+            width: 10rem;
+            height: 3rem;
+
+            /* == For position == */
+
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            background-color: $base_color;
+            text-align: center;
+        }
+        /* == |Clubs| header styling == */
+
+        h1 
+        {
+            height: 100%;
+            color: $white;
+            font-family: Rock;
+            font-weight: 300;
+            font-size: 1rem;
+        }
+
+        .Clubs-content-menu
+        {
+
+
+            h2 
+            {
+                display: flex;
+                justify-content: center;
+            }
+            .Menu-buttons
+            {
+                display: none !important;
+                button 
+                {
+                    display: none;    
+                }
+                
+                
+            }
+            .Menu-select
+            {
+                display: flex !important;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 3rem;
+                
+
+                select 
+                {
+                    width: 8rem;
+                    height: 3rem;
+                    border: none;
+                    border-radius: 20px;
+                    text-align: center;
+                }
+
+                
+                
+            }
+
+        }
+
+        .Clubs-content-preview 
+        {
+
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .Clubs-categories
+            {
+
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 120%;
+                
+                input 
+                {
+                    width: 90%;
+                    height: 2.5%;
+                    border: none;
+                    border-radius: 5px;
+                }
+                i
+                {
+
+                    margin-left: -2rem;
+                    color: $bg_color;
+        
+                }
+                .Clubs-checkbox
+                {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 2rem;
+                    
+                    h2 
+                    {
+                        font-family: Rock;
+                        font-weight: 400;
+                        span 
+                        {
+                            color: $base_color;
+                        }
+                    }
+
+                    .Clubs-checkbox-child
+                    {
+
+                        display: flex;
+                        flex-direction:column;
+                        width: 80%;
+                        justify-content: space-between;                        
+                        
+                        input[type="checkbox"]
+                        {
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            cursor: pointer;
+                            
+                        }
+
+                        label 
+                        {
+                            font-family: Rock;
+                        }
+
+                        
+
+                    }
+
+                }
+                
+                
+            }
+
+            // Styling clubs preview 
+            .Clubs-sections 
+            {
+                // Art clubs 
+                .Art-clubs
+                {
+                    display: flex !important;
+                    flex-direction: column !important;
+                    align-items: center;
+                    width: 85%;
+
+                    .Art-clubs-single
+                    {
+                        width: 80% !important;
+                    }
+                }
+
+                //Sport clubs 
+                .Sport-clubs
+                {
+                    display: flex !important;
+                    flex-direction: column !important;
+                    align-items: center;
+                    width: 85%;
+
+                    .Sport-clubs-single
+                    {
+                        width: 80% !important;
+                    }
+                }
+
+                //IT clubs
+                .IT-clubs 
+                {
+                    display: flex !important;
+                    flex-direction: column !important;
+                    align-items: center;
+                    width: 85%;
+
+                    .IT-clubs-single
+                    {
+                        width: 80% !important;
+                    }
+                }
+                
+            }
+        
+        }
+    }
+}

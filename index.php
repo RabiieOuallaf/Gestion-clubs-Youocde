@@ -10,6 +10,7 @@
     <title>YouCode clubs</title>
 </head>
 <body>
+
     
     <section class="join_us">
         <div class="join_container">
