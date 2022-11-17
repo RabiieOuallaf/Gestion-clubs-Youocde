@@ -1,7 +1,7 @@
 
-@import "./font/font";
-@import "./variable/variables";
-@import "./pages/Clubs";
+@use "./font/font" as *;
+@use "./variable/variables" as *;
+@use "./pages" as *;
 
 * {
     padding: 0;
