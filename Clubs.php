@@ -27,9 +27,7 @@
             <!-- Clubs Menu -->
 
             <div class="Clubs-content-menu">
-
                 
-
                 <h2>Wich <span>club</span> you are intrested in ?</h2>
                 
                 <div class="Menu-buttons">
@@ -68,7 +66,7 @@
                     
                     <input type="search" placeholder="Recherch un club" id="search"></input>
                     <i class="fa-solid fa-search Searchicon"></i>
-                   
+                
                     <div class="Clubs-checkbox">
 
                         <h2><span>C</span>aregories</h2>

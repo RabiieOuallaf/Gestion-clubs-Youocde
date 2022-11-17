@@ -63,7 +63,7 @@ body
             font-weight: 300;
         }
     }
-       
+    
     /* == Clubs Content styling (Container) == */ 
     .Clubs-conent
     {
@@ -206,26 +206,60 @@ body
             .Clubs-sections
             {
                 /* == Art clubs styling == */
+
+                h2 {
+                    margin: 1rem 0;
+                }
                 .Art-clubs 
                 {
 
                     display: flex;
                     flex-direction: row;
+                    gap: 2rem;
                     justify-content: space-around;
                     position: relative;
-                    overflow: hidden;
+                    
 
                     .Art-clubs-single 
                     {
                         width: calc(94% / 3);
-                        border: 4px solid $base_color;
-                
+                        position: relative;
+                        background: #212429;
+                        box-shadow: 0 0 5px black;
+                        
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            background-color: #1877F2;
+                            width: 50%;
+                            height: 50%;
+                            left: -5px;
+                            top: -5px;
+                            z-index: -1;
+                        }
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            background-color: #1877F2;
+                            width: 70%;
+                            height: 70%;
+                            right: -5px;
+                            bottom: -5px;
+                            z-index: -1;
+                        }
+                        
+                        img {
+                            width: 100% !important;
+                        }
+                        
                         .Club-content
                         {
                             margin-left: 0.7rem;
                             margin-bottom: 2rem;
-                            
-
+                            display: flex;
+                            flex-direction: column;
+                            gap: .4rem;
                             
                             h3 
                             {
@@ -234,26 +268,25 @@ body
                                 font-weight: 400;
                                 margin-top: 0.3rem;
                                 margin-bottom: -0.3rem;
-
                             }
 
                             p 
                             {
                                 font-size: 0.8rem;
+                                font-family: $itemFont;
+                                color: $lightGray;
                             }
 
                             button 
                             {
                                 width: 6rem;
                                 height: 2rem;
-                                border-radius: 1rem;
-
+                                border-radius: .3rem;
                                 background-color: $base_color;
                                 color: white;
-
                                 font-family: 500;
+                                border: none;
                                 cursor: pointer;
-
                             }
                             button:hover
                             {
@@ -262,20 +295,28 @@ body
                                 transition: all 200ms linear;
                             }
                         }
-
                     }
-                    .Art-clubs-single:hover
+                    // background: red;
+                    &:hover
                     {
-                        border: 4px dashed #0e4791;
-                        transition: all 500ms ease-in-out;
+                        ::after {
+                            width: 100%;
+                            height: 100%;
+                            transition: all 1s linear;
+                        }
+                        ::before {
+                            width: 100%;
+                            height: 100%;
+
+                            transition: all 1s linear;
+                        }
                     }
-                    
+                
 
                     
                     
                 }                
 
-                
 
                 /* == Sport clubs styling == */
 
@@ -304,7 +345,6 @@ body
                         {
                             margin-left: 0.7rem;
                             margin-bottom: 2rem;
-
                             
                             h3 
                             {
@@ -313,27 +353,20 @@ body
                                 font-weight: 400;
                                 margin-top: 0.3rem;
                                 margin-bottom: -0.3rem;
-
                             }
-
                             p 
                             {
                                 font-size: 0.8rem;
                             }
-
                             button 
                             {
                                 width: 6rem;
                                 height: 2rem;
                                 border-radius: 1rem;
-
                                 background-color: $base_color;
                                 color: white;
-
                                 font-family: 500;
-
                             }
-
                             button:hover
                             {
                                 color: $bg_color;
@@ -341,7 +374,6 @@ body
                                 transition: all 200ms linear;
                             }
                         }
-
                     }
                     .Sport-clubs-single:hover
                     {
