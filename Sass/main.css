@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   width: 1120px;
@@ -136,6 +136,7 @@ body {
   margin: 1rem 0;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs {
+  background: red;
   display: flex;
   flex-direction: row;
   gap: 2rem;
@@ -171,12 +172,12 @@ body {
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .Art-clubs-single:hover::after {
   width: 100%;
   height: 100%;
-  transition: all 1s linear;
+  transition: all 1s ease-in-out;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .Art-clubs-single:hover::before {
   width: 100%;
   height: 100%;
-  transition: all 1s linear;
+  transition: all 1s ease-in-out;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .Art-clubs-single img {
   width: 100% !important;
@@ -262,6 +263,9 @@ body {
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single .Club-content {
   margin-left: 0.7rem;
   margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single .Club-content h3 {
   font-size: 1rem;
@@ -272,6 +276,8 @@ body {
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single .Club-content p {
   font-size: 0.8rem;
+  font-family: "Itim", cursive;
+  color: #C5C5C5;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single .Club-content button {
   width: 6rem;
@@ -333,6 +339,9 @@ body {
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single .Club-content {
   margin-left: 0.7rem;
   margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single .Club-content h3 {
   font-size: 1rem;
@@ -343,6 +352,8 @@ body {
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single .Club-content p {
   font-size: 0.8rem;
+  font-family: "Itim", cursive;
+  color: #C5C5C5;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single .Club-content button {
   width: 6rem;
@@ -484,6 +495,130 @@ body {
     width: 80% !important;
   }
 }
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.join_us, .join_us .join_container .how_to_join .box_btn, .contact_us, .dashboard_bar .container .logo a {
+  display: flex;
+  justify-content: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 300vh;
+  background-image: unset !important;
+  background-color: #212429;
+  display: flex;
+}
+
+.dashboard_bar {
+  width: 230px;
+  height: 100%;
+  background-color: #5EC2ED;
+  position: relative;
+}
+.dashboard_bar .container .logo {
+  padding: 0.5rem 0;
+}
+.dashboard_bar .container .logo img {
+  width: 80%;
+  cursor: pointer;
+}
+.dashboard_bar .container .manage ul {
+  list-style: none;
+  display: grid;
+}
+.dashboard_bar .container .manage ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  padding: 1rem 1rem 1rem 1rem;
+  font-family: "Itim", cursive;
+  cursor: pointer;
+}
+.dashboard_bar .container .manage ul li:hover {
+  background-color: #1877F2;
+  padding: 1rem 1rem 1rem 1.5rem;
+  transition: all 0.5s linear;
+}
+
+.dashboard_header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  box-shadow: 0 2px 5px black;
+}
+.dashboard_header .container {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+.dashboard_header .container .elements {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard_header .container .title {
+  font-family: "IM Fell English SC", serif;
+  font-size: 2rem;
+  color: white;
+}
+.dashboard_header .container .title span {
+  color: #5EC2ED;
+}
+.dashboard_header .container .admin_icon {
+  display: flex;
+  gap: 2rem;
+}
+.dashboard_header .container .admin_icon img {
+  width: 25px;
+}
+.dashboard_header .container .admin_icon .admin {
+  cursor: pointer;
+  border-radius: 50%;
+}
+.dashboard_header .container .admin_icon .admin:hover {
+  border: 2px solid #1877F2;
+}
+.dashboard_header .tableaux_membre {
+  display: flex;
+  width: 100%;
+}
+.dashboard_header .tableaux_membre table {
+  width: 95%;
+  margin: auto;
+}
+.dashboard_header .tableaux_membre table td {
+  border-bottom: 1px solid #ccc;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+.dashboard_header .tableaux_membre table td:last-of-type div {
+  background: #d9d9d9;
+  padding: 0.5rem 0;
+  border-radius: 44px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.dashboard_header .tableaux_membre table th {
+  background-color: #1877F2;
+  color: white;
+  font-family: "Itim", cursive;
+  padding: 1rem;
+}
+
 * {
   padding: 0;
   margin: 0;
