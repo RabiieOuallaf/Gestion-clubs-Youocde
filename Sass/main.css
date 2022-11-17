@@ -168,6 +168,16 @@ body {
   bottom: -5px;
   z-index: -1;
 }
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .Art-clubs-single:hover::after {
+  width: 100%;
+  height: 100%;
+  transition: all 1s linear;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .Art-clubs-single:hover::before {
+  width: 100%;
+  height: 100%;
+  transition: all 1s linear;
+}
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .Art-clubs-single img {
   width: 100% !important;
 }
@@ -205,16 +215,6 @@ body {
   background-color: white;
   transition: all 200ms linear;
 }
-.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs:hover ::after {
-  width: 100%;
-  height: 100%;
-  transition: all 1s linear;
-}
-.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs:hover ::before {
-  width: 100%;
-  height: 100%;
-  transition: all 1s linear;
-}
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs {
   display: flex;
   flex-direction: row;
@@ -222,12 +222,42 @@ body {
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single {
   width: 31.3333333333%;
-  border: 4px solid #1877F2;
-  /*img 
-  {
-
-  }
-  */
+  position: relative;
+  background: #212429;
+  box-shadow: 0 0 5px black;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single::after {
+  content: "";
+  position: absolute;
+  background-color: #1877F2;
+  width: 50%;
+  height: 50%;
+  left: -5px;
+  top: -5px;
+  z-index: -1;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single::before {
+  content: "";
+  position: absolute;
+  background-color: #1877F2;
+  width: 70%;
+  height: 70%;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single:hover::after {
+  width: 100%;
+  height: 100%;
+  transition: all 1s linear;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single:hover::before {
+  width: 100%;
+  height: 100%;
+  transition: all 1s linear;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single img {
+  width: 100%;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single .Club-content {
   margin-left: 0.7rem;
@@ -256,10 +286,6 @@ body {
   background-color: white;
   transition: all 200ms linear;
 }
-.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single:hover {
-  border: 4px dashed #0e4791;
-  transition: all 500ms ease-in-out;
-}
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs {
   display: flex;
   flex-direction: row;
@@ -267,12 +293,42 @@ body {
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single {
   width: 31.3333333333%;
-  border: 4px solid #1877F2;
-  /*img 
-  {
-
-  }
-  */
+  position: relative;
+  background: #212429;
+  box-shadow: 0 0 5px black;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single::after {
+  content: "";
+  position: absolute;
+  background-color: #1877F2;
+  width: 50%;
+  height: 50%;
+  left: -5px;
+  top: -5px;
+  z-index: -1;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single::before {
+  content: "";
+  position: absolute;
+  background-color: #1877F2;
+  width: 70%;
+  height: 70%;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single:hover::after {
+  width: 100%;
+  height: 100%;
+  transition: all 1s linear;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single:hover::before {
+  width: 100%;
+  height: 100%;
+  transition: all 1s linear;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single img {
+  width: 100%;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single .Club-content {
   margin-left: 0.7rem;
@@ -300,10 +356,6 @@ body {
   color: #212429;
   background-color: white;
   transition: all 200ms linear;
-}
-.container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single:hover {
-  border: 4px dashed #0e4791;
-  transition: border 500ms ease-in-out;
 }
 
 @media screen and (max-width: 376px) {
