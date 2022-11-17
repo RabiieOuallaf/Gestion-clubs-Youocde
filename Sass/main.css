@@ -1,3 +1,396 @@
+/* == Variables for repeated parameters == */
+/* == Fonts == */
+@font-face {
+  font-family: Rock;
+  src: url(font/RocknRoll_One/RocknRollOne-Regular.ttf);
+}
+@font-face {
+  font-family: freehand;
+  src: url(font/freehand/Freehand/Freehand-Regular.ttf);
+}
+/* == General Styling == */
+body {
+  background-color: #212429;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1120px;
+  margin: auto;
+  /* == Clubs Content styling (Container) == */
+}
+.container .clubs-header {
+  /* == Dimensions == */
+  width: 15rem;
+  height: 5.5rem;
+  /* == For position == */
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: #1877F2;
+  text-align: center;
+  /* == |Clubs| header styling == */
+}
+.container .clubs-header h1 {
+  height: 100%;
+  color: white;
+  font-family: Rock;
+  font-weight: 300;
+}
+.container .Clubs-conent {
+  margin-top: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .Clubs-conent .Clubs-content-menu {
+  /* == Normal styling == */
+  display: flex;
+  flex-direction: column;
+  /* == H2 styling == */
+  /* == Buttons styling ==*/
+}
+.container .Clubs-conent .Clubs-content-menu h2 {
+  font-family: freehand;
+  color: white;
+  margin-bottom: 3rem;
+}
+.container .Clubs-conent .Clubs-content-menu h2 span {
+  color: #1877F2;
+}
+.container .Clubs-conent .Clubs-content-menu .Menu-select {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.container .Clubs-conent .Clubs-content-menu .Menu-buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.container .Clubs-conent .Clubs-content-menu .Menu-buttons button {
+  width: 11rem;
+  height: 3.5rem;
+  background-color: white;
+  border-radius: 15px;
+  font-family: Rock;
+}
+.container .Clubs-conent .Clubs-content-menu .Menu-buttons button:hover {
+  background-color: #1877F2;
+  color: white;
+  transition: all 200ms linear;
+}
+.container .Clubs-conent .Clubs-content-preview {
+  color: white;
+  display: flex;
+  /* == Club section stlying == */
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-categories {
+  width: 45%;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-categories input {
+  width: 90%;
+  height: 2rem;
+  border: none;
+  border-radius: 5px;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-categories i {
+  margin-left: -2rem;
+  color: #212429;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-categories .Clubs-checkbox {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-categories .Clubs-checkbox h2 {
+  font-family: Rock;
+  font-weight: 400;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-categories .Clubs-checkbox h2 span {
+  color: #1877F2;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-categories .Clubs-checkbox .Clubs-checkbox-child {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: space-between;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-categories .Clubs-checkbox .Clubs-checkbox-child input[type=checkbox] {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-categories .Clubs-checkbox .Clubs-checkbox-child label {
+  font-family: Rock;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections {
+  /* == Art clubs styling == */
+  /* == Sport clubs styling == */
+  /* == IT clubs styling == */
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+  overflow: hidden;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .line {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .line::before {
+  content: "";
+  background-image: conic-gradient(white 120deg, transparent 120deg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .line::after {
+  content: "";
+  width: 190px;
+  height: 190px;
+  background: #212429;
+  position: absolute;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .Art-clubs-single {
+  width: 23.3333333333%;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .Art-clubs-single .Club-content {
+  margin-left: 0.7rem;
+  margin-bottom: 2rem;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .Art-clubs-single .Club-content h3 {
+  font-size: 1rem;
+  font-family: Rock;
+  font-weight: 400;
+  margin-top: 0.3rem;
+  margin-bottom: -0.3rem;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .Art-clubs-single .Club-content p {
+  font-size: 0.8rem;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .Art-clubs-single .Club-content button {
+  width: 6rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background-color: #1877F2;
+  color: white;
+  font-family: 500;
+  cursor: pointer;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .Art-clubs-single .Club-content button:hover {
+  color: #212429;
+  background-color: white;
+  transition: all 200ms linear;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single {
+  width: 23.3333333333%;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single .Club-content {
+  margin-left: 0.7rem;
+  margin-bottom: 2rem;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single .Club-content h3 {
+  font-size: 1rem;
+  font-family: Rock;
+  font-weight: 400;
+  margin-top: 0.3rem;
+  margin-bottom: -0.3rem;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single .Club-content p {
+  font-size: 0.8rem;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single .Club-content button {
+  width: 6rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background-color: #1877F2;
+  color: white;
+  font-family: 500;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single .Club-content button:hover {
+  color: #212429;
+  background-color: white;
+  transition: all 200ms linear;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single {
+  width: 23.3333333333%;
+  /*img 
+  {
+
+  }
+  */
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single .Club-content {
+  margin-left: 0.7rem;
+  margin-bottom: 2rem;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single .Club-content h3 {
+  font-size: 1rem;
+  font-family: Rock;
+  font-weight: 400;
+  margin-top: 0.3rem;
+  margin-bottom: -0.3rem;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single .Club-content p {
+  font-size: 0.8rem;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single .Club-content button {
+  width: 6rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background-color: #1877F2;
+  color: white;
+  font-family: 500;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single .Club-content button:hover {
+  color: #212429;
+  background-color: white;
+  transition: all 200ms linear;
+}
+
+@media screen and (max-width: 376px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    margin: auto;
+    /* == |Clubs| header styling == */
+  }
+  .container .clubs-header {
+    width: 10rem;
+    height: 3rem;
+    /* == For position == */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #1877F2;
+    text-align: center;
+  }
+  .container h1 {
+    height: 100%;
+    color: white;
+    font-family: Rock;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+  .container .Clubs-content-menu h2 {
+    display: flex;
+    justify-content: center;
+  }
+  .container .Clubs-content-menu .Menu-buttons {
+    display: none !important;
+  }
+  .container .Clubs-content-menu .Menu-buttons button {
+    display: none;
+  }
+  .container .Clubs-content-menu .Menu-select {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+  .container .Clubs-content-menu .Menu-select select {
+    width: 8rem;
+    height: 3rem;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+  }
+  .container .Clubs-content-preview {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .Clubs-content-preview .Clubs-categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 120%;
+  }
+  .container .Clubs-content-preview .Clubs-categories input {
+    width: 90%;
+    height: 2.5%;
+    border: none;
+    border-radius: 5px;
+  }
+  .container .Clubs-content-preview .Clubs-categories i {
+    margin-left: -2rem;
+    color: #212429;
+  }
+  .container .Clubs-content-preview .Clubs-categories .Clubs-checkbox {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  .container .Clubs-content-preview .Clubs-categories .Clubs-checkbox h2 {
+    font-family: Rock;
+    font-weight: 400;
+  }
+  .container .Clubs-content-preview .Clubs-categories .Clubs-checkbox h2 span {
+    color: #1877F2;
+  }
+  .container .Clubs-content-preview .Clubs-categories .Clubs-checkbox .Clubs-checkbox-child {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: space-between;
+  }
+  .container .Clubs-content-preview .Clubs-categories .Clubs-checkbox .Clubs-checkbox-child input[type=checkbox] {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+  }
+  .container .Clubs-content-preview .Clubs-categories .Clubs-checkbox .Clubs-checkbox-child label {
+    font-family: Rock;
+  }
+  .container .Clubs-content-preview .Clubs-sections .Art-clubs {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    width: 85%;
+  }
+  .container .Clubs-content-preview .Clubs-sections .Art-clubs .Art-clubs-single {
+    width: 80% !important;
+  }
+  .container .Clubs-content-preview .Clubs-sections .Sport-clubs {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    width: 85%;
+  }
+  .container .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single {
+    width: 80% !important;
+  }
+  .container .Clubs-content-preview .Clubs-sections .IT-clubs {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    width: 85%;
+  }
+  .container .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single {
+    width: 80% !important;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -44,7 +437,7 @@ hr {
 }
 .join_us .join_container .join_title h2 {
   font-family: "Abyssinica SIL", serif;
-  color: #fff;
+  color: white;
 }
 .join_us .join_container .how_to_join {
   display: grid;
@@ -52,7 +445,7 @@ hr {
   margin-bottom: 2rem;
 }
 .join_us .join_container .how_to_join h3 {
-  color: #fff;
+  color: white;
   font-family: "IM Fell English SC", serif;
   word-spacing: 0.5rem;
   position: relative;
@@ -158,7 +551,7 @@ hr {
   transition: 0.5s ease-in-out;
 }
 .join_us .join_container .animate_ball .wonderfull p {
-  color: #fff;
+  color: white;
   font-family: "Itim", cursive;
   width: 70%;
 }
@@ -206,7 +599,7 @@ hr {
   place-self: center;
 }
 .contact_us .contact_container .contact_title h2 {
-  color: #fff;
+  color: white;
   font-family: "Abyssinica SIL", serif;
 }
 .contact_us .contact_container .contact_sub_title {
@@ -215,7 +608,7 @@ hr {
   gap: 1rem;
 }
 .contact_us .contact_container .contact_sub_title h3 {
-  color: #fff;
+  color: white;
   font-family: "IM Fell English SC", serif;
   position: relative;
   letter-spacing: 1px;
@@ -244,7 +637,7 @@ hr {
   width: 100%;
 }
 .contact_us .contact_container .contact_sub_title .form form label {
-  color: #fff;
+  color: white;
   font-family: "Itim", cursive;
 }
 .contact_us .contact_container .contact_sub_title .form form input:not(.submit_btn),
@@ -261,7 +654,7 @@ hr {
   padding: 10px;
   background-color: #1877F2;
   border-radius: 15px;
-  color: #fff;
+  color: white;
   font-family: "Itim", cursive;
   font-weight: bold;
   font-size: 18px;

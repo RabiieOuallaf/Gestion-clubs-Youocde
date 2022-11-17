@@ -63,7 +63,7 @@ body
             font-weight: 300;
         }
     }
-       
+    
     /* == Clubs Content styling (Container) == */ 
     .Clubs-conent
     {
@@ -271,13 +271,10 @@ body
                                 width: 6rem;
                                 height: 2rem;
                                 border-radius: 1rem;
-
                                 background-color: $base_color;
                                 color: white;
-
                                 font-family: 500;
                                 cursor: pointer;
-
                             }
                             button:hover
                             {
@@ -286,14 +283,9 @@ body
                                 transition: all 200ms linear;
                             }
                         }
-
                     }
-
-                    
-                    
                 }                
 
-                
 
                 /* == Sport clubs styling == */
 
@@ -307,20 +299,11 @@ body
                     .Sport-clubs-single 
                     {
                         width: calc(70% / 3);
-                        
-                        
-
-                        /*img 
-                        {
-                            
-                        }
-                        */
 
                         .Club-content
                         {
                             margin-left: 0.7rem;
                             margin-bottom: 2rem;
-
                             
                             h3 
                             {
@@ -329,27 +312,20 @@ body
                                 font-weight: 400;
                                 margin-top: 0.3rem;
                                 margin-bottom: -0.3rem;
-
                             }
-
                             p 
                             {
                                 font-size: 0.8rem;
                             }
-
                             button 
                             {
                                 width: 6rem;
                                 height: 2rem;
                                 border-radius: 1rem;
-
                                 background-color: $base_color;
                                 color: white;
-
                                 font-family: 500;
-
                             }
-
                             button:hover
                             {
                                 color: $bg_color;
@@ -357,9 +333,7 @@ body
                                 transition: all 200ms linear;
                             }
                         }
-
                     }
-                    
                 }
 
                 /* == IT clubs styling == */

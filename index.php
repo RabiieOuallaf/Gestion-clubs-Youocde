@@ -11,6 +11,7 @@
 </head>
 <body>
 
+    <?php include "./Clubs.php" ?>
     
     <section class="join_us">
         <div class="join_container">
