@@ -139,27 +139,9 @@ body {
   position: relative;
   overflow: hidden;
 }
-.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .line {
-  width: 100px;
-  height: 100px;
-  position: relative;
-}
-.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .line::before {
-  content: "";
-  background-image: conic-gradient(white 120deg, transparent 120deg);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .line::after {
-  content: "";
-  width: 190px;
-  height: 190px;
-  background: #212429;
-  position: absolute;
-}
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .Art-clubs-single {
-  width: 23.3333333333%;
+  width: 31.3333333333%;
+  border: 4px solid #1877F2;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .Art-clubs-single .Club-content {
   margin-left: 0.7rem;
@@ -189,13 +171,18 @@ body {
   background-color: white;
   transition: all 200ms linear;
 }
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .Art-clubs-single:hover {
+  border: 4px dashed #0e4791;
+  transition: all 500ms ease-in-out;
+}
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single {
-  width: 23.3333333333%;
+  width: 31.3333333333%;
+  border: 4px solid #1877F2;
   /*img 
   {
 
@@ -229,13 +216,18 @@ body {
   background-color: white;
   transition: all 200ms linear;
 }
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single:hover {
+  border: 4px dashed #0e4791;
+  transition: all 500ms ease-in-out;
+}
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single {
-  width: 23.3333333333%;
+  width: 31.3333333333%;
+  border: 4px solid #1877F2;
   /*img 
   {
 
@@ -268,6 +260,10 @@ body {
   color: #212429;
   background-color: white;
   transition: all 200ms linear;
+}
+.container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single:hover {
+  border: 4px dashed #0e4791;
+  transition: border 500ms ease-in-out;
 }
 
 @media screen and (max-width: 376px) {

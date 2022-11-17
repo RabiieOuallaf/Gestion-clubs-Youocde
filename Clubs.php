@@ -115,7 +115,7 @@
                     <h2 class="Club-headers">Art Clubs</h2>
                     <div class="Art-clubs">
                     
-                        <div class="Art-clubs-single">
+                        <div class="Art-clubs-single before-singl">
                             
                             <img src="sass/images/art 3.png" alt="art">
 

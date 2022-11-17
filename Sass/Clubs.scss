@@ -214,35 +214,11 @@ body
                     justify-content: space-around;
                     position: relative;
                     overflow: hidden;
-                    .line 
-                    {
-                        width: 100px;
-                        height: 100px;
-                        position: relative;
-                    }
-                    .line::before
-                    {
-                        content: "";
-                        background-image: conic-gradient(white 120deg, transparent 120deg);
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-
-                    } 
-
-                    .line::after 
-                    {
-                        content: "";
-                        width: 190px;
-                        height: 190px;
-                        background: #212429;
-                        position: absolute;
-                    }
 
                     .Art-clubs-single 
                     {
-                        width: calc(70% / 3);
-                        
+                        width: calc(94% / 3);
+                        border: 4px solid $base_color;
                 
                         .Club-content
                         {
@@ -288,6 +264,12 @@ body
                         }
 
                     }
+                    .Art-clubs-single:hover
+                    {
+                        border: 4px dashed #0e4791;
+                        transition: all 500ms ease-in-out;
+                    }
+                    
 
                     
                     
@@ -303,10 +285,12 @@ body
                     display: flex;
                     flex-direction: row;
                     justify-content: space-around;
+                    
 
                     .Sport-clubs-single 
                     {
-                        width: calc(70% / 3);
+                        width: calc(94% / 3);
+                        border: 4px solid $base_color;
                         
                         
 
@@ -359,6 +343,11 @@ body
                         }
 
                     }
+                    .Sport-clubs-single:hover
+                    {
+                        border: 4px dashed #0e4791;
+                        transition: all 500ms ease-in-out;
+                    }
                     
                 }
 
@@ -373,7 +362,8 @@ body
 
                     .IT-clubs-single 
                     {
-                        width: calc(70% / 3);
+                        width: calc(94% / 3);
+                        border: 4px solid $base_color;
                         
 
                         /*img 
@@ -424,6 +414,12 @@ body
                             }
                         }
 
+                    }
+
+                    .IT-clubs-single:hover
+                    {
+                        border: 4px dashed #0e4791;
+                        transition: border 500ms ease-in-out;
                     }
                     
                 }
