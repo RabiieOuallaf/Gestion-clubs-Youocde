@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   width: 1120px;
@@ -53,12 +53,25 @@ body {
   /* == Buttons styling ==*/
 }
 .container .Clubs-conent .Clubs-content-menu h2 {
-  font-family: freehand;
+  font-family: "IM Fell English SC", serif;
+  word-spacing: 5px;
+  letter-spacing: 2px;
   color: white;
   margin-bottom: 3rem;
+  position: relative;
+}
+.container .Clubs-conent .Clubs-content-menu h2::after {
+  content: "";
+  position: absolute;
+  background-color: #1877F2;
+  width: 25px;
+  height: 5px;
+  left: 0;
+  bottom: -5px;
 }
 .container .Clubs-conent .Clubs-content-menu h2 span {
   color: #1877F2;
+  font-size: 3rem;
 }
 .container .Clubs-conent .Clubs-content-menu .Menu-select {
   display: none;
@@ -77,6 +90,8 @@ body {
   background-color: white;
   border-radius: 15px;
   font-family: Rock;
+  border: none;
+  box-shadow: 0 0 5px black;
 }
 .container .Clubs-conent .Clubs-content-menu .Menu-buttons button:hover {
   background-color: #1877F2;
@@ -92,6 +107,7 @@ body {
   width: 45%;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-categories input {
+  padding: 1rem;
   width: 90%;
   height: 2rem;
   border: none;
@@ -104,7 +120,8 @@ body {
 .container .Clubs-conent .Clubs-content-preview .Clubs-categories .Clubs-checkbox {
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
+  margin: 2rem 0 0 0.4rem;
+  gap: 1rem;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-categories .Clubs-checkbox h2 {
   font-family: Rock;
@@ -136,7 +153,6 @@ body {
   margin: 1rem 0;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs {
-  background: red;
   display: flex;
   flex-direction: row;
   gap: 2rem;
@@ -158,6 +174,7 @@ body {
   left: -5px;
   top: -5px;
   z-index: -1;
+  transition: all 0.5s linear;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .Art-clubs-single::before {
   content: "";
@@ -168,16 +185,15 @@ body {
   right: -5px;
   bottom: -5px;
   z-index: -1;
+  transition: all 0.5s linear;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .Art-clubs-single:hover::after {
   width: 100%;
   height: 100%;
-  transition: all 1s ease-in-out;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .Art-clubs-single:hover::before {
   width: 100%;
   height: 100%;
-  transition: all 1s ease-in-out;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Art-clubs .Art-clubs-single img {
   width: 100% !important;
@@ -220,6 +236,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  gap: 2rem;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single {
   width: 31.3333333333%;
@@ -236,6 +253,7 @@ body {
   left: -5px;
   top: -5px;
   z-index: -1;
+  transition: all 0.5s linear;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single::before {
   content: "";
@@ -246,16 +264,15 @@ body {
   right: -5px;
   bottom: -5px;
   z-index: -1;
+  transition: all 0.5s linear;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single:hover::after {
   width: 100%;
   height: 100%;
-  transition: all 1s linear;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single:hover::before {
   width: 100%;
   height: 100%;
-  transition: all 1s linear;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single img {
   width: 100%;
@@ -282,10 +299,12 @@ body {
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single .Club-content button {
   width: 6rem;
   height: 2rem;
-  border-radius: 1rem;
+  border-radius: 0.3rem;
   background-color: #1877F2;
   color: white;
   font-family: 500;
+  border: none;
+  cursor: pointer;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .Sport-clubs .Sport-clubs-single .Club-content button:hover {
   color: #212429;
@@ -296,6 +315,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  gap: 2rem;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single {
   width: 31.3333333333%;
@@ -312,6 +332,7 @@ body {
   left: -5px;
   top: -5px;
   z-index: -1;
+  transition: all 0.5s linear;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single::before {
   content: "";
@@ -322,16 +343,15 @@ body {
   right: -5px;
   bottom: -5px;
   z-index: -1;
+  transition: all 0.5s linear;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single:hover::after {
   width: 100%;
   height: 100%;
-  transition: all 1s linear;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single:hover::before {
   width: 100%;
   height: 100%;
-  transition: all 1s linear;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single img {
   width: 100%;
@@ -358,10 +378,12 @@ body {
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single .Club-content button {
   width: 6rem;
   height: 2rem;
-  border-radius: 1rem;
+  border-radius: 0.3rem;
   background-color: #1877F2;
   color: white;
   font-family: 500;
+  border: none;
+  cursor: pointer;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections .IT-clubs .IT-clubs-single .Club-content button:hover {
   color: #212429;
@@ -398,6 +420,7 @@ body {
   .container .Clubs-content-menu h2 {
     display: flex;
     justify-content: center;
+    font-family: "IM Fell English SC", serif;
   }
   .container .Clubs-content-menu .Menu-buttons {
     display: none !important;
@@ -510,25 +533,27 @@ body {
   background-color: #212429;
   display: flex;
   height: 100vh;
+  position: relative;
 }
 
 .dashboard_bar {
   width: 230px;
   height: 100%;
-  background-color: #5EC2ED;
+  background-color: #1877F2;
   position: relative;
 }
 .dashboard_bar .dash_container {
   display: block;
 }
 .dashboard_bar .dash_container .logo {
-  padding: 0.5rem 0;
+  padding: 1.5rem 0;
 }
 .dashboard_bar .dash_container .logo img {
   width: 80%;
   cursor: pointer;
 }
 .dashboard_bar .dash_container .manage ul {
+  margin: 3rem 0;
   list-style: none;
   display: grid;
 }
@@ -537,13 +562,13 @@ body {
   align-items: center;
   gap: 0.5rem;
   color: white;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 2rem 1rem 2rem 1rem;
   font-family: "Itim", cursive;
   cursor: pointer;
 }
 .dashboard_bar .dash_container .manage ul li:hover {
   background-color: #1877F2;
-  padding: 1rem 1rem 1rem 1.5rem;
+  padding: 2rem 1rem 2rem 1.5rem;
   transition: all 0.5s linear;
 }
 
@@ -572,7 +597,7 @@ body {
   color: white;
 }
 .dashboard_header .dash_container .title span {
-  color: #5EC2ED;
+  color: #1877F2;
 }
 .dashboard_header .dash_container .admin_icon {
   display: flex;
@@ -598,7 +623,7 @@ body {
   width: 50px;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  background-color: #5EC2ED;
+  background-color: #1877F2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -625,17 +650,107 @@ body {
   padding: 1rem;
 }
 .dashboard_header .tableaux_membre table td:last-of-type div {
-  background: #d9d9d9;
-  padding: 0.5rem 0;
-  border-radius: 44px;
   display: flex;
   justify-content: space-evenly;
 }
+.dashboard_header .tableaux_membre table td:last-of-type div img {
+  background: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
 .dashboard_header .tableaux_membre table th {
-  background-color: #5EC2ED;
+  background-color: #1877F2;
   color: white;
   font-family: "Itim", cursive;
   padding: 1rem;
+}
+
+.pop_up {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.pop_up .form {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: white;
+  width: 33rem;
+  padding: 2rem;
+}
+.pop_up .form::before {
+  content: "";
+  background-color: #1877F2;
+  width: 20px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(20px);
+}
+.pop_up .form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.pop_up .form form div {
+  width: 100%;
+  display: grid;
+  gap: 0.2rem;
+}
+.pop_up .form form div label {
+  font-family: "Itim", cursive;
+  font-size: 18px;
+  position: relative;
+}
+.pop_up .form form div label::after {
+  content: "*";
+  position: absolute;
+  top: -5px;
+  color: red;
+}
+.pop_up .form form div input {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+.pop_up .form form .btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.pop_up .form form .btns .submit {
+  background-color: #1877F2;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 5px;
+  place-self: center;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 3px black;
+}
+.pop_up .form form .btns .submit:hover {
+  transform: translateY(3px);
+  transition: all 0.4s ease;
+}
+@media (max-width: 689px) {
+  .pop_up .form {
+    width: 23rem;
+    left: calc(50% - 10px);
+  }
 }
 
 * {
@@ -698,13 +813,14 @@ hr {
   position: relative;
 }
 .join_us .join_container .how_to_join h3 span {
-  color: #5EC2ED;
+  color: #1877F2;
   font-size: 2rem;
+  position: relative;
 }
 .join_us .join_container .how_to_join h3 span::after {
   content: "";
   position: absolute;
-  background-color: #5EC2ED;
+  background-color: #1877F2;
   width: 25px;
   height: 5px;
   left: 0;
@@ -726,6 +842,11 @@ hr {
   flex-direction: column;
   box-shadow: 0 0 5px 0 black;
   gap: 0.6rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.join_us .join_container .how_to_join .box_btn > div:hover {
+  transform: translateY(-5px);
 }
 .join_us .join_container .how_to_join .box_btn > div img {
   width: 40px;
@@ -758,44 +879,8 @@ hr {
   -webkit-animation: multiColor 7s alternate infinite;
           animation: multiColor 7s alternate infinite;
 }
-.join_us .join_container .animate_ball .wonderfull::after {
-  content: "";
-  position: absolute;
-  background-color: white;
-  width: 60px;
-  height: 30px;
-  left: 20px;
-  top: 40px;
-  border-radius: 50%;
-  transform: rotate(-30deg);
-  transition: all 1s ease-in-out;
-}
-.join_us .join_container .animate_ball .wonderfull::before {
-  content: "";
-  position: absolute;
-  background-color: white;
-  width: 10px;
-  height: 10px;
-  left: 60px;
-  top: 80px;
-  border-radius: 50%;
-  transition: all 0.5s ease-in-out;
-}
 .join_us .join_container .animate_ball .wonderfull:hover {
   border-radius: 50%;
-  transition: 0.5s ease-in-out;
-}
-.join_us .join_container .animate_ball .wonderfull:hover::after {
-  left: 25px;
-  top: 45px;
-  height: 20px;
-  transform: rotate(-45deg);
-  transition: all 0.5s ease-in-out;
-}
-.join_us .join_container .animate_ball .wonderfull:hover::before {
-  left: 63px;
-  top: 83px;
-  transition: 0.5s ease-in-out;
 }
 .join_us .join_container .animate_ball .wonderfull p {
   color: white;
@@ -862,13 +947,13 @@ hr {
   word-spacing: 0.5rem;
 }
 .contact_us .contact_container .contact_sub_title h3 span {
-  color: #5EC2ED;
+  color: #1877F2;
   font-size: 25px;
 }
 .contact_us .contact_container .contact_sub_title h3::after {
   content: "";
   position: absolute;
-  background-color: #5EC2ED;
+  background-color: #1877F2;
   width: 25px;
   height: 5px;
   left: 0;
