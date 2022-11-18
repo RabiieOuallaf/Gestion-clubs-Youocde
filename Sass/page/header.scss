@@ -43,16 +43,6 @@ a:hover {
     }
 }
 
-.burger {
-    display: none;
-    width: 2.5rem;
-}
-
-.close img {
-    width: 2.5rem;
-    display: none;
-}
-
 .nav-sing {
     width: 10rem;
     height: 10%;
@@ -152,6 +142,12 @@ a:hover {
 
 }
 
+.club-article {
+    position: absolute;
+    left: 25rem;
+    top: 0;
+}
+
 .club-article .text-1 {
     position: relative;
     font-size: 3rem;
@@ -171,10 +167,16 @@ a:hover {
 
 .slider {
     display: flex;
-    gap: .5rem;
+    gap: 0.5rem;
     position: absolute;
-    top: 68%;
-    left: 60rem;
+    z-index: 100000;
+    /* background-color: #ffffff; */
+    /* flex-direction: column-reverse; */
+    /* align-items: center; */
+    /* bottom: -14rem; */
+    top: 52rem;
+    /* right: -11rem; */
+    left: 29rem;
 }
 
 .slider div {
@@ -195,7 +197,7 @@ a:hover {
 
 
 
-@media screen and (max-width:376px) {
+@media screen and (max-width: 413px) {
     nav {
 
         display: flex;
@@ -204,48 +206,6 @@ a:hover {
         background-color: #212429;
         width: 100vh;
         padding: 1.5rem;
-        gap: 8rem;
-
-    }
-
-    // .inside-background img {
-    //     width: 400%;
-    // }
-
-    .burger {
-        display: block;
-    }
-
-    .close img {
-        display: none;
-    }
-
-    .nav-list {
-        display: block;
-        position: absolute;
-        min-width: 50vw;
-        height: 30vh;
-        top: 0;
-        left: 0;
-        padding-top: 3rem;
-        background-color: rgba(0 0 0 /0.59);
-        transform: translateX(-100%);
-        transition: transform .5s ease;
-    }
-
-    .active {
-        transform: translateX(0);
-    }
-
-    .nav-list {
-        text-align: center;
-    }
-
-    .close img {
-        display: block;
-        position: absolute;
-        right: 8px;
-        top: 8px;
 
     }
 
@@ -289,9 +249,16 @@ a:hover {
     }
 
     .context-background {
-        align-items: flex-start;
+        align-items: center;
         gap: 1rem;
-        padding-top: 2rem;
+        /* padding-top: 0rem; */
+        /* left: 94px; */
+        align-items: flex-start;
+        /* justify-self: flex-start; */
+        position: absolute;
+        right: 3rem;
+        /* top: 1rem; */
+        bottom: -4rem;
     }
 
     .see-mr button {
@@ -300,30 +267,23 @@ a:hover {
 
     }
 
-    .club-article {
-        position: absolute;
-        left: 94%;
-        top: 79%;
-    }
-
-    .club-article img {
-        width: 288%;
+    .club-article .text-1 {
+        font-size: 2rem;
     }
 
     .inside-background {
-        top: 41%;
-        left: 66%;
+        flex-direction: column-reverse;
+        top: 62%;
+        left: 88%;
+        gap: 1rem;
     }
 
     .slider {
         display: flex;
         gap: .5rem;
         position: absolute;
-        left: 76%;
-        top: 89%;
-        width: 72px;
-        height: 15px;
-        border-radius: 50%;
+        z-index: 100000;
+        background-color: #ffffff;
     }
 
     .text-background::after {
@@ -349,14 +309,9 @@ a:hover {
         content: "";
         position: absolute;
         background-color: #78D5D7;
-        width: 66px;
+        width: 46px;
         height: 6px;
         right: 0;
         bottom: -4px;
-    }
-
-    .text-1 {
-        width: 280%;
-        font-weight: bold;
     }
 }
