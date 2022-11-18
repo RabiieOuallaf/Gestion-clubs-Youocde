@@ -38,6 +38,9 @@ body {
   color: white;
   font-family: Rock;
   font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container .Clubs-conent {
   margin-top: 4rem;
@@ -806,18 +809,18 @@ hr {
   gap: 2rem;
   margin-bottom: 2rem;
 }
-.join_us .join_container .how_to_join h3 {
+.join_us .join_container .how_to_join h2 {
   color: white;
   font-family: "IM Fell English SC", serif;
   word-spacing: 0.5rem;
   position: relative;
 }
-.join_us .join_container .how_to_join h3 span {
+.join_us .join_container .how_to_join h2 span {
   color: #1877F2;
   font-size: 2rem;
   position: relative;
 }
-.join_us .join_container .how_to_join h3 span::after {
+.join_us .join_container .how_to_join h2 span::after {
   content: "";
   position: absolute;
   background-color: #1877F2;
@@ -939,18 +942,18 @@ hr {
   flex-direction: column;
   gap: 1rem;
 }
-.contact_us .contact_container .contact_sub_title h3 {
+.contact_us .contact_container .contact_sub_title h2 {
   color: white;
   font-family: "IM Fell English SC", serif;
   position: relative;
   letter-spacing: 1px;
   word-spacing: 0.5rem;
 }
-.contact_us .contact_container .contact_sub_title h3 span {
+.contact_us .contact_container .contact_sub_title h2 span {
   color: #1877F2;
   font-size: 25px;
 }
-.contact_us .contact_container .contact_sub_title h3::after {
+.contact_us .contact_container .contact_sub_title h2::after {
   content: "";
   position: absolute;
   background-color: #1877F2;
