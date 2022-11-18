@@ -13,12 +13,21 @@
 <body>
     <?php 
 
-        $sql = "SELECT * FROM USER";
-        $result = mysqli_query($conc, $sql);
-        $checkResult = mysqli_num_rows($result);
-
-        if($checkResult > 0){
-            echo 
+        // try and catch => check if there is an erreur in code php
+        try {
+            $sql = "SELECT * FROM USER";
+            $result = mysqli_query($conc, $sql);
+            $checkResult = mysqli_num_rows($result);
+            if($checkResult > 0){
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo $row['FName']. $row['LName']. $row['Password'];
+                }
+                echo "tableaux plein";
+            } else {
+                echo "tableaux vide";
+            }
+        } catch (Exception $e) {
+            echo 'Exception reçue : ',  $e->getMessage(), "\n";
         }
 
     ?>

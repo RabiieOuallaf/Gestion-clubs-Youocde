@@ -500,22 +500,16 @@ body {
   margin: 0;
 }
 
-.join_us, .join_us .join_container .how_to_join .box_btn, .contact_us, .dashboard_bar .container .logo a {
+.join_us, .join_us .join_container .how_to_join .box_btn, .contact_us, .dashboard_bar .dash_container .logo a {
   display: flex;
   justify-content: center;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  height: 300vh;
+.body {
   background-image: unset !important;
   background-color: #212429;
   display: flex;
+  height: 100vh;
 }
 
 .dashboard_bar {
@@ -524,18 +518,21 @@ body {
   background-color: #5EC2ED;
   position: relative;
 }
-.dashboard_bar .container .logo {
+.dashboard_bar .dash_container {
+  display: block;
+}
+.dashboard_bar .dash_container .logo {
   padding: 0.5rem 0;
 }
-.dashboard_bar .container .logo img {
+.dashboard_bar .dash_container .logo img {
   width: 80%;
   cursor: pointer;
 }
-.dashboard_bar .container .manage ul {
+.dashboard_bar .dash_container .manage ul {
   list-style: none;
   display: grid;
 }
-.dashboard_bar .container .manage ul li {
+.dashboard_bar .dash_container .manage ul li {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -544,7 +541,7 @@ body {
   font-family: "Itim", cursive;
   cursor: pointer;
 }
-.dashboard_bar .container .manage ul li:hover {
+.dashboard_bar .dash_container .manage ul li:hover {
   background-color: #1877F2;
   padding: 1rem 1rem 1rem 1.5rem;
   transition: all 0.5s linear;
@@ -552,51 +549,73 @@ body {
 
 .dashboard_header {
   width: 100%;
-  height: 80px;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  box-shadow: 0 2px 5px black;
+  gap: 1rem;
 }
-.dashboard_header .container {
-  padding: 0.5rem;
+.dashboard_header .dash_container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100px;
+  box-shadow: 0 2px 5px black;
 }
-.dashboard_header .container .elements {
-  width: 90%;
+.dashboard_header .dash_container .elements {
+  width: 95%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.dashboard_header .container .title {
+.dashboard_header .dash_container .title {
   font-family: "IM Fell English SC", serif;
   font-size: 2rem;
   color: white;
 }
-.dashboard_header .container .title span {
+.dashboard_header .dash_container .title span {
   color: #5EC2ED;
 }
-.dashboard_header .container .admin_icon {
+.dashboard_header .dash_container .admin_icon {
   display: flex;
   gap: 2rem;
 }
-.dashboard_header .container .admin_icon img {
+.dashboard_header .dash_container .admin_icon img {
   width: 25px;
 }
-.dashboard_header .container .admin_icon .admin {
+.dashboard_header .dash_container .admin_icon .admin {
   cursor: pointer;
   border-radius: 50%;
 }
-.dashboard_header .container .admin_icon .admin:hover {
+.dashboard_header .dash_container .admin_icon .admin:hover {
   border: 2px solid #1877F2;
 }
 .dashboard_header .tableaux_membre {
+  width: 95%;
+  display: grid;
+  gap: 1rem;
+  margin: 1rem auto;
+}
+.dashboard_header .tableaux_membre .add {
+  width: 50px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: #5EC2ED;
   display: flex;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
+  place-self: end;
+  cursor: pointer;
+}
+.dashboard_header .tableaux_membre .add:hover {
+  background-color: #1877F2;
+  box-shadow: 0 2px 5px black;
+  transform: perspective(100px) translateZ(-4px);
+  transition: all 0.2s ease-in-out;
+}
+.dashboard_header .tableaux_membre .add img {
+  width: 70%;
 }
 .dashboard_header .tableaux_membre table {
-  width: 95%;
+  width: 100%;
   margin: auto;
 }
 .dashboard_header .tableaux_membre table td {
@@ -613,7 +632,7 @@ body {
   justify-content: space-evenly;
 }
 .dashboard_header .tableaux_membre table th {
-  background-color: #1877F2;
+  background-color: #5EC2ED;
   color: white;
   font-family: "Itim", cursive;
   padding: 1rem;

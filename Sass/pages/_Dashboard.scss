@@ -14,17 +14,12 @@
     justify-content: center;
 }
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
-body {
-    height: 300vh;
+.body {
     background-image: unset !important;
     background-color: $backgroundColor;
     display: flex;
+    height: 100vh;
 }
 
 .dashboard_bar {
@@ -76,19 +71,20 @@ body {
 
 .dashboard_header {
     width: 100%;
-    height: 80px;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    box-shadow: 0 2px 5px black;
-
+    gap: 1rem;
+    
     .dash_container {
-        padding: .5rem;
+        // padding: .5rem;
         display: flex;
         justify-content: center;
+        align-items: center;
+        height: 100px;
+        box-shadow: 0 2px 5px black;
         
         .elements {
-            width: 90%;
+            width: 95%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -121,10 +117,36 @@ body {
         }
     }
     .tableaux_membre {
-        display: flex;
-        width: 100%;
+        width: 95%;
+        display: grid;
+        gap: 1rem;
+        margin: 1rem auto;
+
+        .add {
+            width: 50px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            background-color: $lightBlue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            place-self: end;
+            cursor: pointer;
+            
+            &:hover {
+                background-color: $darkBlue;
+                box-shadow: 0 2px 5px black;
+                transform: perspective(100px) translateZ(-4px);
+                transition: all .2s ease-in-out;
+            }
+
+            img {
+                width:70%;
+            }
+        }
+
         table {
-            width: 95%;
+            width: 100%;
             margin: auto;
             
             td {
@@ -138,14 +160,14 @@ body {
                         background: #d9d9d9;
                         padding: .5rem 0;
                         border-radius: 44px;
-                        // width: 80px;
+                        // width: 100px;
                         display: flex;
                         justify-content: space-evenly;
                     }
                 }
             }
             th {
-                background-color: $darkBlue;
+                background-color: $lightBlue;
                 color: white;
                 font-family: $itemFont;
                 padding: 1rem;
