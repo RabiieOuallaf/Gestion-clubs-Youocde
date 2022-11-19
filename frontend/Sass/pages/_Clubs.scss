@@ -34,7 +34,7 @@ body
 
 .container
 {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     width: 1120px;
@@ -44,11 +44,6 @@ body
 
     .clubs-header 
     {
-        /* == Dimensions == */
-
-        width: 15rem;
-        height: 5.5rem;
-
         /* == For position == */
 
         margin: auto;
@@ -56,6 +51,33 @@ body
         justify-content: center;
         background-color: $base_color;
         text-align: center;
+        padding: 1rem 3rem;
+        position: relative;
+        z-index: 10;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: $base_color;
+            width: 100%;
+            height: 100%;
+            transform: skew(30deg);
+            left: -30px;
+            top: 0;
+            z-index: -5;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            background: $base_color;
+            width: 10px;
+            height: 100%;
+            transform: skew(30deg);
+            left: -50px;
+            top: 0;
+            z-index: -5;
+        }
 
         /* == |Clubs| header styling == */
 
@@ -65,6 +87,9 @@ body
             color: $white;
             font-family: Rock;
             font-weight: 300;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
     
@@ -88,13 +113,27 @@ body
             /* == H2 styling == */
             h2
             {
-                font-family: freehand;
+                font-family: $IMFellFont;
+                word-spacing: 5px;
+                letter-spacing: 2px;
                 color: white;
                 margin-bottom: 3rem;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background-color: $lightBlue;
+                    width: 25px;
+                    height: 5px;
+                    left: 0;
+                    bottom: -5px;
+                }
 
                 span 
                 {
-                    color: $base_color;
+                    color: $lightBlue;
+                    font-size: 3rem;
                 }
             }
 
@@ -122,6 +161,8 @@ body
                     background-color: white;
                     border-radius: 15px;
                     font-family: Rock;
+                    border: none;
+                    box-shadow: 0 0 5px black;
                     
                     
                 }
@@ -147,6 +188,7 @@ body
                 width: 45%;
                 input 
                 {
+                    padding: 1rem;
                     width: 90%;
                     height: 2rem;
                     border: none;
@@ -163,7 +205,8 @@ body
                 {
                     display: flex;
                     flex-direction: column;
-                    margin-top: 2rem;
+                    margin: 2rem 0 0 .4rem;
+                    gap: 1rem;
                     
                     h2 
                     {
@@ -216,7 +259,6 @@ body
                 }
                 .Art-clubs 
                 {
-                    background: red;
                     display: flex;
                     flex-direction: row;
                     gap: 2rem;
@@ -239,6 +281,7 @@ body
                             left: -5px;
                             top: -5px;
                             z-index: -1;
+                            transition: all .5s linear;
                         }
                         &::before {
                             content: "";
@@ -249,17 +292,16 @@ body
                             right: -5px;
                             bottom: -5px;
                             z-index: -1;
+                            transition: all .5s linear;
                         }
                         
                         &:hover::after {
                                 width: 100%;
                                 height: 100%;
-                                transition: all 1s ease-in-out;
                         }
                         &:hover::before {
                             width: 100%;
                             height: 100%;
-                            transition: all 1s ease-in-out;
                         }
 
                         img {
@@ -319,7 +361,7 @@ body
                     display: flex;
                     flex-direction: row;
                     justify-content: space-around;
-                    
+                    gap: 2rem;
 
                     .Sport-clubs-single 
                     {
@@ -337,6 +379,7 @@ body
                             left: -5px;
                             top: -5px;
                             z-index: -1;
+                            transition: all .5s linear;
                         }
                         &::before {
                             content: "";
@@ -347,17 +390,16 @@ body
                             right: -5px;
                             bottom: -5px;
                             z-index: -1;
+                            transition: all .5s linear;
                         }
                         
                         &:hover::after {
                                 width: 100%;
                                 height: 100%;
-                                transition: all 1s linear;
                         }
                         &:hover::before {
                             width: 100%;
                             height: 100%;
-                            transition: all 1s linear;
                         }
 
                         img {
@@ -390,10 +432,12 @@ body
                             {
                                 width: 6rem;
                                 height: 2rem;
-                                border-radius: 1rem;
-                                background-color: $base_color;
+                                border-radius: 0.3rem;
+                                background-color: #1877F2;
                                 color: white;
                                 font-family: 500;
+                                border: none;
+                                cursor: pointer;
                             }
                             button:hover
                             {
@@ -414,6 +458,7 @@ body
                     display: flex;
                     flex-direction: row;
                     justify-content: space-around;
+                    gap: 2rem;
 
                     .IT-clubs-single 
                     {
@@ -431,6 +476,7 @@ body
                             left: -5px;
                             top: -5px;
                             z-index: -1;
+                            transition: all .5s linear;
                         }
                         &::before {
                             content: "";
@@ -441,17 +487,16 @@ body
                             right: -5px;
                             bottom: -5px;
                             z-index: -1;
+                            transition: all .5s linear;
                         }
                         
                         &:hover::after {
                                 width: 100%;
                                 height: 100%;
-                                transition: all 1s linear;
                         }
                         &:hover::before {
                             width: 100%;
                             height: 100%;
-                            transition: all 1s linear;
                         }
 
                         img {
@@ -488,13 +533,12 @@ body
                             {
                                 width: 6rem;
                                 height: 2rem;
-                                border-radius: 1rem;
-
-                                background-color: $base_color;
+                                border-radius: 0.3rem;
+                                background-color: #1877F2;
                                 color: white;
-
                                 font-family: 500;
-
+                                border: none;
+                                cursor: pointer;
                             }
 
                             button:hover
@@ -556,19 +600,18 @@ body
 
         .Clubs-content-menu
         {
-
-
             h2 
             {
                 display: flex;
                 justify-content: center;
+                font-family: $IMFellFont;
             }
             .Menu-buttons
             {
                 display: none !important;
                 button 
                 {
-                    display: none;    
+                    display: none; 
                 }
                 
                 

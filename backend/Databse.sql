@@ -9,9 +9,10 @@ CREATE TABLE ADMIN(
 
 CREATE TABLE USER(
 	Id INT NOT NULL PRIMARY KEY auto_increment,
-    FName VARCHAR(255),
-    LName VARCHAR(255),
-    Password VARCHAR(255)
+    FullName VARCHAR(255),
+    Class VARCHAR(255),
+    Email VARCHAR(255),
+    Club VARCHAR(255)
 );
 
 CREATE TABLE CLUBS(
@@ -19,9 +20,6 @@ CREATE TABLE CLUBS(
     Description VARCHAR(255),
 	Image varchar(255)
 );
-
-ALTER TABLE USER
-ADD Image VARCHAR(255);
 
 ALTER TABLE ADMIN
 ADD Image VARCHAR(255);
