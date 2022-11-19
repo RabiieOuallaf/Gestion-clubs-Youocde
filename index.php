@@ -48,10 +48,9 @@
                             <option>Night Club</option>
                         </select> 
                 </div>
-
             </div>
 
-            <!-- Clubs preview --> 
+            <!-- Clubs preview categorie start --> 
             <section class="Clubs-content-preview">
                 <div class="Clubs-categories">
                     <input type="search" placeholder="Recherch un club" id="search"></input>
@@ -82,8 +81,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="Clubs-sections">
 
+                <!-- club section start -->
+                <div class="Clubs-sections">
                     <!-- Art clubs --> 
                     <h2 class="Club-headers">Art Clubs</h2>
                     <div class="Art-clubs">
@@ -254,11 +254,15 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <!-- club section end  -->
             </section>
+            <!-- clubs preview categorie end -->
         </div>
-
     </div>
+    <!-- club categorie end  -->
     
+    <!-- join us start -->
     <section class="join_us">
         <div class="join_container">
             <div class="join_title">
@@ -290,7 +294,11 @@
             </div>
         </div>
     </section>
+    <!-- join us end -->
+
     <hr>
+
+    <!-- contact us start -->
     <section class="contact_us">
         <div class="contact_container">
             <div class="contact_title">
@@ -323,6 +331,7 @@
             </div>
         </div>
     </section>
+    <!-- contact us end -->
 
 </body>
     <script src="https://kit.fontawesome.com/28113ccba1.js" crossorigin="anonymous"></script>

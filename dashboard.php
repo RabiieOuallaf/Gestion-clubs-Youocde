@@ -48,37 +48,39 @@
 
             <div class="tableaux_membre">
                 <div class="add" id="btn_add"><img src="./frontend/Sass/images/🦆 icon _plus_.png" alt=""></div>
-
-                <!-- table membres -->
-                <?php 
-                    // try and catch => check if there is an erreur in code php
-                    $sql = "SELECT * FROM USER";
-                    $result = mysqli_query($conc, $sql);
-                    $checkResult = mysqli_num_rows($result);
-                    if($checkResult > 0){
-                        echo '<table>
-                            <tr>
-                                <th>Nome</th>
-                                <th>Class</th>
-                                <th>Email</th>
-                                <th>Club</th>
-                                <th>Action</th>
-                            </tr>';
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            
-                            echo '<tr num='.$row['Id'].'>
-                                <td><span>'.$row['FullName'].'</span></td>
-                                <td>'.$row['Class'] .'</td>
-                                <td>'.$row['Email'].'</td>
-                                <td>'.$row['Club'].'</td>
-                                <td><div><img src="./frontend/Sass/images/🦆 icon _edit outline_.png" alt="" width="20px"><img src="./frontend/Sass/images/🦆 icon _trash 2 outline_.png" alt="" width="20px" id="del_membre"></div></td>
-                            </tr>';
+                <div class="table">
+                    <!-- table membres -->
+                    <?php 
+                        // try and catch => check if there is an erreur in code php
+                        $sql = "SELECT * FROM USER";
+                        $result = mysqli_query($conc, $sql);
+                        $checkResult = mysqli_num_rows($result);
+                        if($checkResult > 0){
+                            echo '<table>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Class</th>
+                                    <th>Email</th>
+                                    <th>Club</th>
+                                    <th>Action</th>
+                                </tr>';
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                
+                                echo '
+                                <tr num='.$row['Id'].'>
+                                    <td><span>'.$row['FullName'].'</span></td>
+                                    <td>'.$row['Class'] .'</td>
+                                    <td>'.$row['Email'].'</td>
+                                    <td>'.$row['Club'].'</td>
+                                    <td><button><i class="fa-regular fa-pen-to-square"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                                </tr>';
+                            }
+                            echo '</table>';
+                        } else {
+                            echo "tableaux vide";
                         }
-                        echo '</table>';
-                    } else {
-                        echo "tableaux vide";
-                    }
-                ?>
+                    ?>
+                </div>
             </div>
         </section>
         <div class="pop_up pop" id="pop_up">
@@ -110,5 +112,6 @@
     </div>
 
 </body>
+<script src="https://kit.fontawesome.com/28113ccba1.js" crossorigin="anonymous"></script>
     <script src="./frontend/js/addMembre.js" type="module"></script>
 </html>
