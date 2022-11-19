@@ -1,6 +1,6 @@
 // Clear the placeholder while focusing 
 
-const Search = document.getElementById("search");
+const Search = document.getElementById("input");
 
 
 
