@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clubs</title>
-    <link rel="stylesheet" href="Sass/Clubs.css">
+    <!-- <link rel="stylesheet" href="Sass/Clubs.css"> -->
 
 
     
@@ -27,9 +27,7 @@
             <!-- Clubs Menu -->
 
             <div class="Clubs-content-menu">
-
                 
-
                 <h2>Wich <span>club</span> you are intrested in ?</h2>
                 
                 <div class="Menu-buttons">
@@ -68,7 +66,7 @@
                     
                     <input type="search" placeholder="Recherch un club" id="search"></input>
                     <i class="fa-solid fa-search Searchicon"></i>
-                   
+                
                     <div class="Clubs-checkbox">
 
                         <h2><span>C</span>aregories</h2>
