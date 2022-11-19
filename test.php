@@ -1,5 +1,5 @@
 <?php
-    include_once("Connection.php");
+    include_once("./Module/Connection.php");
 ?>
 
 <!DOCTYPE html>
@@ -13,14 +13,14 @@
 <body>
     <?php 
 
-        $sql = "SELECT * FROM USER";
+        $sql = "SELECT * FROM ADMIN;";
         $result = mysqli_query($conc, $sql);
-        $finalRes = mysqli_fetch_all($result, MYSQLI_ASSOC);
         $checkResult = mysqli_num_rows($result);
 
         if($checkResult > 0){
-            print_r($finalRes);
-            echo "smth";
+            while($rows = mysqli_fetch_assoc($result)){
+                echo $rows[0];
+            }
         }
 
     ?>
