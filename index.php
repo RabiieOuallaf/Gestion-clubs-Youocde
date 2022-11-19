@@ -11,6 +11,7 @@
 </head>
 <body>
 
+    <!-- body -->
     <div class="container">
         <!-- Clubs headder --> 
         <div class="clubs-header">
