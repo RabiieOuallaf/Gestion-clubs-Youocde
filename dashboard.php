@@ -67,7 +67,7 @@
                         while ($row = mysqli_fetch_assoc($result)) {
                             
                             echo '<tr num='.$row['Id'].'>
-                                <td><span>'.$row['Name'].'</span></td>
+                                <td><span>'.$row['FullName'].'</span></td>
                                 <td>'.$row['Class'] .'</td>
                                 <td>'.$row['Email'].'</td>
                                 <td>'.$row['Club'].'</td>
@@ -86,7 +86,7 @@
                 <form action="./backend/Module/addMembre.php" method="POST">
                     <div class="name">
                         <label for="name">Name</label> <br>
-                        <input type="text" name="Name" id="name" placeholder="Full name" required>
+                        <input type="text" name="FullName" id="name" placeholder="Full name" required>
                     </div>
                     <div class="class">
                         <label for="class">Class</label> <br>
