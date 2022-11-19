@@ -1,7 +1,7 @@
 
 @use "./font/font" as *;
 @use "./variable/variables" as *;
-@use "./pages" as *;
+@use "./pages/allPage" as *;
 
 * {
     padding: 0;
@@ -63,6 +63,7 @@ hr {
                 span {
                     color: $lightBlue;
                     font-size: 2rem;
+                    position: relative;
                     &::after {
                         content: "";
                         position: absolute;
@@ -90,6 +91,13 @@ hr {
                     flex-direction: column;
                     box-shadow: 0 0 5px 0 black;
                     gap: .6rem;
+                    cursor: pointer;
+                    transition: all .3s ease-in-out;
+
+                    &:hover {
+                        transform: translateY(-5px);
+                    }
+
                     img {
                         width: 40px;
                     }
@@ -125,44 +133,8 @@ hr {
                 transition: all 1s ease-in-out;
 
                 animation: multiColor 7s alternate infinite;
-                &::after {
-                    content: "";
-                    position: absolute;
-                    background-color: white;
-                    width: 60px;
-                    height: 30px;
-                    left: 20px;
-                    top: 40px;
-                    border-radius: 50%;
-                    transform: rotate(-30deg);
-                    transition: all 1s ease-in-out;
-                }
-                &::before {
-                    content: "";
-                    position: absolute;
-                    background-color: white;
-                    width: 10px;
-                    height: 10px;
-                    left: 60px;
-                    top: 80px;
-                    border-radius: 50%;
-                    transition: all .5s ease-in-out;
-                }
                 &:hover {
                     border-radius: 50%;
-                    &::after {
-                        left: 25px;
-                        top: 45px;
-                        height: 20px;
-                        transform: rotate(-45deg);
-                        transition: all .5s ease-in-out;
-                    }
-                    &::before {
-                        left: 63px;
-                        top: 83px;
-                        transition: .5s ease-in-out;
-                    }
-                    transition: .5s ease-in-out;
                 }
 
                 p {
@@ -359,3 +331,4 @@ hr {
         inset -10px -10px 25px rgba(0, 0, 0, 0.9);
     }
 }
+
