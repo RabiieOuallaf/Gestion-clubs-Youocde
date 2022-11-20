@@ -858,15 +858,20 @@ header .header_container .sign_in button:hover {
   color: #1877F2;
 }
 
+main .article_container {
+  position: relative;
+}
+main .article_container .background_img {
+  width: 100%;
+}
 main .article_container .background_img img {
   width: 100%;
-  position: relative;
   filter: blur(5px);
 }
 main .article_container .content {
   width: 90%;
   position: absolute;
-  top: calc(50% - 6rem);
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: grid;
@@ -960,7 +965,7 @@ main .slider_btn {
   display: flex;
   gap: 1rem;
   position: absolute;
-  top: calc(50% + 10rem);
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -1149,11 +1154,7 @@ hr {
   position: relative;
 }
 .join_us .join_container .how_to_join h2 span {
-<<<<<<< HEAD
-  color: #1877F2;
-=======
   color: #5EC2ED;
->>>>>>> 3182f9f7b6b8ebc02f425b425a04e27beb1622b0
   font-size: 2rem;
   position: relative;
 }
@@ -1310,11 +1311,7 @@ hr {
   word-spacing: 0.5rem;
 }
 .contact_us .contact_container .contact_sub_title h2 span {
-<<<<<<< HEAD
-  color: #1877F2;
-=======
   color: #5EC2ED;
->>>>>>> 3182f9f7b6b8ebc02f425b425a04e27beb1622b0
   font-size: 25px;
 }
 .contact_us .contact_container .contact_sub_title h2::after {
