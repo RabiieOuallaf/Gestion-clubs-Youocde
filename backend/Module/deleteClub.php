@@ -19,7 +19,7 @@
         $Result = mysqli_query($conc, $sql);
 
         if($Result){
-            header("Location: ../../Clubs.php");
+            header("Location: ../../dashboard_clubs.php");
         }else {
             echo "Erorr!";
         }

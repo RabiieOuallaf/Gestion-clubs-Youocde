@@ -1,0 +1,158 @@
+
+@use "../font/font" as *;
+@use "../variable/variables" as *;
+
+%flex {
+    display: flex;
+    justify-content: center;
+}
+
+.contact_us {
+    width: 100%;
+    @extend %flex;
+    .contact_container {
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+
+        .contact_title {
+            grid-column: span 2;
+            margin: 4rem 0;
+            background-color: $darkBlue;
+            width: fit-content;
+            padding: 1rem 3rem;
+            grid-column: span 2;
+            place-self: center;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: $darkBlue;
+                width: 100%;
+                height: 100%;
+                transform: skew(30deg);
+                left: -20px;
+                top: 0;
+                z-index: -5;
+            }
+    
+            &::after {
+                content: "";
+                position: absolute;
+                background: $darkBlue;
+                width: 10px;
+                height: 100%;
+                transform: skew(30deg);
+                left: -40px;
+                top: 0;
+                z-index: -5;
+            }
+
+            h2 {
+                color: $white;
+                font-family: $AbyssFont;
+            }
+        }
+        .contact_sub_title {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            h2 {
+                color: $white;
+                font-family: $IMFellFont;
+                position: relative;
+                letter-spacing: 1px;
+                word-spacing: .5rem;
+
+                span {
+                    color: $lightBlue;
+                    font-size: 25px;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background-color: $lightBlue;
+                    width: 25px;
+                    height: 5px;
+                    left: 0;
+                    bottom: -5px;
+                }
+            }
+
+            .form {
+                width: 100%;
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    width: 100%;
+                    
+                    label {
+                        color: $white;
+                        font-family: $itemFont;
+                    }
+                    input:not(.submit_btn),
+                    textarea {
+                        width: 80%;
+                        padding: 10px 15px;
+                        margin-top: 8px;
+                        outline: none;
+                        border-radius: 3px;
+                        border: none;
+                    }
+                    .submit_btn {
+                        width: 150px;
+                        padding: 10px;
+                        background-color: $darkBlue;
+                        border-radius: 15px;
+                        color: $white;
+                        font-family: $itemFont;
+                        font-weight: bold;
+                        font-size: 18px;
+                        position: relative;
+                        left: calc(50% - 10%);
+                        transform: translateX(-50%);
+                        border: none;
+                    }
+                }
+            }
+        }
+        .contact_img {
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    // media of contact 
+    @media (max-width: 689px) {
+        .contact_container {
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 1fr;
+            row-gap: 2rem;
+            .contact_title {
+                margin: 2rem;
+            }
+            .contact_img {
+                grid-row: 2;
+            }
+            .contact_sub_title {
+                grid-row: 3;
+                .form form input,
+                .form form textarea {
+                    width: 100% !important;
+                }
+                .form form .submit_btn {
+                    left: unset;
+                    transform: unset;
+                    border: none;
+                }
+            }
+        }
+    }
+}

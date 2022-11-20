@@ -23,8 +23,8 @@
                 </div>
                 <div class="manage">
                     <ul>
-                        <li><img src="./frontend/Sass/images/🦆 icon _people outline_.png" alt="" width="30px"><span>Members</span></li>
-                        <li><img src="./frontend/Sass/images/🦆 icon _home outline_.png" alt="" width="30px"><span>Clubs</span></li>
+                        <li style="padding: 2rem 1rem 2rem 1.5rem; background-color: #212429;"><a href="./dashboard.php"><img src="./frontend/Sass/images/🦆 icon _people outline_.png" alt="" width="30px"><span>Members</span></a></li>
+                        <li><a href="./dashboard_clubs.php"><img src="./frontend/Sass/images/🦆 icon _home outline_.png" alt="" width="30px"><span>Clubs</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -68,7 +68,7 @@
                                 
                                 echo '
                                 <tr num='.$row['Id'].'>
-                                    <td><span>'.$row['FullName'].'</span></td>
+                                    <td>'.$row['Name'].'</td>
                                     <td>'.$row['Class'] .'</td>
                                     <td>'.$row['Email'].'</td>
                                     <td>'.$row['Club'].'</td>
@@ -88,7 +88,7 @@
                 <form action="./backend/Module/addMembre.php" method="POST">
                     <div class="name">
                         <label for="name">Name</label> <br>
-                        <input type="text" name="FullName" id="name" placeholder="Full name" required>
+                        <input type="text" name="Name" id="name" placeholder="Full name" required>
                     </div>
                     <div class="class">
                         <label for="class">Class</label> <br>

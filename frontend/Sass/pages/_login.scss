@@ -7,24 +7,39 @@
 //     background-color: #8ed1fc;
 // }
 
-.login {
-    background-color: #ffffff;
+.login_body {
+    background-color: $backgroundColor;
+    position: relative;
     display: flex;
     flex-direction: column;
-    width: 40%;
-    height: 26rem;
-    
-    padding: 1.5rem;
-    gap: 1.9rem;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 5rem;
+}
+
+.login {
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    width: 40%;    
+    padding: 2rem;
     position: relative;
-    margin: 3rem auto;
+
+    gap: 1.9rem;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
 
 }
 
 .login::after {
     content: "";
     position: absolute;
-    background-color: rgb(110 133 255);
+    background-color: $darkBlue;
     width: 30px;
     height: 100%;
     right: -30px;
@@ -32,7 +47,7 @@
 }
 
 .text-1 {
-    color: rgb(110 133 255);
+    color: $darkBlue;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
@@ -46,9 +61,9 @@
 .ps>input {
     background-color: rgb(255, 255, 255);
     border: none;
-    height: 40px;
     box-shadow: 0px 2px 3px rgb(192, 192, 192);
     border-radius: 10px;
+    padding: 1rem;
 }
 
 label {
@@ -67,13 +82,20 @@ label {
     align-items: center;
     cursor: pointer;
     font-weight: bold;
-    box-shadow: 0px 2px 3px rgb(192, 192, 192);
-    border-radius: .8rem;
+    box-shadow: 0px 0px 3px rgb(192, 192, 192);
+    border-radius: 4px;
     border: none;
+    
+}
+
+.ok {
+    background-color: $darkBlue;
+    color: white;
 }
 
 .ok:hover {
-    background-color: rgb(110 133 255);
+    background-color: $white;
+    color: $darkBlue;
     transition: all 300ms ease-in-out;
 }
 
@@ -86,12 +108,9 @@ li{
    text-align: right;
 }
 
-@media screen and (max-width: 413px) {
+@media (max-width: 689px) {
     .login {
-        width: 71%;
-        height: 354px;
-        margin-right: 43px;
-        gap: 16px;
+        width: calc(90% - 30px);
     }
    
 }

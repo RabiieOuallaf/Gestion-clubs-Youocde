@@ -1,0 +1,75 @@
+
+@use "../font/font" as *;
+@use "../variable/variables" as *;
+
+
+
+footer {
+    background-color: #525252;
+    color: white;
+    height: 100px;
+    
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        box-shadow: 0 -3px 3px #ccc;
+
+        .copyright {
+            background: white;
+            color: black;
+            font-size: 11px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            
+            p {
+                width: 80%;
+                text-align: center;
+            }
+        }
+
+        .social_media {
+            text-align: center;
+            .media img {
+                width: 25px;
+            }
+        }
+    }
+
+
+    @media (max-width: 689px) {
+        height: fit-content;
+    
+        .container {
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 1rem;
+            padding: 0 0 1rem 0;
+            
+            .copyright {
+                height: 100%;
+                width: 60%;
+                padding: 1rem 0;
+                gap: 1rem;
+                
+                img {
+                    width: 50%;
+                }
+            }
+            .tel {
+                order: 2;
+            }
+            
+            .social_media {
+                order: 3;
+            }
+        }
+    }
+}
+
+
+

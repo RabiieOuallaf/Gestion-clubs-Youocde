@@ -23,8 +23,8 @@
                 </div>
                 <div class="manage">
                     <ul>
-                        <li><img src="./frontend/Sass/images/🦆 icon _people outline_.png" alt="" width="30px"><span>Members</span></li>
-                        <li><img src="./frontend/Sass/images/🦆 icon _home outline_.png" alt="" width="30px"><span>Clubs</span></li>
+                        <li><a href="./dashboard_membre.php"><img src="./frontend/Sass/images/🦆 icon _people outline_.png" alt="" width="30px"><span>Members</span></a></li>
+                        <li style="background: #212429; padding: 2rem 1rem 2rem 1.5rem;"><a href="./dashboard_clubs.php"><img src="./frontend/Sass/images/🦆 icon _home outline_.png" alt="" width="30px"><span>Clubs</span></a></li>
                     </ul>
                 </div>
             </div>
