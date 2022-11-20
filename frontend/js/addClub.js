@@ -1,13 +1,11 @@
-
-
 let addBtn = document.querySelector("#btn_add");
 let popUp = document.getElementById("pop_up");
 let cancel = document.getElementById("cancel");
 
-
-addBtn.addEventListener("click", () => {
+addBtn.addEventListener("click", _ => {
     popUp.style.display = "block";
 })
+
 cancel.addEventListener("click", () => {
     popUp.style.display = "none";
 })
