@@ -1149,7 +1149,11 @@ hr {
   position: relative;
 }
 .join_us .join_container .how_to_join h2 span {
+<<<<<<< HEAD
+  color: #1877F2;
+=======
   color: #5EC2ED;
+>>>>>>> 3182f9f7b6b8ebc02f425b425a04e27beb1622b0
   font-size: 2rem;
   position: relative;
 }
@@ -1306,7 +1310,11 @@ hr {
   word-spacing: 0.5rem;
 }
 .contact_us .contact_container .contact_sub_title h2 span {
+<<<<<<< HEAD
+  color: #1877F2;
+=======
   color: #5EC2ED;
+>>>>>>> 3182f9f7b6b8ebc02f425b425a04e27beb1622b0
   font-size: 25px;
 }
 .contact_us .contact_container .contact_sub_title h2::after {
