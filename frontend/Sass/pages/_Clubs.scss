@@ -25,12 +25,6 @@ $white : #ffff;
 }
 
 /* == General Styling == */ 
-body 
-{
-    background-color: $bg_color;
-
-
-}
 
 .container
 {
@@ -40,22 +34,42 @@ body
     width: 1120px;
     margin: auto;
 
-
-
     .clubs-header 
     {
-        /* == Dimensions == */
-
-        width: 15rem;
-        height: 5.5rem;
-
         /* == For position == */
 
-        margin: auto;
+        margin: 3rem auto 0 auto;
         display: flex;
         justify-content: center;
         background-color: $base_color;
         text-align: center;
+        padding: 1rem 3rem;
+        position: relative;
+        z-index: 10;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: $base_color;
+            width: 100%;
+            height: 100%;
+            transform: skew(30deg);
+            left: -30px;
+            top: 0;
+            z-index: -5;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            background: $base_color;
+            width: 10px;
+            height: 100%;
+            transform: skew(30deg);
+            left: -50px;
+            top: 0;
+            z-index: -5;
+        }
 
         /* == |Clubs| header styling == */
 
@@ -72,10 +86,7 @@ body
     }
     
     /* == Clubs Content styling (Container) == */ 
-    .Clubs-conent
-    {
-        
-
+    .Clubs-conent {
         margin-top: 4rem;
         width: 100%;
         display: flex;
@@ -157,10 +168,9 @@ body
 
         .Clubs-content-preview 
         {
-
-            color: white;
+            color: $white;
             display: flex;
-
+            
             .Clubs-categories
             {
                 width: 45%;
@@ -185,6 +195,7 @@ body
                     flex-direction: column;
                     margin: 2rem 0 0 .4rem;
                     gap: 1rem;
+                    color: $white;
                     
                     h2 
                     {
@@ -215,6 +226,7 @@ body
                         label 
                         {
                             font-family: Rock;
+                            color: $white;
                         }
 
                         

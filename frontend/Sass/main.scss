@@ -14,6 +14,10 @@
     justify-content: center;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-image: url(./images/background\ image.png);
     background-repeat: no-repeat;
@@ -44,6 +48,32 @@ hr {
             padding: 1rem 3rem;
             grid-column: span 2;
             place-self: center;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: $base_color;
+                width: 100%;
+                height: 100%;
+                transform: skew(30deg);
+                left: -20px;
+                top: 0;
+                z-index: -5;
+            }
+    
+            &::after {
+                content: "";
+                position: absolute;
+                background: $base_color;
+                width: 10px;
+                height: 100%;
+                transform: skew(30deg);
+                left: -40px;
+                top: 0;
+                z-index: -5;
+            }
+
             h2 {
                 font-family: $AbyssFont;
                 color: $white;
@@ -190,6 +220,31 @@ hr {
             padding: 1rem 3rem;
             grid-column: span 2;
             place-self: center;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: $base_color;
+                width: 100%;
+                height: 100%;
+                transform: skew(30deg);
+                left: -20px;
+                top: 0;
+                z-index: -5;
+            }
+    
+            &::after {
+                content: "";
+                position: absolute;
+                background: $base_color;
+                width: 10px;
+                height: 100%;
+                transform: skew(30deg);
+                left: -40px;
+                top: 0;
+                z-index: -5;
+            }
 
             h2 {
                 color: $white;
@@ -256,6 +311,7 @@ hr {
                         position: relative;
                         left: calc(50% - 10%);
                         transform: translateX(-50%);
+                        border: none;
                     }
                 }
             }

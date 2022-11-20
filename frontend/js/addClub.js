@@ -1,3 +1,5 @@
+
+
 let addBtn = document.querySelector("#btn_add");
 let popUp = document.getElementById("pop_up");
 let cancel = document.getElementById("cancel");
@@ -23,5 +25,3 @@ function delMembre(e) {
 
         row.remove();
 }
-
-
