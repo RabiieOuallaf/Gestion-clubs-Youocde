@@ -21,5 +21,11 @@ CREATE TABLE CLUBS(
 	Image varchar(255)
 );
 
+CREATE TABLE ADMIN(
+    Id INT NOT NULL PRIMARY KEY auto_increment,
+	UserName VARCHAR(255),
+    Password VARCHAR(255)
+);
+
 SELECT * FROM ADMIN;
 

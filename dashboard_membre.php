@@ -38,7 +38,6 @@
                         <h4><span>M</span>embers</h4>
                     </div>
                     <div class="admin_icon">
-                        <img src="./frontend/Sass/images/🦆 icon _search outline_.png" alt="">
                         <img src="./frontend/Sass/images/🦆 icon _bell outline_.png" alt="">
                         <img src="./frontend/Sass/images/art 1.png" alt="" width="50px" class="admin">
                         <img src="./frontend/Sass/images/🦆 icon _log out_.png" alt="">
@@ -69,7 +68,8 @@
                                 
                                 echo '
                                 <tr num='.$row['Id'].'>
-                                    <td><span>'.$row['FullName'].'</span></td>
+                                    <td>'.$row['Id'] .'</td>
+                                    <td><span>'.$row['Name'].'</span></td>
                                     <td>'.$row['Class'] .'</td>
                                     <td>'.$row['Email'].'</td>
                                     <td>'.$row['Club'].'</td>
