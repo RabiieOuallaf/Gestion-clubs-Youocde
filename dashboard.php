@@ -58,6 +58,7 @@
                         if($checkResult > 0){
                             echo '<table>
                                 <tr>
+                                    <th>Id</th>
                                     <th>Nome</th>
                                     <th>Class</th>
                                     <th>Email</th>
@@ -68,11 +69,16 @@
                                 
                                 echo '
                                 <tr num='.$row['Id'].'>
+                                    <td>'.$row['Id'].'</td>
                                     <td><span>'.$row['FullName'].'</span></td>
                                     <td>'.$row['Class'] .'</td>
                                     <td>'.$row['Email'].'</td>
                                     <td>'.$row['Club'].'</td>
-                                    <td><button><i class="fa-regular fa-pen-to-square"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                                    <td>
+                                        <button><a href="./updateMemeberforum.php?updateid='.$row['Id'].'&updateName='.$row['FullName'].'&updateClass='.$row['Class'].'&updateEmail='.$row['Email'].'&updateClub='.$row['Club'].'" >Update</a><<i class="fa-regular fa-pen-to-square"></i></button>
+                                        <button><a href="./backend/Module/deleteMemeber.php?deletedid='.$row['Id'].'" >Delete</a><i class="fa-solid fa-trash"></i></button>
+                                     
+                                     </td>
                                 </tr>';
                             }
                             echo '</table>';
@@ -86,6 +92,11 @@
         <div class="pop_up pop" id="pop_up">
             <div class="form">
                 <form action="./backend/Module/addMembre.php" method="POST">
+                    
+                    <div class="name">
+                    <label for="id">Id</label> <br>
+                        <input type="text" name="Id" id="id" placeholder="Member Id" readonly>
+                    </div>
                     <div class="name">
                         <label for="name">Name</label> <br>
                         <input type="text" name="FullName" id="name" placeholder="Full name" required>

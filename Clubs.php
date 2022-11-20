@@ -65,11 +65,16 @@
                             </tr>';
                         while ($row = mysqli_fetch_assoc($result)) {
                             
-                            echo '<tr num='.$row['Id'].'>
+                            echo '<tr>
                                 <td><span>'.$row['Name'].'</span></td>
                                 <td>'.$row['Description'] .'</td>
                                 <td>'.$row['Image'].'</td>
-                                <td><button ><a href="./backend/Module/deleteClub.php?deletedid='.$row['Id'].'" >Delete</a></button></td>
+                                <td>
+                                    
+                                    <button><a href="./updateClubForum.php?updateid='.$row['Id'].'&updateName='.$row['Name'].'&updateDescription='.$row['Description'].'&updateImage='.$row['Image'].' "> Update </a><i class="fa-regular fa-pen-to-square"></i></button>
+                                    <button><a href="./backend/Module/deleteClub.php?deletedid='.$row['Id'].'" >Delete</a><i class="fa-solid fa-trash"></i></button>
+                                     
+                                </td>
                             </tr>';
                         }
                         echo '</table>';
