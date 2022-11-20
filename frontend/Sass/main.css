@@ -9,10 +9,6 @@
   src: url(font/freehand/Freehand/Freehand-Regular.ttf);
 }
 /* == General Styling == */
-body {
-  background-color: #212429;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -23,7 +19,7 @@ body {
 }
 .container .clubs-header {
   /* == For position == */
-  margin: auto;
+  margin: 3rem auto 0 auto;
   display: flex;
   justify-content: center;
   background-color: #1877F2;
@@ -147,6 +143,7 @@ body {
   flex-direction: column;
   margin: 2rem 0 0 0.4rem;
   gap: 1rem;
+  color: white;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-categories .Clubs-checkbox h2 {
   font-family: Rock;
@@ -168,6 +165,7 @@ body {
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-categories .Clubs-checkbox .Clubs-checkbox-child label {
   font-family: Rock;
+  color: white;
 }
 .container .Clubs-conent .Clubs-content-preview .Clubs-sections {
   /* == Art clubs styling == */
@@ -799,6 +797,271 @@ body {
   }
 }
 
+.join_us, .join_us .join_container .how_to_join .box_btn, .contact_us, header .header_container .nav_bar ul, header .header_container .nav_bar, header {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  height: 200vh;
+}
+
+header {
+  background-color: rgba(34, 38, 43, 0.7);
+  width: 100%;
+  height: 6rem;
+  position: fixed;
+  z-index: 100;
+}
+header .header_container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header_container .nav_bar {
+  align-items: center;
+  height: 100%;
+}
+header .header_container .nav_bar ul {
+  height: 100%;
+  list-style: none;
+}
+header .header_container .nav_bar ul li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 2rem;
+  transition: all 0.4s linear;
+}
+header .header_container .nav_bar ul li:hover {
+  background: #1877F2;
+}
+header .header_container .nav_bar ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+header .header_container .sign_in button {
+  background: #1877F2;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+header .header_container .sign_in button:hover {
+  background: white;
+  color: #1877F2;
+}
+
+main .article_container .background_img img {
+  width: 100%;
+  position: relative;
+  filter: blur(5px);
+}
+main .article_container .content {
+  width: 90%;
+  position: absolute;
+  top: calc(50% - 6rem);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: auto 1fr 1fr auto;
+  align-items: center;
+  place-items: center;
+  gap: 3rem;
+}
+main .article_container .content .club_img img {
+  border-radius: 5px;
+}
+main .article_container .content .club_img .info_img {
+  color: white;
+  font-family: "Itim", cursive;
+  text-align: right;
+  font-size: 1.5rem;
+}
+main .article_container .content .club_img .info_img span {
+  position: relative;
+}
+main .article_container .content .club_img .info_img span::after {
+  content: "";
+  position: absolute;
+  background-color: antiquewhite;
+  width: 100%;
+  height: 4px;
+  border-radius: 3px;
+  bottom: -5px;
+  right: 0;
+}
+main .article_container .content .text_content {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+main .article_container .content .text_content h2 {
+  font-size: 4rem;
+  font-family: "IM Fell English SC", serif;
+  position: relative;
+}
+main .article_container .content .text_content h2::after {
+  content: "";
+  position: absolute;
+  background-color: #1877F2;
+  left: 0;
+  bottom: -10px;
+  width: 30px;
+  height: 7px;
+}
+main .article_container .content .text_content h2 span {
+  color: #1877F2;
+}
+main .article_container .content .text_content p {
+  font-family: "Itim", cursive;
+}
+main .article_container .content .text_content .see_more_btn {
+  display: flex;
+  justify-content: center;
+}
+main .article_container .content .text_content .see_more_btn button {
+  font-weight: bold;
+  background-color: #1877F2;
+  padding: 1rem 2rem;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: all 0.4 linear;
+  cursor: pointer;
+}
+main .article_container .content .text_content .see_more_btn button:hover {
+  background-color: white;
+  color: #1877F2;
+}
+main .article_container .content .slide_icon {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 3px;
+  transition: all 0.4 ease;
+  cursor: pointer;
+}
+main .article_container .content .slide_icon:hover {
+  background: #1877F2;
+  color: white;
+}
+main .article_container .content .slide_icon i {
+  font-size: 1.5rem;
+}
+main .slider_btn {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  top: calc(50% + 10rem);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .slider_btn div {
+  background: white;
+  width: 13px;
+  height: 13px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+main .slider_btn div:hover {
+  background-color: #5EC2ED;
+}
+
+.login {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 26rem;
+  padding: 1.5rem;
+  gap: 1.9rem;
+  position: relative;
+  margin: 3rem auto;
+}
+
+.login::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(110, 133, 255);
+  width: 30px;
+  height: 100%;
+  right: -30px;
+  top: 0;
+}
+
+.text-1 {
+  color: rgb(110, 133, 255);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.us,
+.ps {
+  display: flex;
+  flex-direction: column;
+}
+
+.us > input,
+.ps > input {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  height: 40px;
+  box-shadow: 0px 2px 3px rgb(192, 192, 192);
+  border-radius: 10px;
+}
+
+label {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: xx-large;
+  font-weight: bold;
+  color: #000000;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.go > input {
+  margin-top: 0.7rem;
+  width: 7rem;
+  height: 3rem;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0px 2px 3px rgb(192, 192, 192);
+  border-radius: 0.8rem;
+  border: none;
+}
+
+.ok:hover {
+  background-color: rgb(110, 133, 255);
+  transition: all 300ms ease-in-out;
+}
+
+.go {
+  align-self: center;
+}
+
+li {
+  list-style: none;
+  color: #000000;
+  text-align: right;
+}
+
+@media screen and (max-width: 413px) {
+  .login {
+    width: 71%;
+    height: 354px;
+    margin-right: 43px;
+    gap: 16px;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -808,6 +1071,10 @@ body {
 .contact_us, .join_us .join_container .how_to_join .box_btn, .join_us {
   display: flex;
   justify-content: center;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

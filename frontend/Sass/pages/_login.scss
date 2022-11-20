@@ -1,6 +1,11 @@
-body {
-    background-color: #8ed1fc;
-}
+
+@use "../font/font" as *;
+@use "../variable/variables" as *;
+
+
+// body {
+//     background-color: #8ed1fc;
+// }
 
 .login {
     background-color: #ffffff;

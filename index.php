@@ -11,8 +11,69 @@
 </head>
 <body>
 
+
+    <!-- header start -->
+    <header id="header_container">
+        <div class="header_container" >
+            <div class="logo">
+                <img src="./frontend/Sass/images/logo.png" alt="" width="200px">
+            </div>
+            <nav class="nav_bar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#club">Clubs</a></li>
+                    <li><a href="#join us">Join Us</a></li>
+                    <li><a href="#contact us">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="sign_in">
+                <button class="sign_btn">Sign in</button>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+    
+    <!-- slider home start -->
+    <main class="article" id="home">
+
+        <div class="article_container">
+
+            <div class="background_img"><img src="./frontend/Sass/images/youcodefamily.png" alt=""></div>
+
+            <div class="content">
+                <div class="slide_icon"><i class="fa-solid fa-arrow-left"></i></div>
+                <div class="club_img">
+                    <img src="./frontend/Sass/images/sport 1.png" alt="" width="400px">
+                    <div class="info_img">By <span>Unknown</span></div>
+                </div>
+                <div class="text_content">
+                    <h2><span>Y</span>ou<span>C</span>ode Clubs</h2>
+                    <p>lorem ipsum est, en imprimerie, une suite de mots sans signification 
+                        utilisée à titre provisoire pour calibrer une mise en page, 
+                        le texte définitif venant remplacer le faux-texte dès 
+                        qu'il est prêt ou que la mise en page est achevée. 
+                    </p>
+                    <div class="see_more_btn">
+                        <button>See More</button>
+                    </div>
+                </div>
+                <div class="slide_icon"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+            <div class="slider_btn">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+        </div>
+
+    </main>
+    <!-- slide home end -->
+
+
     <!-- body -->
-    <div class="container">
+    <div class="container" id="club">
         <!-- Clubs headder --> 
         <div class="clubs-header">
             <h1>Clubs</h1>
@@ -263,7 +324,7 @@
     <!-- club categorie end  -->
     
     <!-- join us start -->
-    <section class="join_us">
+    <section class="join_us" id="join us">
         <div class="join_container">
             <div class="join_title">
                 <h2>Join Us</h2>
@@ -299,7 +360,7 @@
     <hr>
 
     <!-- contact us start -->
-    <section class="contact_us">
+    <section class="contact_us" id="contact us">
         <div class="contact_container">
             <div class="contact_title">
                 <h2>Contact Us</h2>
@@ -333,7 +394,24 @@
     </section>
     <!-- contact us end -->
 
+
+
+    
 </body>
     <script src="https://kit.fontawesome.com/28113ccba1.js" crossorigin="anonymous"></script>
     <script src="./frontend/js/Club.js" ></script>
+    <script>
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+                document.getElementById("header_container").style.cssText = "padding: 1rem 10rem; background-color: rgba(34 38 43 /1)";
+
+            } else {
+                document.getElementById("header_container").style.cssText = "padding:0; background-color: rgba(34 38 43 /.7)";
+            }
+        }
+    </script>
 </html>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Sass/header.scss">
+    <link rel="stylesheet" href="./frontend/Sass/header.scss">
     <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Itim&display=swap" rel="stylesheet">
@@ -20,10 +20,10 @@
 
         <nav class="nav-bar" id="nav-Bar">
             <span class="menu-icon">
-                <img class="burger" src="./Sass/images/menu.png" alt="burger">
+                <img class="burger" src="./frontend/Sass/images/menu.png" alt="burger">
             </span>
             <div class="nav-logo">
-                <a href="./header.php"><img src="./Sass/images/logo.png" alt="YouCode Clubs"></a>
+                <a href="./header.php"><img src="./frontend/Sass/images/logo.png" alt="YouCode Clubs"></a>
             </div>
 
             <ul class="nav-list">
@@ -32,7 +32,7 @@
                 <li><a href="#clubs">Clubs</a></li>
                 <li><a href="#join us">join Us</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <span class="close"><img src="./Sass/images/close.png" alt=""></span>
+                <span class="close"><img src="./frontend/Sass/images/close.png" alt=""></span>
 
             </ul>
             <div class="nav-sing">
@@ -46,15 +46,15 @@
     </header>
     <main class="article">
         <div class="background">
-            <img class="cover" src="./Sass/images/youcodefamily.png" alt="YouCode Familly">
+            <img class="cover" src="./frontend/Sass/images/youcodefamily.png" alt="YouCode Familly">
 
             <div class="inside-background">
                 <div class="left">
-                    <img src="./Sass/images/left flesh.png" alt="left button">
+                    <i class="fa-solid fa-arrow-left"></i>
 
                 </div>
                 <div class="club-article">
-                    <img src="./Sass/images/sport 1.png" alt="football">
+                    <img src="./frontend/Sass/images/sport 1.png" alt="football">
                     <h2 class="text-1">by Team</h2>
                 </div>
                 <div class="context-background">
@@ -63,7 +63,7 @@
                     <a class="see-mr" href="#clubs"><button>See more</button></a>
                 </div>
                 <div class="right">
-                    <img src="./Sass/images/right flesh.png" alt="right button">
+                    <img src="./frontend/Sass/images/right flesh.png" alt="right button">
                 </div>
 
             </div>
