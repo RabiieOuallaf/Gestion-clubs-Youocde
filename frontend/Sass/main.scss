@@ -1,7 +1,7 @@
 
 @use "./font/font" as *;
 @use "./variable/variables" as *;
-@use "./pages" as *;
+@use "./pages/allPage" as *;
 
 * {
     padding: 0;
@@ -12,6 +12,10 @@
 %flex {
     display: flex;
     justify-content: center;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -44,6 +48,32 @@ hr {
             padding: 1rem 3rem;
             grid-column: span 2;
             place-self: center;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: $base_color;
+                width: 100%;
+                height: 100%;
+                transform: skew(30deg);
+                left: -20px;
+                top: 0;
+                z-index: -5;
+            }
+    
+            &::after {
+                content: "";
+                position: absolute;
+                background: $base_color;
+                width: 10px;
+                height: 100%;
+                transform: skew(30deg);
+                left: -40px;
+                top: 0;
+                z-index: -5;
+            }
+
             h2 {
                 font-family: $AbyssFont;
                 color: $white;
@@ -54,7 +84,7 @@ hr {
             display: grid;
             gap: 2rem;
             margin-bottom: 2rem;
-            h3 {
+            h2 {
                 color: $white;
                 font-family: $IMFellFont;
                 word-spacing: .5rem;
@@ -63,6 +93,7 @@ hr {
                 span {
                     color: $lightBlue;
                     font-size: 2rem;
+                    position: relative;
                     &::after {
                         content: "";
                         position: absolute;
@@ -90,6 +121,13 @@ hr {
                     flex-direction: column;
                     box-shadow: 0 0 5px 0 black;
                     gap: .6rem;
+                    cursor: pointer;
+                    transition: all .3s ease-in-out;
+
+                    &:hover {
+                        transform: translateY(-5px);
+                    }
+
                     img {
                         width: 40px;
                     }
@@ -125,44 +163,8 @@ hr {
                 transition: all 1s ease-in-out;
 
                 animation: multiColor 7s alternate infinite;
-                &::after {
-                    content: "";
-                    position: absolute;
-                    background-color: white;
-                    width: 60px;
-                    height: 30px;
-                    left: 20px;
-                    top: 40px;
-                    border-radius: 50%;
-                    transform: rotate(-30deg);
-                    transition: all 1s ease-in-out;
-                }
-                &::before {
-                    content: "";
-                    position: absolute;
-                    background-color: white;
-                    width: 10px;
-                    height: 10px;
-                    left: 60px;
-                    top: 80px;
-                    border-radius: 50%;
-                    transition: all .5s ease-in-out;
-                }
                 &:hover {
                     border-radius: 50%;
-                    &::after {
-                        left: 25px;
-                        top: 45px;
-                        height: 20px;
-                        transform: rotate(-45deg);
-                        transition: all .5s ease-in-out;
-                    }
-                    &::before {
-                        left: 63px;
-                        top: 83px;
-                        transition: .5s ease-in-out;
-                    }
-                    transition: .5s ease-in-out;
                 }
 
                 p {
@@ -218,6 +220,31 @@ hr {
             padding: 1rem 3rem;
             grid-column: span 2;
             place-self: center;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: $base_color;
+                width: 100%;
+                height: 100%;
+                transform: skew(30deg);
+                left: -20px;
+                top: 0;
+                z-index: -5;
+            }
+    
+            &::after {
+                content: "";
+                position: absolute;
+                background: $base_color;
+                width: 10px;
+                height: 100%;
+                transform: skew(30deg);
+                left: -40px;
+                top: 0;
+                z-index: -5;
+            }
 
             h2 {
                 color: $white;
@@ -229,7 +256,7 @@ hr {
             flex-direction: column;
             gap: 1rem;
 
-            h3 {
+            h2 {
                 color: $white;
                 font-family: $IMFellFont;
                 position: relative;
@@ -284,6 +311,7 @@ hr {
                         position: relative;
                         left: calc(50% - 10%);
                         transform: translateX(-50%);
+                        border: none;
                     }
                 }
             }
@@ -359,3 +387,4 @@ hr {
         inset -10px -10px 25px rgba(0, 0, 0, 0.9);
     }
 }
+

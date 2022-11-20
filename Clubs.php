@@ -1,351 +1,117 @@
+<?php
+    require_once './backend/Module/Connection.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clubs</title>
-    <!-- <link rel="stylesheet" href="Sass/Clubs.css"> -->
-
-
-    
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Itim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./frontend/Sass/main.css">
+    <title>Dashboard</title>
 </head>
 <body>
-
-    <div class="container">
-
-        <!-- Clubs headder --> 
-
-        <div class="clubs-header">
-            <h1>Clubs</h1>
-        </div>
-
-        <!-- Clubs content -->
-
-        <div class="Clubs-conent">
-
-            <!-- Clubs Menu -->
-
-            <div class="Clubs-content-menu">
-                
-                <h2>Wich <span>club</span> you are intrested in ?</h2>
-                
-                <div class="Menu-buttons">
-
-                    <button id="Menu-btn" value="fotball">Football club</button>
-                    <button id="Menu-btn" value="design">Design club</button>
-                    <button id="Menu-btn" value="robotique">Robotique</button>
-                    <button id="Menu-btn" value="gaming">Gaming club</button>
-                    <button id="Menu-btn" value="hack">Hack club</button>
-                    <button id="Menu-btn" value="events">Events club</button>
-                    <button id="Menu-btn" value="social">Social Club</button>
-                    <button id="Menu-btn" value="night">Night club</button>
-
+    
+    <div class="body">
+        <section class="dashboard_bar">
+            <div class="dash_container">
+                <div class="logo">
+                    <a href="./index.php"><img src="./frontend/Sass/images/logo.png" alt=""></a>
                 </div>
-
-                <div class="Menu-select">
-                        <select id="select" class="select">
-                            <option>Football Club</option>
-                            <option>Design Club</option>
-                            <option>Robotique Club</option>
-                            <option>Gaming Club</option>
-                            <option>Hack Club</option>
-                            <option>Events Club</option>
-                            <option>Social Club</option>
-                            <option>Night Club</option>
-                        </select> 
+                <div class="manage">
+                    <ul>
+                        <li><img src="./frontend/Sass/images/🦆 icon _people outline_.png" alt="" width="30px"><span>Members</span></li>
+                        <li><img src="./frontend/Sass/images/🦆 icon _home outline_.png" alt="" width="30px"><span>Clubs</span></li>
+                    </ul>
                 </div>
+            </div>
+        </section>
+    
+        <section class="dashboard_header">
 
+            <div class="dash_container">
+                <div class="elements">
+                    <div class="title">
+                        <h4><span>M</span>embers</h4>
+                    </div>
+                    <div class="admin_icon">
+                        <img src="./frontend/Sass/images/🦆 icon _search outline_.png" alt="">
+                        <img src="./frontend/Sass/images/🦆 icon _bell outline_.png" alt="">
+                        <img src="./frontend/Sass/images/art 1.png" alt="" width="50px" class="admin">
+                        <img src="./frontend/Sass/images/🦆 icon _log out_.png" alt="">
+                    </div>
+                </div>
             </div>
 
-            <!-- Clubs preview --> 
+            <div class="tableaux_membre">
+                <div class="add" id="btn_add"><img src="./frontend/Sass/images/🦆 icon _plus_.png" alt=""></div>
 
-            <section class="Clubs-content-preview">
-
-                <div class="Clubs-categories">
-                    
-                    <input type="search" placeholder="Recherch un club" id="search"></input>
-                    <i class="fa-solid fa-search Searchicon"></i>
-                
-                    <div class="Clubs-checkbox">
-
-                        <h2><span>C</span>aregories</h2>
-                        
-                        <div class="Clubs-checkbox-child">
-
-                            <label>Art</label>
-                            <input type="checkbox">
+                <!-- table membres -->
+                <?php 
+                    // try and catch => check if there is an erreur in code php
+                    $sql = "SELECT * FROM clubs";
+                    $result = mysqli_query($conc, $sql);
+                    $checkResult = mysqli_num_rows($result);
+                    if($checkResult > 0){
+                        echo '<table>
+                            <tr>
+                                <th>Names</th>
+                                <th>Descriptions</th>
+                                <th>Images</th>
+                                <th>Actions</th>
+                            </tr>';
+                        while ($row = mysqli_fetch_assoc($result)) {
                             
-                        </div>
-                        
-                        <div class="Clubs-checkbox-child">
-
-                            <label>Sport</label>
-                            <input type="checkbox">
-                            
-                        </div>
-
-                        <div class="Clubs-checkbox-child">
-
-                            <label>Robotique</label>
-                            <input type="checkbox">
-                            
-                        </div>
-
-                        <div class="Clubs-checkbox-child">
-
-                            <label>Social</label>
-                            <input type="checkbox">
-                            
-                        </div>
-
-                        <div class="Clubs-checkbox-child">
-                            <label>Enviremoent</label>
-                            <input type="checkbox">
-                            
-                        </div>
+                            echo '<tr num='.$row['Id'].'>
+                                <td><span>'.$row['Name'].'</span></td>
+                                <td>'.$row['Description'] .'</td>
+                                <td>'.$row['Image'].'</td>
+                                <td><button ><a href="./backend/Module/deleteClub.php?deletedid='.$row['Id'].'" >Delete</a></button></td>
+                            </tr>';
+                        }
+                        echo '</table>';
+                    } else {
+                        echo "tableaux vide";
+                    }
+                ?>
+            </div>
+        </section>
+        <div class="pop_up pop" id="pop_up">
+            <div class="form">
+                <form action="./backend/Module/addClubs.php" method="POST">
+                    <!-- Add club name -->
+                    <div class="Club name">
+                        <label for="name">Club name</label> <br>
+                        <input type="text" name="Clubname" id="name" placeholder="Full name" required>
                     </div>
-                </div>
-
-                <div class="Clubs-sections">
-
-                    <!-- Art clubs --> 
-                    <h2 class="Club-headers">Art Clubs</h2>
-                    <div class="Art-clubs">
                     
-                        <div class="Art-clubs-single before-singl">
-                            
-                            <img src="sass/images/art 3.png" alt="art">
-
-                            <!-- First art club --> 
-
-                            <div class="Club-content">
-                                <h3>Eye catching</h3>
-
-                                <p>Created by : <span>....</span></p>
-                                <p>Location : <span>....</span></p>
-                                <p>Places left : <span>....</span></p>
-
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi aperiam, <br>
-                                    optio iusto iste ratione fuga perferendis corporis assumenda est in dolorum saepe, <br>
-                                    
-                                </p>
-
-                                <button>Register</button> 
-                            </div>
-                        </div>
-                            <!-- Second Art club --> 
-
-                        <div class="Art-clubs-single">
-                            <img src="sass/images/art1.png" alt="art">
-
-                            <div class="Club-content">
-                                <h3>Eye Awesome</h3>
-
-                                <p>Created by : <span>....</span></p>
-                                <p>Location : <span>....</span></p>
-                                <p>Places left : <span>....</span></p>
-
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi aperiam, <br>
-                                    optio iusto iste ratione fuga perferendis corporis assumenda est in dolorum saepe, <br>
-                                    
-                                </p>
-
-                                <button>Register</button> 
-                            </div>
-                        </div>
-
-                            <!-- Third Art club -->
-
-                        <div class="Art-clubs-single">    
-                            <img src="sass/images/art 2.png" alt="art">
-
-                            <div class="Club-content">
-                                <h3>Design art</h3>
-
-                                <p>Created by : <span>....</span></p>
-                                <p>Location : <span>....</span></p>
-                                <p>Places left : <span>....</span></p>
-
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi aperiam, <br>
-                                    optio iusto iste ratione fuga perferendis corporis assumenda est in dolorum saepe, <br>
-                                    
-                                </p>
-
-                                <button>Register</button> 
-                            </div>
-                        </div>
-                        
-                    
+                    <!-- Add club description -->
+                    <div class="description">
+                        <label for="description">Club description</label> <br>
+                        <input type="text" name="Clubdescription" id="name" placeholder="Description" required>
                     </div>
 
-                    <!-- Sport clubs -->
-                    <h2 class="Club-headers">Sport Clubs</h2>
-                    <div class="Sport-clubs">
+                    <!-- Add club image -->
 
-                        
-                    
-                        <div class="Sport-clubs-single">
-
-                            
-                            
-                            <img src="sass/images/sport 2.png" alt="art">
-
-                            <!-- First sport club --> 
-
-                            <div class="Club-content">
-                                <h3>Eye catching</h3>
-
-                                <p>Created by : <span>....</span></p>
-                                <p>Location : <span>....</span></p>
-                                <p>Places left : <span>....</span></p>
-
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi aperiam, <br>
-                                    optio iusto iste ratione fuga perferendis corporis assumenda est in dolorum saepe, <br>
-                                    
-                                </p>
-
-                                <button>Register</button> 
-                            </div>
-                        </div>
-                            <!-- Second Sport club --> 
-
-                        <div class="Sport-clubs-single">
-                            <img src="sass/images/sport 3.png" alt="art">
-
-                            <div class="Club-content">
-                                <h3>Eye catching</h3>
-
-                                <p>Created by : <span>....</span></p>
-                                <p>Location : <span>....</span></p>
-                                <p>Places left : <span>....</span></p>
-
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi aperiam, <br>
-                                    optio iusto iste ratione fuga perferendis corporis assumenda est in dolorum saepe, <br>
-                                    
-                                </p>
-
-                                <button>Register</button> 
-                            </div>
-                        </div>
-
-                            <!-- Third Art club -->
-
-                        <div class="Sport-clubs-single">    
-                            <img src="sass/images/sport 1.png" alt="art">
-
-                            <div class="Club-content">
-                                <h3>Eye catching</h3>
-
-                                <p>Created by : <span>....</span></p>
-                                <p>Location : <span>....</span></p>
-                                <p>Places left : <span>....</span></p>
-
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi aperiam, <br>
-                                    optio iusto iste ratione fuga perferendis corporis assumenda est in dolorum saepe, <br>
-                                    
-                                </p>
-
-                                <button>Register</button> 
-                            </div>
-                        </div>
-                        
-                    
+                    <div class="image">
+                        <label for="image">Club image</label> <br>
+                        <input type="text" name="Clubimage" id="name" placeholder="opload image" required>
                     </div>
 
-                    <!-- IT clubs -->
-                    <h2 class="Club-headers">IT Clubs</h2>
-                    <div class="IT-clubs">
-                    
-                        <div class="IT-clubs-single">
-                            
-                            <img src="sass/images/sport 2.png" alt="art">
-
-                            <!-- First IT club --> 
-
-                            <div class="Club-content">
-                                <h3>Eye catching</h3>
-
-                                <p>Created by : <span>....</span></p>
-                                <p>Location : <span>....</span></p>
-                                <p>Places left : <span>....</span></p>
-
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi aperiam, <br>
-                                    optio iusto iste ratione fuga perferendis corporis assumenda est in dolorum saepe, <br>
-                                    
-                                </p>
-
-                                <button>Register</button> 
-                            </div>
-                        </div>
-                            <!-- Second IT club --> 
-
-                        <div class="IT-clubs-single">
-                            <img src="sass/images/sport 1.png" alt="art">
-
-                            <div class="Club-content">
-                                <h3>Eye catching</h3>
-
-                                <p>Created by : <span>....</span></p>
-                                <p>Location : <span>....</span></p>
-                                <p>Places left : <span>....</span></p>
-
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi aperiam, <br>
-                                    optio iusto iste ratione fuga perferendis corporis assumenda est in dolorum saepe, <br>
-                                    
-                                </p>
-
-                                <button>Register</button> 
-                            </div>
-                        </div>
-
-                            <!-- Third IT club -->
-
-                        <div class="IT-clubs-single">    
-                            <img src="sass/images/sport 3.png" alt="art">
-                            <div class="line"></div>
-                            <div class="Club-content">
-                                <h3>Eye catching</h3>
-
-                                <p>Created by : <span>....</span></p>
-                                <p>Location : <span>....</span></p>
-                                <p>Places left : <span>....</span></p>
-
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi aperiam, <br>
-                                    optio iusto iste ratione fuga perferendis corporis assumenda est in dolorum saepe, <br>
-                                    
-                                </p>
-
-                                <button>Register</button> 
-                            </div>
-                        </div>
-                        
-                    
+                    <div class="btns">
+                        <input type="submit" id="submit" class="submit" value="Ajouter">
+                        <button class="submit" id="cancel" style="background-color:red; cursor: pointer;">Cancel</button>
                     </div>
 
-                
-                
 
-            </section>
-            
-
+                </form>
+            </div>
         </div>
-
     </div>
 
-    <!-- Javascript files -->
-    <script src="https://kit.fontawesome.com/28113ccba1.js" crossorigin="anonymous"></script>
-    <script src="./js/Club.js" ></script>
-
-
 </body>
+    <script src="./frontend/js/addClub.js" type="module"></script>
 </html>
