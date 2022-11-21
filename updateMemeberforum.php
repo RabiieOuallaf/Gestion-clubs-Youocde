@@ -37,7 +37,6 @@
                         $sql = "SELECT * FROM USER WHERE Id = '.$id.'";
                         
                         $Result = mysqli_query($conc , $sql);
-                        
 
 
 
