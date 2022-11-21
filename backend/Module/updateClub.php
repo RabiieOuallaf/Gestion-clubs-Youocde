@@ -22,7 +22,7 @@
     // redirect the user 
 
     if($result){
-        header('Location: ../../Clubs.php');
+        header('Location: ../../dashboard_clubs.php');
     }else{
         echo 'Error!';
     }

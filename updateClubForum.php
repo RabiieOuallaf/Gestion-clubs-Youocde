@@ -39,20 +39,20 @@
                             
                             <div class="Club name">
                                 <label for="name">Club name</label> <br>
-                                <input type="text" name="Name" id="name" placeholder="Club name : '.$name.'" required>
+                                <input type="text" name="Name" id="name" value="Club name : '.$name.'" required>
                             </div>
                             
                             <!-- Add club description -->
                             <div class="description">
                                 <label for="description">Club description</label> <br>
-                                <input type="text" name="Description" id="name" placeholder="Club Description : '.$description.'" required>
+                                <input type="text" name="Description" id="name" value="Club Description : '.$description.'" required>
                             </div>
 
                             <!-- Add club image -->
 
                             <div class="image">
                                 <label for="image">Club image</label> <br>
-                                <input type="text" name="Image" id="name" placeholder="group image : '.$image.'" required>
+                                <input type="text" name="Image" id="name" value="group image : '.$image.'" required>
                             </div>
 
                             <div class="btns">
