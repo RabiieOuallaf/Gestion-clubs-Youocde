@@ -8,7 +8,7 @@
 
     // try and catch => check if there is an erreur in code php
 
-    $sql = "INSERT INTO `USER`(`Name`, `Class`, `Email`, `Club`)
+    $sql = "INSERT INTO `USER`(`FullName`, `Class`, `Email`, `Club`)
     VALUES ('$name','$class','$email','$club')";
 
     if (mysqli_query($conc, $sql)) {
