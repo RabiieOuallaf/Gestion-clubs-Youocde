@@ -23,8 +23,8 @@
                 </div>
                 <div class="manage">
                     <ul>
-                        <li><img src="./frontend/Sass/images/🦆 icon _people outline_.png" alt="" width="30px"><span>Members</span></li>
-                        <li><img src="./frontend/Sass/images/🦆 icon _home outline_.png" alt="" width="30px"><span>Clubs</span></li>
+                        <li><a href="./dashboard_membre.php"><img src="./frontend/Sass/images/🦆 icon _people outline_.png" alt="" width="30px"><span>Members</span></a></li>
+                        <li style="background: #212429; padding: 2rem 1rem 2rem 1.5rem;"><a href="./dashboard_clubs.php"><img src="./frontend/Sass/images/🦆 icon _home outline_.png" alt="" width="30px"><span>Clubs</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -35,10 +35,9 @@
             <div class="dash_container">
                 <div class="elements">
                     <div class="title">
-                        <h4><span>M</span>embers</h4>
+                        <h4><span>C</span>lubs</h4>
                     </div>
                     <div class="admin_icon">
-                        <img src="./frontend/Sass/images/🦆 icon _search outline_.png" alt="">
                         <img src="./frontend/Sass/images/🦆 icon _bell outline_.png" alt="">
                         <img src="./frontend/Sass/images/art 1.png" alt="" width="50px" class="admin">
                         <img src="./frontend/Sass/images/🦆 icon _log out_.png" alt="">
@@ -70,10 +69,8 @@
                                 <td>'.$row['Description'] .'</td>
                                 <td>'.$row['Image'].'</td>
                                 <td>
-                                    
                                     <button><a href="./updateClubForum.php?updateid='.$row['Id'].'&updateName='.$row['Name'].'&updateDescription='.$row['Description'].'&updateImage='.$row['Image'].' "> Update </a><i class="fa-regular fa-pen-to-square"></i></button>
                                     <button><a href="./backend/Module/deleteClub.php?deletedid='.$row['Id'].'" >Delete</a><i class="fa-solid fa-trash"></i></button>
-                                     
                                 </td>
                             </tr>';
                         }
@@ -118,5 +115,6 @@
     </div>
 
 </body>
+    <script src="https://kit.fontawesome.com/28113ccba1.js" crossorigin="anonymous"></script>
     <script src="./frontend/js/addClub.js" type="module"></script>
 </html>

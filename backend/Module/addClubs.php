@@ -20,7 +20,7 @@
     // If the Command is applied seccussfuly do the following 
 
     if($Result){
-        header('location: ../../Clubs.php');
+        header('location: ../../dashboard_clubs.php');
     }else {
         echo "Error: " . $sqlAddClub . "<br>" . mysqli_error($conc);
     }
