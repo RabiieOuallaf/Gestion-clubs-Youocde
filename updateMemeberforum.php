@@ -21,6 +21,7 @@
                 <form action="./backend/Module/updateMemeber.php" method="POST">
 
                     <?php 
+
                         // Get memeber informations 
                         
                         $Name = $_GET['updateName'];
@@ -32,7 +33,7 @@
                         
 
 
-                        // Get memeber inforamtions 
+                        // Get memeber id 
 
                         $sql = "SELECT * FROM USER WHERE Id = '.$id.'";
                         
@@ -43,6 +44,7 @@
 
 
                         echo '
+                            
                         <div class="name">
                             <label for="Id">Id</label> <br>
                             <input type="text" name="Id" id="id" placeholder="Member Id : '.$id.'" value='.$id.' readonly>
