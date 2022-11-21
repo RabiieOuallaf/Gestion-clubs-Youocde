@@ -52,6 +52,7 @@
                         <div class="name">
                             <label for="name">Name</label> <br>
                             <input type="text" name="Name" id="name" value="Full name : '.$Name.'" required>
+
                         </div>
                         <div class="class">
                             <label for="class">Class</label> <br>
