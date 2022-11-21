@@ -5,11 +5,11 @@
 
 
 footer {
-    background-color: #525252;
+    background-color: $backgroundColor;
     color: white;
     height: 100px;
     
-    .container {
+    .footer_container {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -17,8 +17,7 @@ footer {
         box-shadow: 0 -3px 3px #ccc;
 
         .copyright {
-            background: white;
-            color: black;
+            color: $white;
             font-size: 11px;
             height: 100%;
             display: flex;
@@ -34,8 +33,8 @@ footer {
 
         .social_media {
             text-align: center;
-            .media img {
-                width: 25px;
+            .media i {
+                color: red;
             }
         }
     }
@@ -45,7 +44,7 @@ footer {
         height: fit-content;
     
         .container {
-            flex-direction: column;
+            // flex-direction: column;
             justify-content: space-around;
             gap: 1rem;
             padding: 0 0 1rem 0;

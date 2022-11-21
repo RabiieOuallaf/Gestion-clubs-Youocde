@@ -24,7 +24,7 @@
                 <div class="manage">
                     <ul>
                         <li><a href="./dashboard_membre.php"><img src="./frontend/Sass/images/🦆 icon _people outline_.png" alt="" width="30px"><span>Members</span></a></li>
-                        <li style="background: #212429; padding: 2rem 1rem 2rem 1.5rem;"><a href="./dashboard_clubs.php"><img src="./frontend/Sass/images/🦆 icon _home outline_.png" alt="" width="30px"><span>Clubs</span></a></li>
+                        <li style="background: #212429;"><a href="./dashboard_clubs.php"><img src="./frontend/Sass/images/🦆 icon _home outline_.png" alt="" width="30px"><span>Clubs</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -47,36 +47,35 @@
 
             <div class="tableaux_membre">
                 <div class="add" id="btn_add"><img src="./frontend/Sass/images/🦆 icon _plus_.png" alt=""></div>
-                <div class="table">
+                <div class="table_club">
                     <!-- table membres -->
                     <?php 
                         // try and catch => check if there is an erreur in code php
                         $sql = "SELECT * FROM clubs";
                         $result = mysqli_query($conc, $sql);
                         $checkResult = mysqli_num_rows($result);
+
                         if($checkResult > 0){
-                            echo '<table>
-                                    <tr>
-                                        <th>Names</th>
-                                        <th>Descriptions</th>
-                                        <th>Images</th>
-                                        <th>Actions</th>
-                                    </tr>';
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                
-                                echo '<tr>
-                                    <td><span>'.$row['Name'].'</span></td>
-                                    <td>'.$row['Description'] .'</td>
-                                    <td>'.$row['Image'].'</td>
-                                    <td>
-                                        <button><a href="./updateClubForum.php?updateid='.$row['Id'].'&updateName='.$row['Name'].'&updateDescription='.$row['Description'].'&updateImage='.$row['Image'].' "> Update </a><i class="fa-regular fa-pen-to-square"></i></button>
-                                        <button><a href="./backend/Module/deleteClub.php?deletedid='.$row['Id'].'" >Delete</a><i class="fa-solid fa-trash"></i></button>
-                                    </td>
-                                </tr>';
-                            }
-                            echo '</table>';
+                            echo '<div class="club">';
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo '
+                                    <div class="club_container">
+                                        <div class="club_img">
+                                            <img src="./upload/'.$row['Image'].'" alt="club img" style="width: 200px">
+                                        </div>
+                                        <div class="club_info">
+                                            <h3>'.$row['Clubname'].'</h3>
+                                            <p>'.$row['Description'] .'</p>
+                                            <div class="club_btn">
+                                                <a href="./updateClubForum.php?updateid='.$row['Id'].'&updateName='.$row['Clubname'].'&updateDescription='.$row['Description'].'&updateImage='.$row['Image'].' "><button> Update <i class="fa-regular fa-pen-to-square"></i></button></a>
+                                                <a href="./backend/Module/deleteClub.php?deletedid='.$row['Id'].'" ><button>Delete<i class="fa-solid fa-trash"></i></button></a>
+                                            </div>
+                                        </div>
+                                    </div>';
+                                }
+                            echo '</div>';
                         } else {
-                            echo "tableaux vide";
+                            echo "<div style='color: white'>No membre exist</div>";
                         }
                     ?>
                 </div>
@@ -84,7 +83,8 @@
         </section>
         <div class="pop_up pop" id="pop_up">
             <div class="form">
-                <form action="./backend/Module/addClubs.php" method="POST">
+                <form action="./backend/Module/addClubs.php" method="POST" enctype="multipart/form-data">
+
                     <!-- Add club name -->
                     <div class="Club name">
                         <label for="name">Club name</label> <br>
@@ -94,19 +94,18 @@
                     <!-- Add club description -->
                     <div class="description">
                         <label for="description">Club description</label> <br>
-                        <input type="text" name="Clubdescription" id="name" placeholder="Description" required>
+                        <textarea type="text" name="Clubdescription" id="name" placeholder="Description" required></textarea>
                     </div>
 
                     <!-- Add club image -->
-
                     <div class="image">
                         <label for="image">Club image</label> <br>
-                        <input type="text" name="Clubimage" id="name" placeholder="opload image" required>
+                        <input type="file" name="Image" id="name" required>
                     </div>
 
                     <div class="btns">
                         <input type="submit" id="submit" class="submit" value="Ajouter">
-                        <!-- <input type="reset" class="submit" id="cancel" style="background-color:red; cursor: pointer;">Cancel</button> -->
+                        <input type="reset" value="Cancel" class="submit" id="cancel" style="background-color:red; cursor: pointer;">
                     </div>
 
 
@@ -114,6 +113,33 @@
             </div>
         </div>
     </div>
+
+
+    
+    <!-- footer start -->
+    <footer>
+        <div class="footer_container">
+            <div class="tel">
+                <p>+81 123-5678-9101</p>
+                <p>Privacy Policy</p>
+            </div>
+            <div class="copyright">
+                <img src="./frontend/Sass/images/logo.png" alt="" width="50px">
+                <p>&copy;Copyright. Designed And Developed By Oussama Haddi</p>
+            </div>
+            <div class="social_media">
+                <div class="media">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
 
 </body>
     <script src="https://kit.fontawesome.com/28113ccba1.js" crossorigin="anonymous"></script>

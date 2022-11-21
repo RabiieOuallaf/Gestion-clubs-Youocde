@@ -65,8 +65,8 @@
                             <input type="text" name="Club" id="club" value="'.$club.'" required>
                         </div>
                         <div class="btns">
-                            <input type="submit" id="submit" class="submit" value="Ajouter">
-                            <button class="submit" id="cancel" style="background-color:red; cursor: pointer;">Cancel</button>
+                            <input type="submit" id="submit" class="submit" value="Update">
+                            <a href="./dashboard_clubs.php"><input type="reset" class="submit" value="Cancel" id="cancel" style="background-color:red; cursor: pointer;"></a>
                         </div>
                         '
                     
@@ -79,4 +79,6 @@
     </div>
 
 </body>
+    <script src="https://kit.fontawesome.com/28113ccba1.js" crossorigin="anonymous"></script>
+    <script src="./frontend/js/addMembre.js" type="module"></script>
 </html>

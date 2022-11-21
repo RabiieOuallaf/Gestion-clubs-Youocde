@@ -18,11 +18,10 @@
 
         <div class="pop_up " id="pop_up" style="display : block">
             <div class="form">
-                <form action="./backend/Module/updateClub.php" method="POST">
+                <form action="./backend/Module/updateClub.php" method="POST" enctype="multipart/form-data">
 
                     <?php 
                         // Get memeber informations 
-                        
                         $name = $_GET['updateName'];
                         $description = $_GET['updateDescription'];
                         $image = $_GET['updateImage'];
@@ -39,25 +38,25 @@
                             
                             <div class="Club name">
                                 <label for="name">Club name</label> <br>
-                                <input type="text" name="Name" id="name" value="'.$name.'" required>
+                                <input type="text" name="Clubname" id="name" value="'.$name.'" required>
                             </div>
                             
                             <!-- Add club description -->
                             <div class="description">
                                 <label for="description">Club description</label> <br>
-                                <input type="text" name="Description" id="name" value="'.$description.'" required>
+                                <textarea name="Description" id="name" required>'.$description.'</textarea>
                             </div>
 
                             <!-- Add club image -->
 
                             <div class="image">
                                 <label for="image">Club image</label> <br>
-                                <input type="text" name="Image" id="name" value="'.$image.'" required>
+                                <input type="file" name="Image" id="name">
                             </div>
 
                             <div class="btns">
                                 <input type="submit" id="submit" class="submit" value="Ajouter">
-                                <button class="submit" id="cancel" style="background-color:red; cursor: pointer;">Cancel</button>
+                                <a href="./dashboard_clubs.php"><button value="Cancel" class="submit" id="cancel" style="background-color:red; cursor: pointer;">test</button></a>
                             </div>
                         '
                     

@@ -1,22 +1,40 @@
 <?php 
 
-    include_once("Connection.php");
+    include "Connection.php";
 
     // fetch the data 
 
     $id = $_POST['id'];
-    $name = $_POST['Name'];
+    $name = $_POST['Clubname'];
     $description = $_POST['Description'];
-    $Image = $_POST['Image'];
+    // $cancel = $_POST['reset'];
 
+    // if (isset($cancel)) {
+    //     header('location: ../../dashboard_clubs.php');
+    // }
+    
+    
+    $image_name = $_FILES['Image']['name'];
+    $image_tmp = $_FILES['Image']['tmp_name'];
+    $image_extension = pathinfo($image_name, PATHINFO_EXTENSION);
+    $image_str_lower = strtolower($image_extension);
+    $new_image_name = uniqid("IMG-", true).'.'.$image_str_lower;
+    $image_upload_path = '../../upload/'.$new_image_name;
+    move_uploaded_file($image_tmp, $image_upload_path);
 
+    if (empty($image_name)) {
+        $sqlUp = "UPDATE CLUBS SET `Clubname` = '$name',
+                        `Description` = '$description',
+                        WHERE `Id` = '$id';";
+    }
+    else {
+        $sqlUp = "UPDATE CLUBS SET `Clubname` = '$name',
+                        `Description` = '$description',
+                        `Image` = '$new_image_name'
+                        WHERE `Id` = '$id';";
+    }
 
     // Sql command 
-    $sqlUp = "UPDATE CLUBS SET `Name` = '$name',
-                            `Description` = '$description',
-                            `Image` = '$Image'
-                            WHERE `Id` = '$id';";
-
     $result = mysqli_query($conc , $sqlUp);
 
     // redirect the user 

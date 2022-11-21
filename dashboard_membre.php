@@ -23,7 +23,7 @@
                 </div>
                 <div class="manage">
                     <ul>
-                        <li style="padding: 2rem 1rem 2rem 1.5rem; background-color: #212429;"><a href="./dashboard.php"><img src="./frontend/Sass/images/🦆 icon _people outline_.png" alt="" width="30px"><span>Members</span></a></li>
+                        <li style="background-color: #212429;"><a href="./dashboard_membre.php"><img src="./frontend/Sass/images/🦆 icon _people outline_.png" alt="" width="30px"><span>Members</span></a></li>
                         <li><a href="./dashboard_clubs.php"><img src="./frontend/Sass/images/🦆 icon _home outline_.png" alt="" width="30px"><span>Clubs</span></a></li>
                     </ul>
                 </div>
@@ -75,13 +75,13 @@
                                     <td>'.$row['Club'].'</td>
                                     <td>
                                     <a href="./updateMemeberforum.php?updateid='.$row['Id'].'&updateName='.$row['FullName'].'&updateClub='.$row['Club'].'&updateClass='.$row['Class'].'&updateEmail='.$row['Email'].'"><button>Update<i class="fa-regular fa-pen-to-square"></i></button></a>
-                                        <button><a href="./backend/Module/deleteMemeber.php?deletedid='.$row['Id'].'" >Delete</a><i class="fa-solid fa-trash"></i></button>
+                                    <a href="./backend/Module/deleteMemeber.php?deletedid='.$row['Id'].'" ><button>Delete<i class="fa-solid fa-trash"></i></button></a>
                                     </td>
                                 </tr>';
                             }
                             echo '</table>';
                         } else {
-                            echo "tableaux vide";
+                            echo "<div style='color: white'>No membre exist</div>";
                         }
                     ?>
                 </div>
@@ -92,24 +92,32 @@
                 <form action="./backend/Module/addMembre.php" method="POST">
                     
                     <div class="id">
-                    <label for="id">Id</label> <br>
+                    <label for="id">Id</label>
                         <input type="text" name="Id" id="id" placeholder="Member Id" readonly>
                     </div>
                     <div class="name">
-                        <label for="name">Name</label> <br>
+                        <label for="name">Name</label>
                         <input type="text" name="FullName" id="name" placeholder="Full name" required>
                     </div>
                     <div class="class">
-                        <label for="class">Class</label> <br>
+                        <label for="class">Class</label>
                         <input type="text" name="Class" id="class" placeholder="Class name" required>
                     </div>
                     <div class="email">
-                        <label for="email">Email</label> <br>
+                        <label for="email">Email</label>
                         <input type="email" name="Email" id="email" placeholder="jhonsmith@gmail.com" required>
                     </div>
                     <div class="club">
-                        <label for="club">Club</label> <br>
-                        <input type="text" name="Club" id="club" placeholder="Club name" required>
+                        <label for="club">Club</label>
+                        <select name="Club" id="club" required>
+                            <optgroup label="Clubs" focused>
+                                <option value="Art">Art</option>
+                                <option value="Sport">Sport</option>
+                                <option value="It">It</option>
+                                <option value="Programming">Programming</option>
+                                <option value="Environement">Environement</option>
+                            </optgroup>
+                        </select>
                     </div>
                     <div class="btns">
                         <input type="submit" id="submit" class="submit" value="Ajouter">
@@ -119,6 +127,32 @@
             </div>
         </div>
     </div>
+
+
+    
+    <!-- footer start -->
+    <footer>
+        <div class="footer_container">
+            <div class="tel">
+                <p>+81 123-5678-9101</p>
+            </div>
+            <div class="copyright">
+                <img src="./frontend/Sass/images/logo.png" alt="" width="50px">
+                <p>&copy;Copyright. Designed And Developed By Oussama Haddi</p>
+            </div>
+            <div class="social_media">
+                <div class="media">
+                    <a href="#"><img src="./images/icons/🦆 icon _facebook_.png" alt=""></a>
+                    <a href="#"><img src="./images/icons/🦆 icon _linkedin_.png" alt=""></a>
+                    <a href="#"><img src="./images/icons/🦆 icon _share_.png" alt=""></a>
+                    <a href="#"><img src="./images/icons/🦆 icon _twitter_.png" alt=""></a>
+                </div>
+                <p>Privacy Policy</p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
 
 </body>
     <script src="https://kit.fontawesome.com/28113ccba1.js" crossorigin="anonymous"></script>
