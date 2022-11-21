@@ -6,12 +6,20 @@
 
     $name = $_POST['Clubname'];
     $description = $_POST['Clubdescription'];
-    $image = $_POST['Clubimage'];
+
+    $image_name = $_FILES['Image']['name'];
+    $image_tmp = $_FILES['Image']['tmp_name'];
+    $image_extension = pathinfo($image_name, PATHINFO_EXTENSION);
+    $image_str_lower = strtolower($image_extension);
+    $new_image_name = uniqid("IMG-", true).'.'.$image_str_lower;
+    $image_upload_path = '../../upload/'.$new_image_name;
+    move_uploaded_file($image_tmp, $image_upload_path);
+
 
     // Insert data into the data base
 
-    $sqlAddClub = "INSERT INTO `CLUBS` (`Name` , `Description`, `Image`)
-    values('$name', '$description','$image')";
+    $sqlAddClub = "INSERT INTO `CLUBS` (`Clubname` , `Description`, `Image`)
+                values ('$name', '$description','$new_image_name');";
 
     // Aplly SQL command to the database
 
