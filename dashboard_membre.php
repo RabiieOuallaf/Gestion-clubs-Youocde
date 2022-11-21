@@ -73,7 +73,10 @@
                                     <td>'.$row['Class'] .'</td>
                                     <td>'.$row['Email'].'</td>
                                     <td>'.$row['Club'].'</td>
-                                    <td><button><i class="fa-regular fa-pen-to-square"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                                    <td>
+                                        <button><a href="./updateMemeberforum.php?updateid='.$row['Id'].'&updateName='.$row['FullName'].'&updateClub='.$row['Club'].'&updateClass='.$row['Class'].'&updateEmail='.$row['Email'].'"> Update </a><i class="fa-regular fa-pen-to-square"></i></button>
+                                        <button><a href="./backend/Module/deleteMemeber.php?deletedid='.$row['Id'].'" >Delete</a><i class="fa-solid fa-trash"></i></button>
+                                    </td>
                                 </tr>';
                             }
                             echo '</table>';
