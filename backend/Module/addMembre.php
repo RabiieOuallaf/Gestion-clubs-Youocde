@@ -1,15 +1,16 @@
 <?php
     include_once("Connection.php");
 
-    $name = $_POST['Name'];
+    $name = $_POST['FullName'];
     $class = $_POST['Class'];
     $email = $_POST['Email'];
     $club = $_POST['Club'];
+    $id = $_POST['Id'];
 
     // try and catch => check if there is an erreur in code php
 
-    $sql = "INSERT INTO `USER`(`Name`, `Class`, `Email`, `Club`)
-    VALUES ('$name','$class','$email','$club')";
+    $sql = "INSERT INTO `USER`(`Id`,`FullName`, `Class`, `Email`, `Club`)
+    VALUES ('$id','$name','$class','$email','$club')";
 
     if (mysqli_query($conc, $sql)) {
         header('location: ../../dashboard_membre.php');

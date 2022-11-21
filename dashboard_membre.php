@@ -69,7 +69,7 @@
                                 echo '
                                 <tr num='.$row['Id'].'>
                                     <td>'.$row['Id'] .'</td>
-                                    <td><span>'.$row['Name'].'</span></td>
+                                    <td><span>'.$row['FullName'].'</span></td>
                                     <td>'.$row['Class'] .'</td>
                                     <td>'.$row['Email'].'</td>
                                     <td>'.$row['Club'].'</td>
@@ -88,13 +88,13 @@
             <div class="form">
                 <form action="./backend/Module/addMembre.php" method="POST">
                     
-                    <div class="name">
+                    <div class="id">
                     <label for="id">Id</label> <br>
                         <input type="text" name="Id" id="id" placeholder="Member Id" readonly>
                     </div>
                     <div class="name">
                         <label for="name">Name</label> <br>
-                        <input type="text" name="Name" id="name" placeholder="Full name" required>
+                        <input type="text" name="FullName" id="name" placeholder="Full name" required>
                     </div>
                     <div class="class">
                         <label for="class">Class</label> <br>
@@ -118,6 +118,6 @@
     </div>
 
 </body>
-<script src="https://kit.fontawesome.com/28113ccba1.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/28113ccba1.js" crossorigin="anonymous"></script>
     <script src="./frontend/js/addMembre.js" type="module"></script>
 </html>
