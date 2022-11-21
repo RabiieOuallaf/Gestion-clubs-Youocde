@@ -7,6 +7,11 @@
     $id = $_POST['id'];
     $name = $_POST['Clubname'];
     $description = $_POST['Description'];
+    // $cancel = $_POST['reset'];
+
+    // if (isset($cancel)) {
+    //     header('location: ../../dashboard_clubs.php');
+    // }
     
     
     $image_name = $_FILES['Image']['name'];

@@ -16,8 +16,8 @@ CREATE TABLE USER(
 
 CREATE TABLE CLUBS(
     Id INT NOT NULL PRIMARY KEY auto_increment,
-	Name VARCHAR(255),
-    Description VARCHAR(10000),
+	Clubname VARCHAR(255),
+    Description longtext,
 	Image varchar(255)
 );
 

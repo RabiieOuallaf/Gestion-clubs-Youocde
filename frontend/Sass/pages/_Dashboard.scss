@@ -43,9 +43,9 @@
                 list-style: none;
                 display: grid;
                 // gap: .6rem;
-
+                
                 li {
-                    padding: 2rem 1rem 2rem 1rem;
+                    
                     font-family: $itemFont;
                     cursor: pointer;
                     
@@ -55,14 +55,17 @@
                         gap: .5rem;
                         color: white;
                         text-decoration: none;
+                        height: 100%;
+                        padding: 2rem 1rem 2rem;
+
+                        &:hover {
+                            background-color: $darkBlue;
+                            padding: 2rem 1rem 2rem 1.5rem;
+                            transition: all .5s linear;
+                        }
                     }
                 }
 
-                li:hover {
-                    background-color: $darkBlue;
-                    padding: 2rem 1rem 2rem 1.5rem;
-                    transition: all .5s linear;
-                }
             }
         }
     }

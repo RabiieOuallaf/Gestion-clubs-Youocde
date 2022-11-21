@@ -576,7 +576,6 @@
   display: grid;
 }
 .dashboard_bar .dash_container .manage ul li {
-  padding: 2rem 1rem 2rem 1rem;
   font-family: "Itim", cursive;
   cursor: pointer;
 }
@@ -586,8 +585,10 @@
   gap: 0.5rem;
   color: white;
   text-decoration: none;
+  height: 100%;
+  padding: 2rem 1rem 2rem;
 }
-.dashboard_bar .dash_container .manage ul li:hover {
+.dashboard_bar .dash_container .manage ul li a:hover {
   background-color: #1877F2;
   padding: 2rem 1rem 2rem 1.5rem;
   transition: all 0.5s linear;
@@ -1492,20 +1493,19 @@ li {
   }
 }
 footer {
-  background-color: #525252;
+  background-color: #212429;
   color: white;
   height: 100px;
 }
-footer .container {
+footer .footer_container {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 100%;
   box-shadow: 0 -3px 3px #ccc;
 }
-footer .container .copyright {
-  background: white;
-  color: black;
+footer .footer_container .copyright {
+  color: white;
   font-size: 11px;
   height: 100%;
   display: flex;
@@ -1513,15 +1513,15 @@ footer .container .copyright {
   align-items: center;
   justify-content: space-around;
 }
-footer .container .copyright p {
+footer .footer_container .copyright p {
   width: 80%;
   text-align: center;
 }
-footer .container .social_media {
+footer .footer_container .social_media {
   text-align: center;
 }
-footer .container .social_media .media img {
-  width: 25px;
+footer .footer_container .social_media .media i {
+  color: red;
 }
 @media (max-width: 689px) {
   footer {
@@ -1530,7 +1530,6 @@ footer .container .social_media .media img {
     height: fit-content;
   }
   footer .container {
-    flex-direction: column;
     justify-content: space-around;
     gap: 1rem;
     padding: 0 0 1rem 0;

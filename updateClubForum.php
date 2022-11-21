@@ -56,7 +56,7 @@
 
                             <div class="btns">
                                 <input type="submit" id="submit" class="submit" value="Ajouter">
-                                <a href="./dashboard_clubs.php"><button type="reset" class="submit" id="cancel" style="background-color:red; cursor: pointer;">Cancel </button></a>
+                                <a href="./dashboard_clubs.php"><button value="Cancel" class="submit" id="cancel" style="background-color:red; cursor: pointer;">test</button></a>
                             </div>
                         '
                     

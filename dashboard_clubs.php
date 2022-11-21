@@ -24,7 +24,7 @@
                 <div class="manage">
                     <ul>
                         <li><a href="./dashboard_membre.php"><img src="./frontend/Sass/images/🦆 icon _people outline_.png" alt="" width="30px"><span>Members</span></a></li>
-                        <li style="background: #212429; padding: 2rem 1rem 2rem 1.5rem;"><a href="./dashboard_clubs.php"><img src="./frontend/Sass/images/🦆 icon _home outline_.png" alt="" width="30px"><span>Clubs</span></a></li>
+                        <li style="background: #212429;"><a href="./dashboard_clubs.php"><img src="./frontend/Sass/images/🦆 icon _home outline_.png" alt="" width="30px"><span>Clubs</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -105,7 +105,7 @@
 
                     <div class="btns">
                         <input type="submit" id="submit" class="submit" value="Ajouter">
-                        <input type="reset" class="submit" id="cancel" style="background-color:red; cursor: pointer;">
+                        <input type="reset" value="Cancel" class="submit" id="cancel" style="background-color:red; cursor: pointer;">
                     </div>
 
 
@@ -113,6 +113,33 @@
             </div>
         </div>
     </div>
+
+
+    
+    <!-- footer start -->
+    <footer>
+        <div class="footer_container">
+            <div class="tel">
+                <p>+81 123-5678-9101</p>
+                <p>Privacy Policy</p>
+            </div>
+            <div class="copyright">
+                <img src="./frontend/Sass/images/logo.png" alt="" width="50px">
+                <p>&copy;Copyright. Designed And Developed By Oussama Haddi</p>
+            </div>
+            <div class="social_media">
+                <div class="media">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
 
 </body>
     <script src="https://kit.fontawesome.com/28113ccba1.js" crossorigin="anonymous"></script>
