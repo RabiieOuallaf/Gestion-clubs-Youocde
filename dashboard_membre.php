@@ -23,8 +23,8 @@
                 </div>
                 <div class="manage">
                     <ul>
-                        <li><img src="./frontend/Sass/images/🦆 icon _people outline_.png" alt="" width="30px"><span>Members</span></li>
-                        <li><img src="./frontend/Sass/images/🦆 icon _home outline_.png" alt="" width="30px"><span>Clubs</span></li>
+                        <li style="padding: 2rem 1rem 2rem 1.5rem; background-color: #212429;"><a href="./dashboard.php"><img src="./frontend/Sass/images/🦆 icon _people outline_.png" alt="" width="30px"><span>Members</span></a></li>
+                        <li><a href="./dashboard_clubs.php"><img src="./frontend/Sass/images/🦆 icon _home outline_.png" alt="" width="30px"><span>Clubs</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -38,7 +38,6 @@
                         <h4><span>M</span>embers</h4>
                     </div>
                     <div class="admin_icon">
-                        <img src="./frontend/Sass/images/🦆 icon _search outline_.png" alt="">
                         <img src="./frontend/Sass/images/🦆 icon _bell outline_.png" alt="">
                         <img src="./frontend/Sass/images/art 1.png" alt="" width="50px" class="admin">
                         <img src="./frontend/Sass/images/🦆 icon _log out_.png" alt="">
@@ -69,16 +68,12 @@
                                 
                                 echo '
                                 <tr num='.$row['Id'].'>
-                                    <td>'.$row['Id'].'</td>
-                                    <td><span>'.$row['FullName'].'</span></td>
+                                    <td>'.$row['Id'] .'</td>
+                                    <td><span>'.$row['Name'].'</span></td>
                                     <td>'.$row['Class'] .'</td>
                                     <td>'.$row['Email'].'</td>
                                     <td>'.$row['Club'].'</td>
-                                    <td>
-                                        <button><a href="./updateMemeberforum.php?updateid='.$row['Id'].'&updateName='.$row['FullName'].'&updateClass='.$row['Class'].'&updateEmail='.$row['Email'].'&updateClub='.$row['Club'].'" >Update</a><<i class="fa-regular fa-pen-to-square"></i></button>
-                                        <button><a href="./backend/Module/deleteMemeber.php?deletedid='.$row['Id'].'" >Delete</a><i class="fa-solid fa-trash"></i></button>
-                                     
-                                     </td>
+                                    <td><button><i class="fa-regular fa-pen-to-square"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
                                 </tr>';
                             }
                             echo '</table>';
@@ -99,7 +94,7 @@
                     </div>
                     <div class="name">
                         <label for="name">Name</label> <br>
-                        <input type="text" name="FullName" id="name" placeholder="Full name" required>
+                        <input type="text" name="Name" id="name" placeholder="Full name" required>
                     </div>
                     <div class="class">
                         <label for="class">Class</label> <br>

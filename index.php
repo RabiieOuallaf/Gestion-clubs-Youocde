@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="./frontend/Sass/main.css">
     <title>YouCode clubs</title>
 </head>
-<body>
-
+<body class="index_body">
 
     <!-- header start -->
     <header id="header_container">
@@ -27,7 +26,7 @@
                 </ul>
             </nav>
             <div class="sign_in">
-                <button class="sign_btn">Sign in</button>
+                <button class="sign_btn" onclick="document.location.href = './login.php'">Sign in</button>
             </div>
         </div>
     </header>
@@ -332,12 +331,12 @@
             <div class="how_to_join">
                 <h2>How to Create your own <span>club</span> ?</h2>
                 <div class="box_btn">
-                    <div class="create_club">
+                    <div class="create_club" onclick="document.location.href = './login.php'">
                         <img src="./frontend/Sass/images/🦆 icon _edit_.png" alt="">
                         <strong>Create a club</strong>
                         <p>You can create you own club by clicking at this button or click here.</p>
                     </div>
-                    <div class="join_club">
+                    <div class="join_club" onclick="document.location.href = './login.php'">
                         <img src="./frontendSass/images/🦆 icon _log out_.png" alt="">
                         <strong>Join a club</strong>
                         <p>You can create you own club by clicking at this button or click here.</p>
@@ -393,6 +392,30 @@
         </div>
     </section>
     <!-- contact us end -->
+
+
+    <!-- footer start -->
+    <footer>
+        <div class="container">
+            <div class="tel">
+                <p>+81 123-5678-9101</p>
+            </div>
+            <div class="copyright">
+                <img src="./images/logo/hitaka_logo.png" alt="" width="50px">
+                <p>&copy;Copyright. Designed And Developed By Oussama Haddi</p>
+            </div>
+            <div class="social_media">
+                <div class="media">
+                    <a href="#"><img src="./images/icons/🦆 icon _facebook_.png" alt=""></a>
+                    <a href="#"><img src="./images/icons/🦆 icon _linkedin_.png" alt=""></a>
+                    <a href="#"><img src="./images/icons/🦆 icon _share_.png" alt=""></a>
+                    <a href="#"><img src="./images/icons/🦆 icon _twitter_.png" alt=""></a>
+                </div>
+                <p>Privacy Policy</p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
 
 
 
