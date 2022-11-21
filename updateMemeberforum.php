@@ -46,7 +46,7 @@
                             
                         <div class="name">
                             <label for="Id">Id</label> <br>
-                            <input type="text" name="Id" id="id" placeholder="Member Id : '.$id.'" readonly>
+                            <input type="text" name="Id" id="id" value='.$id.' readonly>
                         </div>
                         <div class="name">
                             <label for="name">Name</label> <br>

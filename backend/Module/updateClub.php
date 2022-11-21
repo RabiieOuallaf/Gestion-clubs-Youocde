@@ -12,7 +12,7 @@
 
 
     // Sql command 
-    $sqlUp = "UPDATE CLUBS SET `Name` = 'name',
+    $sqlUp = "UPDATE CLUBS SET `Name` = '$name',
                             `Description` = '$description',
                             `Image` = '$Image'
                             WHERE `Id` = '$id';";
@@ -22,7 +22,7 @@
     // redirect the user 
 
     if($result){
-        header('Location: ../../Clubs.php');
+        header('Location: ../../dashboard_clubs.php');
     }else{
         echo 'Error!';
     }
