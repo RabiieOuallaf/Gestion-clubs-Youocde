@@ -38,7 +38,6 @@
                         $sql = "SELECT * FROM USER WHERE Id = '.$id.'";
                         
                         $Result = mysqli_query($conc , $sql);
-                        
 
 
 
@@ -52,7 +51,6 @@
                         <div class="name">
                             <label for="name">Name</label> <br>
                             <input type="text" name="Name" id="name" value="'.$Name.'" required>
-
                         </div>
                         <div class="class">
                             <label for="class">Class</label> <br>

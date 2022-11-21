@@ -47,38 +47,39 @@
 
             <div class="tableaux_membre">
                 <div class="add" id="btn_add"><img src="./frontend/Sass/images/🦆 icon _plus_.png" alt=""></div>
-
-                <!-- table membres -->
-                <?php 
-                    // try and catch => check if there is an erreur in code php
-                    $sql = "SELECT * FROM clubs";
-                    $result = mysqli_query($conc, $sql);
-                    $checkResult = mysqli_num_rows($result);
-                    if($checkResult > 0){
-                        echo '<table>
-                            <tr>
-                                <th>Names</th>
-                                <th>Descriptions</th>
-                                <th>Images</th>
-                                <th>Actions</th>
-                            </tr>';
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            
-                            echo '<tr>
-                                <td><span>'.$row['Name'].'</span></td>
-                                <td>'.$row['Description'] .'</td>
-                                <td>'.$row['Image'].'</td>
-                                <td>
-                                    <button><a href="./updateClubForum.php?updateid='.$row['Id'].'&updateName='.$row['Name'].'&updateDescription='.$row['Description'].'&updateImage='.$row['Image'].' "> Update </a><i class="fa-regular fa-pen-to-square"></i></button>
-                                    <button><a href="./backend/Module/deleteClub.php?deletedid='.$row['Id'].'" >Delete</a><i class="fa-solid fa-trash"></i></button>
-                                </td>
-                            </tr>';
+                <div class="table">
+                    <!-- table membres -->
+                    <?php 
+                        // try and catch => check if there is an erreur in code php
+                        $sql = "SELECT * FROM clubs";
+                        $result = mysqli_query($conc, $sql);
+                        $checkResult = mysqli_num_rows($result);
+                        if($checkResult > 0){
+                            echo '<table>
+                                    <tr>
+                                        <th>Names</th>
+                                        <th>Descriptions</th>
+                                        <th>Images</th>
+                                        <th>Actions</th>
+                                    </tr>';
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                
+                                echo '<tr>
+                                    <td><span>'.$row['Name'].'</span></td>
+                                    <td>'.$row['Description'] .'</td>
+                                    <td>'.$row['Image'].'</td>
+                                    <td>
+                                        <button><a href="./updateClubForum.php?updateid='.$row['Id'].'&updateName='.$row['Name'].'&updateDescription='.$row['Description'].'&updateImage='.$row['Image'].' "> Update </a><i class="fa-regular fa-pen-to-square"></i></button>
+                                        <button><a href="./backend/Module/deleteClub.php?deletedid='.$row['Id'].'" >Delete</a><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>';
+                            }
+                            echo '</table>';
+                        } else {
+                            echo "tableaux vide";
                         }
-                        echo '</table>';
-                    } else {
-                        echo "tableaux vide";
-                    }
-                ?>
+                    ?>
+                </div>
             </div>
         </section>
         <div class="pop_up pop" id="pop_up">
@@ -105,7 +106,7 @@
 
                     <div class="btns">
                         <input type="submit" id="submit" class="submit" value="Ajouter">
-                        <button class="submit" id="cancel" style="background-color:red; cursor: pointer;">Cancel</button>
+                        <!-- <input type="reset" class="submit" id="cancel" style="background-color:red; cursor: pointer;">Cancel</button> -->
                     </div>
 
 

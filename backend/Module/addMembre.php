@@ -1,10 +1,11 @@
 <?php
     include_once("Connection.php");
 
-    $name = $_POST['Name'];
+    $name = $_POST['FullName'];
     $class = $_POST['Class'];
     $email = $_POST['Email'];
     $club = $_POST['Club'];
+    $id = $_POST['Id'];
 
     // try and catch => check if there is an erreur in code php
 

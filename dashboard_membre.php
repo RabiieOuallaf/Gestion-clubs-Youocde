@@ -91,13 +91,13 @@
             <div class="form">
                 <form action="./backend/Module/addMembre.php" method="POST">
                     
-                    <div class="name">
+                    <div class="id">
                     <label for="id">Id</label> <br>
                         <input type="text" name="Id" id="id" placeholder="Member Id" readonly>
                     </div>
                     <div class="name">
                         <label for="name">Name</label> <br>
-                        <input type="text" name="Name" id="name" placeholder="Full name" required>
+                        <input type="text" name="FullName" id="name" placeholder="Full name" required>
                     </div>
                     <div class="class">
                         <label for="class">Class</label> <br>
@@ -113,7 +113,7 @@
                     </div>
                     <div class="btns">
                         <input type="submit" id="submit" class="submit" value="Ajouter">
-                        <button class="submit" id="cancel" style="background-color:red; cursor: pointer;">Cancel</button>
+                        <input type="reset" value="cancel" class="submit" id="cancel" style="background-color:red; cursor: pointer;">
                     </div>
                 </form>
             </div>
@@ -121,6 +121,6 @@
     </div>
 
 </body>
-<script src="https://kit.fontawesome.com/28113ccba1.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/28113ccba1.js" crossorigin="anonymous"></script>
     <script src="./frontend/js/addMembre.js" type="module"></script>
 </html>
