@@ -18,6 +18,7 @@
                             WHERE `Id` = '$id';";
 
     $result = mysqli_query($conc , $sqlUp);
+    $coulm = mysqli_column
 
     // redirect the user 
 
