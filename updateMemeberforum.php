@@ -47,24 +47,24 @@
                             
                         <div class="name">
                             <label for="Id">Id</label> <br>
-                            <input type="text" name="Id" id="id" value="Member Id : '.$id.'" value='.$id.' readonly>
+                            <input type="text" name="Id" id="id" value='.$id.' readonly>
                         </div>
                         <div class="name">
                             <label for="name">Name</label> <br>
-                            <input type="text" name="Name" id="name" value="Full name : '.$Name.'" required>
+                            <input type="text" name="Name" id="name" value="'.$Name.'" required>
 
                         </div>
                         <div class="class">
                             <label for="class">Class</label> <br>
-                            <input type="text" name="Class" id="class" value="Class name : '.$class.'" required>
+                            <input type="text" name="Class" id="class" value="'.$class.'" required>
                         </div>
                         <div class="email">
                             <label for="email">Email</label> <br>
-                            <input type="email" name="Email" id="email" value="Email : '.$email.'" required>
+                            <input type="email" name="Email" id="email" value="'.$email.'" required>
                         </div>
                         <div class="club">
                             <label for="club">Club</label> <br>
-                            <input type="text" name="Club" id="club" value="Club name : '.$club.'" required>
+                            <input type="text" name="Club" id="club" value="'.$club.'" required>
                         </div>
                         <div class="btns">
                             <input type="submit" id="submit" class="submit" value="Ajouter">

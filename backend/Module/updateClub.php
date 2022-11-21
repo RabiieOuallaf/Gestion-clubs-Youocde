@@ -12,13 +12,12 @@
 
 
     // Sql command 
-    $sqlUp = "UPDATE CLUBS SET `Name` = 'name',
+    $sqlUp = "UPDATE CLUBS SET `Name` = '$name',
                             `Description` = '$description',
                             `Image` = '$Image'
                             WHERE `Id` = '$id';";
 
     $result = mysqli_query($conc , $sqlUp);
-    $coulm = mysqli_column
 
     // redirect the user 
 
