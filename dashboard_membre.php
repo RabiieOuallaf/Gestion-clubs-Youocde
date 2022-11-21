@@ -113,7 +113,7 @@
                     </div>
                     <div class="btns">
                         <input type="submit" id="submit" class="submit" value="Ajouter">
-                        <button class="submit" id="cancel" style="background-color:red; cursor: pointer;">Cancel</button>
+                        <input type="reset" value="cancel" class="submit" id="cancel" style="background-color:red; cursor: pointer;">
                     </div>
                 </form>
             </div>
