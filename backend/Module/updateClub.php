@@ -7,6 +7,7 @@
     $id = $_POST['id'];
     $name = $_POST['Clubname'];
     $description = $_POST['Description'];
+    $formattedDescription = preg_replace('/^a-zA-Z0-9 ]/g',"",$description);
     // $cancel = $_POST['reset'];
 
     // if (isset($cancel)) {
@@ -24,13 +25,13 @@
 
     if (empty($image_name)) {
         $sqlUp = "UPDATE CLUBS SET `Clubname` = '$name',
-                        `Description` = '$description',
+                        `Description` = '$formattedDescription',
                         `Image` = CLUBS.Image
                         WHERE `Id` = $id;";
     }
     else {
         $sqlUp = "UPDATE CLUBS SET `Clubname` = '$name',
-                        `Description` = '$description',
+                        `Description` = '$formattedDescription',
                         `Image` = '$new_image_name'
                         WHERE `Id` = $id;";
     }

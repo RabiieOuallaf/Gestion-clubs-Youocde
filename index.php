@@ -14,10 +14,13 @@
     <!-- header start -->
     <header id="header_container">
         <div class="header_container" >
+            <div class="nav_icon" id="nav_icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
             <div class="logo">
                 <img src="./frontend/Sass/images/logo.png" alt="" width="200px">
             </div>
-            <nav class="nav_bar">
+            <nav class="nav_bar" id="nav_bar_list">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#club">Clubs</a></li>
@@ -36,7 +39,6 @@
     <main class="article" id="home">
 
         <div class="article_container">
-
             <div class="background_img"><img src="./frontend/Sass/images/youcodefamily.png" alt=""></div>
 
             <div class="content">
@@ -69,6 +71,7 @@
 
     </main>
     <!-- slide home end -->
+    
 
 
     <!-- body -->
@@ -431,10 +434,10 @@
 
         function scrollFunction() {
             if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
-                document.getElementById("header_container").style.cssText = "padding: 1rem 10rem; background-color: rgba(34 38 43 /1)";
+                document.getElementById("header_container").classList.add("scrol_header");
 
             } else {
-                document.getElementById("header_container").style.cssText = "padding:0; background-color: rgba(34 38 43 /.7)";
+                document.getElementById("header_container").classList.remove("scrol_header");
             }
         }
     </script>

@@ -25,6 +25,10 @@ header {
         justify-content: space-between;
         align-items: center;
 
+        .nav_icon {
+            display: none;
+        }
+
         .nav_bar {
             @extend %flex;
             align-items: center;
@@ -76,7 +80,36 @@ header {
     }
 
     @media (max-width: 689px) {
-        
+        height: 4rem;
+        background-color: rgba(34 38 43 /.7);
+        padding: 0;
+        .header_container {
+            width: 100%;
+            justify-content: space-around;
+            gap: 1rem;
+            .nav_icon {
+                display: block;
+                border: 1px solid #ccc;
+                padding: .3rem .5rem;
+                color: #ccc;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+
+            .sign_in button {
+                font-size: 11px;
+                padding: .4rem 1rem;
+            }
+
+            .logo {
+                img {
+                    width: 100px;
+                }
+            }
+            .nav_bar {
+                display: none;
+            }
+        }
     }
 }
 
@@ -226,5 +259,61 @@ main {
                 background-color: $lightBlue;
             }
         }
+    }
+
+    @media (max-width:689px) {
+        .article_container {
+
+            .background_img {
+                overflow: hidden;
+                img {
+                    width: unset;
+                }
+            }
+    
+            .content {
+                display: flex;
+                flex-direction: column;
+                
+                .club_img {
+                    width: 80%;
+                    
+                    img {
+                        width: 100%;
+                    }
+
+                    .info_img {
+                        font-size: 15px;
+                    }
+                }
+                .text_content {
+                    width: 80%;
+                    display: grid;
+                    gap: 1rem;
+                    h2 {
+                        font-size: 2.5rem;
+                    }
+                }
+
+                .slide_icon {
+                    display: none;
+                }
+            }
+
+            .slider_btn {
+                top: 86%;
+            }
+        }
+    }
+}
+
+
+.scrol_header {
+    padding: 1rem 10rem; background-color: rgba(34 38 43 /1)
+}
+
+@media (max-width:689px) {
+    .scrol_header {
+        padding: .3rem 2rem; background-color: rgba(34 38 43 /1)
     }
 }

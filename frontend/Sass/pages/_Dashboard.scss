@@ -293,8 +293,9 @@
     background-color: rgba(0, 0, 0, 30%);
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     top: 0;
+    overflow-y: scroll;
     
     .form {
         position: absolute;
@@ -302,7 +303,7 @@
         top: 0;
         transform: translate(-50%, 5%);
         background-color: white;
-        width: 33rem;
+        width: 30rem;
         padding: 1.5rem;
         
         &::before {
@@ -326,7 +327,6 @@
                 display: flex;
                 flex-direction: column;
                 gap: .2rem;
-    
                 label {
                     font-family: $itemFont;
                     font-size: 18px;

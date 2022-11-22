@@ -86,19 +86,19 @@
 
                     <!-- Add club name -->
                     <div class="Club name">
-                        <label for="name">Club name</label> <br>
+                        <label for="name">Club name</label>
                         <input type="text" name="Clubname" id="name" placeholder="Full name" required>
                     </div>
                     
                     <!-- Add club description -->
                     <div class="description">
-                        <label for="description">Club description</label> <br>
+                        <label for="description">Club description</label>
                         <textarea type="text" name="Clubdescription" id="name" placeholder="Description" required></textarea>
                     </div>
 
                     <!-- Add club image -->
                     <div class="image">
-                        <label for="image">Club image</label> <br>
+                        <label for="image">Club image</label>
                         <input type="file" name="Image" id="name" required>
                     </div>
 

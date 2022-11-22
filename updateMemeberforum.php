@@ -44,24 +44,24 @@
 
                         echo '
                             
-                        <div class="name">
-                            <label for="Id">Id</label> <br>
+                        <div class="name" style="display: none;">
+                            <label for="Id">Id</label>
                             <input type="text" name="Id" id="id" value="'.$id.'" readonly>
                         </div>
                         <div class="name">
-                            <label for="name">Name</label> <br>
+                            <label for="name">Name</label>
                             <input type="text" name="Name" id="name" value="'.$Name.'" required>
                         </div>
                         <div class="class">
-                            <label for="class">Class</label> <br>
+                            <label for="class">Class</label>
                             <input type="text" name="Class" id="class" value="'.$class.'" required>
                         </div>
                         <div class="email">
-                            <label for="email">Email</label> <br>
+                            <label for="email">Email</label>
                             <input type="email" name="Email" id="email" value="'.$email.'" required>
                         </div>
                         <div class="club">
-                            <label for="club">Club</label> <br>
+                            <label for="club">Club</label>
                             <input type="text" name="Club" id="club" value="'.$club.'" required>
                         </div>
                         <div class="btns">

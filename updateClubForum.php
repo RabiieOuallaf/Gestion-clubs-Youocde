@@ -29,28 +29,28 @@
 
                         echo '
 
-                        <div class="Club name">
-                            <label for="id">Club id</label> <br>
+                        <div class="Club id" style="display:none;">
+                            <label for="id">Club id</label>
                             <input type="number" name="id" id="id"" value="'.$id.'" readonly >
                         </div>
 
                             <!--  Update club name -->
                             
                             <div class="Club name">
-                                <label for="name">Club name</label> <br>
+                                <label for="name">Club name</label>
                                 <input type="text" name="Clubname" id="name" value="'.$name.'" required>
                             </div>
                             
                             <!-- Add club description -->
                             <div class="description">
-                                <label for="description">Club description</label> <br>
+                                <label for="description">Club description</label>
                                 <textarea name="Description" id="name" required>'.$description.'</textarea>
                             </div>
 
                             <!-- Add club image -->
 
                             <div class="image">
-                                <label for="image">Club image</label> <br>
+                                <label for="image">Club image</label>
                                 <input type="file" name="Image" id="name">
                             </div>
 
