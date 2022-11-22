@@ -419,7 +419,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 400px;
+    width: 100%;
     margin: auto;
     /* == |Clubs| header styling == */
   }
@@ -437,13 +437,21 @@
     height: 100%;
     color: white;
     font-family: Rock;
-    font-weight: 300;
+    font-weight: bold;
     font-size: 1rem;
   }
+  .container .Clubs-content-menu {
+    margin: 1px auto !important;
+  }
   .container .Clubs-content-menu h2 {
+    word-spacing: unset !important;
+    letter-spacing: unset !important;
     display: flex;
     justify-content: center;
     font-family: "IM Fell English SC", serif;
+  }
+  .container .Clubs-content-menu h2 span {
+    font-size: unset !important;
   }
   .container .Clubs-content-menu .Menu-buttons {
     display: none !important;
@@ -456,12 +464,13 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 3rem;
+    width: 100%;
   }
   .container .Clubs-content-menu .Menu-select select {
-    width: 8rem;
-    height: 3rem;
+    width: 90%;
+    padding: 1rem 2rem;
     border: none;
-    border-radius: 20px;
+    border-radius: 3px;
     text-align: center;
   }
   .container .Clubs-content-preview {
@@ -470,15 +479,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    display: grid;
+    place-items: center;
+    width: 100%;
   }
   .container .Clubs-content-preview .Clubs-categories {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 120%;
+    align-items: center;
+    width: 90% !important;
   }
   .container .Clubs-content-preview .Clubs-categories input {
-    width: 90%;
+    width: 100%;
     height: 2.5%;
     border: none;
     border-radius: 5px;
@@ -490,7 +502,9 @@
   .container .Clubs-content-preview .Clubs-categories .Clubs-checkbox {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-top: 2rem;
+    width: 100%;
   }
   .container .Clubs-content-preview .Clubs-categories .Clubs-checkbox h2 {
     font-family: Rock;
@@ -502,7 +516,7 @@
   .container .Clubs-content-preview .Clubs-categories .Clubs-checkbox .Clubs-checkbox-child {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 90% !important;
     justify-content: space-between;
   }
   .container .Clubs-content-preview .Clubs-categories .Clubs-checkbox .Clubs-checkbox-child input[type=checkbox] {
@@ -512,6 +526,10 @@
   }
   .container .Clubs-content-preview .Clubs-categories .Clubs-checkbox .Clubs-checkbox-child label {
     font-family: Rock;
+  }
+  .container .Clubs-content-preview .Clubs-sections {
+    display: grid;
+    place-items: center;
   }
   .container .Clubs-content-preview .Clubs-sections .Art-clubs {
     display: flex !important;
@@ -770,8 +788,9 @@
   background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   top: 0;
+  overflow-y: scroll;
 }
 .pop_up .form {
   position: absolute;
@@ -779,7 +798,7 @@
   top: 0;
   transform: translate(-50%, 5%);
   background-color: white;
-  width: 33rem;
+  width: 30rem;
   padding: 1.5rem;
 }
 .pop_up .form::before {
@@ -870,6 +889,9 @@ header .header_container {
   justify-content: space-between;
   align-items: center;
 }
+header .header_container .nav_icon {
+  display: none;
+}
 header .header_container .nav_bar {
   align-items: center;
   height: 100%;
@@ -907,6 +929,36 @@ header .header_container .sign_in button {
 header .header_container .sign_in button:hover {
   background: white;
   color: #1877F2;
+}
+@media (max-width: 689px) {
+  header {
+    height: 4rem;
+    background-color: rgba(34, 38, 43, 0.7);
+    padding: 0;
+  }
+  header .header_container {
+    width: 100%;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+  header .header_container .nav_icon {
+    display: block;
+    border: 1px solid #ccc;
+    padding: 0.3rem 0.5rem;
+    color: #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  header .header_container .sign_in button {
+    font-size: 11px;
+    padding: 0.4rem 1rem;
+  }
+  header .header_container .logo img {
+    width: 100px;
+  }
+  header .header_container .nav_bar {
+    display: none;
+  }
 }
 
 main .article_container {
@@ -1031,7 +1083,53 @@ main .slider_btn div {
 main .slider_btn div:hover {
   background-color: #5EC2ED;
 }
+@media (max-width: 689px) {
+  main .article_container .background_img {
+    overflow: hidden;
+  }
+  main .article_container .background_img img {
+    width: unset;
+  }
+  main .article_container .content {
+    display: flex;
+    flex-direction: column;
+  }
+  main .article_container .content .club_img {
+    width: 80%;
+  }
+  main .article_container .content .club_img img {
+    width: 100%;
+  }
+  main .article_container .content .club_img .info_img {
+    font-size: 15px;
+  }
+  main .article_container .content .text_content {
+    width: 80%;
+    display: grid;
+    gap: 1rem;
+  }
+  main .article_container .content .text_content h2 {
+    font-size: 2.5rem;
+  }
+  main .article_container .content .slide_icon {
+    display: none;
+  }
+  main .article_container .slider_btn {
+    top: 86%;
+  }
+}
 
+.scrol_header {
+  padding: 1rem 10rem;
+  background-color: rgb(34, 38, 43);
+}
+
+@media (max-width: 689px) {
+  .scrol_header {
+    padding: 0.3rem 2rem;
+    background-color: rgb(34, 38, 43);
+  }
+}
 .login_body {
   background-color: #212429;
   position: relative;
@@ -1502,6 +1600,7 @@ footer {
   color: white;
   height: 100px;
   margin-top: 4rem;
+  font-family: "Itim", cursive;
 }
 footer .footer_container {
   display: flex;

@@ -90,7 +90,7 @@
             <div class="form">
                 <form action="./backend/Module/addMembre.php" method="POST">
                     
-                    <div class="id">
+                    <div class="id" style="display:none;">
                     <label for="id">Id</label>
                         <input type="number" name="Id" id="id" placeholder="Member Id" readonly>
                     </div>
