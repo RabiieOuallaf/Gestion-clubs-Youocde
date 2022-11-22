@@ -389,9 +389,8 @@
                     </form>
                 </div>
             </div>
-            <div class="contact_img">
-                <img src="./frontend/Sass/images/contact.png" alt="" width="100%">
-            </div>
+            <div class="contact_img" style="width: 100%"><iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=asfi%20youcode+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="100%" frameborder="0"><a href="https://www.maps.ie/distance-area-calculator.html">measure distance on map</a></iframe></div>
+
         </div>
     </section>
     <!-- contact us end -->

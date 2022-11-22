@@ -18,6 +18,7 @@
 
     // Insert data into the data base
 
+    
     $sqlAddClub = "INSERT INTO `CLUBS` (`Clubname` , `Description`, `Image`)
                 values ('$name', '$description','$new_image_name');";
 
@@ -26,6 +27,7 @@
     $Result = mysqli_query($conc, $sqlAddClub);
 
     // If the Command is applied seccussfuly do the following 
+    
 
     if($Result){
         header('location: ../../dashboard_clubs.php');
