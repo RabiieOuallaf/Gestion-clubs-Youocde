@@ -396,22 +396,23 @@
 
     <!-- footer start -->
     <footer>
-        <div class="container">
+        <div class="footer_container">
             <div class="tel">
                 <p>+81 123-5678-9101</p>
+                <p>Privacy Policy</p>
             </div>
             <div class="copyright">
-                <img src="./images/logo/hitaka_logo.png" alt="" width="50px">
-                <p>&copy;Copyright. Designed And Developed By Oussama Haddi</p>
+                <img src="./frontend/Sass/images/logo.png" alt="" width="50px">
+                <p>&copy;Copyright. Designed And Developed By Anas Rabie Oussama</p>
             </div>
             <div class="social_media">
                 <div class="media">
-                    <a href="#"><img src="./images/icons/🦆 icon _facebook_.png" alt=""></a>
-                    <a href="#"><img src="./images/icons/🦆 icon _linkedin_.png" alt=""></a>
-                    <a href="#"><img src="./images/icons/🦆 icon _share_.png" alt=""></a>
-                    <a href="#"><img src="./images/icons/🦆 icon _twitter_.png" alt=""></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 </div>
-                <p>Privacy Policy</p>
+                
             </div>
         </div>
     </footer>

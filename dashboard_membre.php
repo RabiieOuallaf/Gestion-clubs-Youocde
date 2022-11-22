@@ -38,9 +38,8 @@
                         <h4><span>M</span>embers</h4>
                     </div>
                     <div class="admin_icon">
-                        <img src="./frontend/Sass/images/🦆 icon _bell outline_.png" alt="">
                         <img src="./frontend/Sass/images/art 1.png" alt="" width="50px" class="admin">
-                        <img src="./frontend/Sass/images/🦆 icon _log out_.png" alt="">
+                        <a href="./index.php"><div class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></div></a>
                     </div>
                 </div>
             </div>
@@ -67,9 +66,9 @@
                             while ($row = mysqli_fetch_assoc($result)) {
                                 
                                 echo '
-                                <tr num='.$row['Id'].'>
+                                <tr num="'.$row['Id'].'">
                                     <td>'.$row['Id'] .'</td>
-                                    <td><span>'.$row['FullName'].'</span></td>
+                                    <td><img src="./frontend/Sass/images/membre/" alt=""><span>'.$row['FullName'].'</span></td>
                                     <td>'.$row['Class'] .'</td>
                                     <td>'.$row['Email'].'</td>
                                     <td>'.$row['Club'].'</td>
@@ -93,7 +92,7 @@
                     
                     <div class="id">
                     <label for="id">Id</label>
-                        <input type="text" name="Id" id="id" placeholder="Member Id" readonly>
+                        <input type="number" name="Id" id="id" placeholder="Member Id" readonly>
                     </div>
                     <div class="name">
                         <label for="name">Name</label>
@@ -127,31 +126,6 @@
             </div>
         </div>
     </div>
-
-
-    
-    <!-- footer start -->
-    <footer>
-        <div class="footer_container">
-            <div class="tel">
-                <p>+81 123-5678-9101</p>
-            </div>
-            <div class="copyright">
-                <img src="./frontend/Sass/images/logo.png" alt="" width="50px">
-                <p>&copy;Copyright. Designed And Developed By Oussama Haddi</p>
-            </div>
-            <div class="social_media">
-                <div class="media">
-                    <a href="#"><img src="./images/icons/🦆 icon _facebook_.png" alt=""></a>
-                    <a href="#"><img src="./images/icons/🦆 icon _linkedin_.png" alt=""></a>
-                    <a href="#"><img src="./images/icons/🦆 icon _share_.png" alt=""></a>
-                    <a href="#"><img src="./images/icons/🦆 icon _twitter_.png" alt=""></a>
-                </div>
-                <p>Privacy Policy</p>
-            </div>
-        </div>
-    </footer>
-    <!-- footer end -->
 
 
 </body>
