@@ -25,13 +25,14 @@
     if (empty($image_name)) {
         $sqlUp = "UPDATE CLUBS SET `Clubname` = '$name',
                         `Description` = '$description',
-                        WHERE `Id` = '$id';";
+                        `Image` = CLUBS.Image
+                        WHERE `Id` = $id;";
     }
     else {
         $sqlUp = "UPDATE CLUBS SET `Clubname` = '$name',
                         `Description` = '$description',
                         `Image` = '$new_image_name'
-                        WHERE `Id` = '$id';";
+                        WHERE `Id` = $id;";
     }
 
     // Sql command 

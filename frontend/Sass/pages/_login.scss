@@ -102,10 +102,25 @@ label {
 .go {
     align-self: center;
 }
+
+.back {
+    width: fit-content;
+    a {
+        display: flex;
+        gap: .4rem;
+        align-items: center;
+        text-decoration: none;
+        color: $backgroundColor;
+        font-family: $itemFont;
+
+    }
+}
 li{
    list-style: none;
    color: #000000;
    text-align: right;
+
+   text-decoration: none;
 }
 
 @media (max-width: 689px) {

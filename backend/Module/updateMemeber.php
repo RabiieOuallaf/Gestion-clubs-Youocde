@@ -14,7 +14,7 @@
                             `Class` = '$class',
                             `Club` = '$club',
                             `Email` = '$email'
-                            WHERE `Id` = '$id';";
+                            WHERE `Id` = $id;";
 
     $result = mysqli_query($conc , $sql);
 

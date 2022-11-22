@@ -31,7 +31,7 @@
 
                         <div class="Club name">
                             <label for="id">Club id</label> <br>
-                            <input type="text" name="id" id="id"" value='.$id.' readonly >
+                            <input type="number" name="id" id="id"" value="'.$id.'" readonly >
                         </div>
 
                             <!--  Update club name -->
@@ -56,8 +56,8 @@
 
                             <div class="btns">
                                 <input type="submit" id="submit" class="submit" value="Ajouter">
-                                <a href="./dashboard_clubs.php"><button value="Cancel" class="submit" id="cancel" style="background-color:red; cursor: pointer;">test</button></a>
-                            </div>
+                                <a href="./dashboard_clubs.php"><button value="Cancel" class="submit" id="cancel" style="background-color:red; cursor: pointer;">Cancel</button></a>
+                                </div>
                         '
                     
                     ?>

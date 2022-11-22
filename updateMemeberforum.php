@@ -35,7 +35,7 @@
 
                         // Get memeber id 
 
-                        $sql = "SELECT * FROM USER WHERE Id = '.$id.'";
+                        $sql = "SELECT * FROM USER WHERE Id = $id";
                         
                         $Result = mysqli_query($conc , $sql);
 
@@ -46,7 +46,7 @@
                             
                         <div class="name">
                             <label for="Id">Id</label> <br>
-                            <input type="text" name="Id" id="id" value='.$id.' readonly>
+                            <input type="text" name="Id" id="id" value="'.$id.'" readonly>
                         </div>
                         <div class="name">
                             <label for="name">Name</label> <br>
@@ -66,7 +66,7 @@
                         </div>
                         <div class="btns">
                             <input type="submit" id="submit" class="submit" value="Update">
-                            <a href="./dashboard_clubs.php"><input type="reset" class="submit" value="Cancel" id="cancel" style="background-color:red; cursor: pointer;"></a>
+                            <a href="./dashboard_membre.php"><button value="Cancel" class="submit" id="cancel" style="background-color:red; cursor: pointer;">test</button></a>
                         </div>
                         '
                     
