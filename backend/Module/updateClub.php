@@ -8,7 +8,7 @@
     $name = $_POST['Clubname'];
     $description = $_POST['Description'];
     
-    $regEx = '/^([a-zA-Z0-9\.]+@+[a-zA-Z]+(\.)+[a-zA-Z]{2,3})$/';
+    // $regEx = '/^([a-zA-Z0-9\.]+@+[a-zA-Z]+(\.)+[a-zA-Z]{2,3})$/';
 
     $image_name = $_FILES['Image']['name'];
     $image_tmp = $_FILES['Image']['tmp_name'];
