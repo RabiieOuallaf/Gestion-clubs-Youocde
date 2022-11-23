@@ -7,14 +7,9 @@
     $id = $_POST['id'];
     $name = $_POST['Clubname'];
     $description = $_POST['Description'];
-    $formattedDescription = preg_replace('/^a-zA-Z0-9 ]/g',"",$description);
-    // $cancel = $_POST['reset'];
+    
+    // $regEx = '/^([a-zA-Z0-9\.]+@+[a-zA-Z]+(\.)+[a-zA-Z]{2,3})$/';
 
-    // if (isset($cancel)) {
-    //     header('location: ../../dashboard_clubs.php');
-    // }
-    
-    
     $image_name = $_FILES['Image']['name'];
     $image_tmp = $_FILES['Image']['tmp_name'];
     $image_extension = pathinfo($image_name, PATHINFO_EXTENSION);
@@ -24,14 +19,15 @@
     move_uploaded_file($image_tmp, $image_upload_path);
 
     if (empty($image_name)) {
+        
         $sqlUp = "UPDATE CLUBS SET `Clubname` = '$name',
-                        `Description` = '$formattedDescription',
+                        `Description` = '$description',
                         `Image` = CLUBS.Image
                         WHERE `Id` = $id;";
     }
     else {
         $sqlUp = "UPDATE CLUBS SET `Clubname` = '$name',
-                        `Description` = '$formattedDescription',
+                        `Description` = '$description',
                         `Image` = '$new_image_name'
                         WHERE `Id` = $id;";
     }
