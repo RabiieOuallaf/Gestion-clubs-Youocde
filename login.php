@@ -1,5 +1,6 @@
 
 <?php
+    session_start();
     require_once './backend/Module/Connection.php';
 ?>
 
@@ -25,6 +26,13 @@
     </div>
 
     <div class="login">
+
+        <?php 
+            if (isset($_SESSION['UserName'])) {
+                header('location: ./dashboard_membre.php');
+            } else {
+        ?>
+
         <form action="./backend/Module/authentification.php" method="POST">
             <div class="text-1">
                 <h1>ACOUNT LOGIN</h1>
@@ -51,6 +59,9 @@
                 <a href="./index.php"><i class="fa-solid fa-arrow-left-long"></i><li class="Back">Back To Home</li></a>
             </div>
         </form>
+
+        <?php } ?>
+        
     </div>
 </body>
 

@@ -1,5 +1,6 @@
 <?php
     require_once './backend/Module/Connection.php';
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -39,13 +40,21 @@
                     </div>
                     <div class="admin_icon">
                         <img src="./frontend/Sass/images/art 1.png" alt="" width="50px" class="admin">
-                        <a href="./index.php"><div class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></div></a>
+                        <a href="./logout.php"><div class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></div></a>
                     </div>
                 </div>
             </div>
 
             <div class="tableaux_membre">
-                <div class="add" id="btn_add"><img src="./frontend/Sass/images/🦆 icon _plus_.png" alt=""></div>
+                <h2 style="color: white; align-text: center;">
+                    Welcome back 
+                    <?php 
+                        echo '<span style="color: #5EC2ED; text-transform: capitalize;">'.$_SESSION['UserName'];
+                    ?>
+                </h2>
+                <div class="add" id="btn_add">
+                    <img src="./frontend/Sass/images/🦆 icon _plus_.png" alt="">
+                </div>
                 <div class="table">
                     <!-- table membres -->
                     <?php 

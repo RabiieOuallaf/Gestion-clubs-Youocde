@@ -1,3 +1,11 @@
+
+<?php
+
+    session_start();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,8 +79,6 @@
 
     </main>
     <!-- slide home end -->
-    
-
 
     <!-- body -->
     <div class="container" id="club">
