@@ -240,14 +240,25 @@
                     background-color: $backgroundColor;
                     box-shadow: 0 0 4px black;
                     color: white;
+                    width: 90%;
 
                     .club_img {
                         width: fit-content;
                     }
                     .club_info {
                         display: grid;
-                        align-content: space-around;
+                        align-items: space-around;
                         width: 100%;
+                        gap: 1rem;
+                        margin: .5rem 0 ;
+
+                        p {
+                            width: 80%;
+                            color: rgb(192, 192, 192);
+                            font-family: $itemFont;
+                            font-size: 14px;
+
+                        }
 
                         .club_btn {
                             display: flex;
@@ -282,6 +293,78 @@
                             }
                         }
                     }
+                }
+            }
+        }
+
+        h2 {
+            margin: 1rem 0;
+        }
+
+        .state {
+            display: flex;
+            justify-content: space-around;
+
+            div {
+                background: white;
+                width: 15rem;
+                height: 5rem;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                border-radius: 5px;
+                
+                
+                &:nth-child(1) {
+                    position: relative;
+                    box-shadow: 0 2px 5px $darkBlue;
+                    
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        background: $darkBlue;
+                        width: 7px;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        border-radius: 5px 0 0 5px;
+                    }
+                }
+                &:nth-child(2) {
+                    position: relative;
+                    box-shadow: 0 2px 5px $lightBlue;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        background: $lightBlue;
+                        width: 7px;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        border-radius: 5px 0 0 5px;
+                    }
+                }
+                &:nth-child(3) {
+                    position: relative;
+                    box-shadow: 0 2px 5px #40ea40;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        background: #40ea40;
+                        width: 7px;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        border-radius: 5px 0 0 5px;
+                    }
+                }
+                
+                
+                span {
+                    font-family: $itemFont;
                 }
             }
         }

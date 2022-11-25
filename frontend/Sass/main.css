@@ -746,6 +746,7 @@
   background-color: #212429;
   box-shadow: 0 0 4px black;
   color: white;
+  width: 90%;
 }
 .dashboard_header .tableaux_membre .table_club .club .club_container .club_img {
   width: -webkit-fit-content;
@@ -754,8 +755,16 @@
 }
 .dashboard_header .tableaux_membre .table_club .club .club_container .club_info {
   display: grid;
-  align-content: space-around;
+  align-items: space-around;
   width: 100%;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+.dashboard_header .tableaux_membre .table_club .club .club_container .club_info p {
+  width: 80%;
+  color: rgb(192, 192, 192);
+  font-family: "Itim", cursive;
+  font-size: 14px;
 }
 .dashboard_header .tableaux_membre .table_club .club .club_container .club_info .club_btn {
   display: flex;
@@ -782,6 +791,67 @@
 }
 .dashboard_header .tableaux_membre .table_club .club .club_container .club_info .club_btn a:first-child i {
   color: #039803 !important;
+}
+.dashboard_header .tableaux_membre h2 {
+  margin: 1rem 0;
+}
+.dashboard_header .tableaux_membre .state {
+  display: flex;
+  justify-content: space-around;
+}
+.dashboard_header .tableaux_membre .state div {
+  background: white;
+  width: 15rem;
+  height: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+}
+.dashboard_header .tableaux_membre .state div:nth-child(1) {
+  position: relative;
+  box-shadow: 0 2px 5px #1877F2;
+}
+.dashboard_header .tableaux_membre .state div:nth-child(1):after {
+  content: "";
+  position: absolute;
+  background: #1877F2;
+  width: 7px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 5px 0 0 5px;
+}
+.dashboard_header .tableaux_membre .state div:nth-child(2) {
+  position: relative;
+  box-shadow: 0 2px 5px #5EC2ED;
+}
+.dashboard_header .tableaux_membre .state div:nth-child(2):after {
+  content: "";
+  position: absolute;
+  background: #5EC2ED;
+  width: 7px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 5px 0 0 5px;
+}
+.dashboard_header .tableaux_membre .state div:nth-child(3) {
+  position: relative;
+  box-shadow: 0 2px 5px #40ea40;
+}
+.dashboard_header .tableaux_membre .state div:nth-child(3):after {
+  content: "";
+  position: absolute;
+  background: #40ea40;
+  width: 7px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 5px 0 0 5px;
+}
+.dashboard_header .tableaux_membre .state div span {
+  font-family: "Itim", cursive;
 }
 
 .pop_up {

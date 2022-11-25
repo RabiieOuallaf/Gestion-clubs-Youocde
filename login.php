@@ -1,7 +1,7 @@
 
 <?php
-    session_start();
     require_once './backend/Module/Connection.php';
+    session_start();
 ?>
 
 
@@ -29,7 +29,7 @@
 
         <?php 
             if (isset($_SESSION['UserName'])) {
-                header('location: ./dashboard_membre.php');
+                header('location: ./dashboard_statistique.php');
             } else {
         ?>
 

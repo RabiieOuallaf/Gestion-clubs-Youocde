@@ -17,7 +17,7 @@
     {
         $_SESSION['UserName'] = $username;
         $_SESSION['Password'] = $password;
-        header('location: ../../dashboard_membre.php');
+        header('location: ../../dashboard_statistique.php');
         exit();
     }
     else
