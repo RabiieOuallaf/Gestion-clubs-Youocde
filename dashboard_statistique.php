@@ -4,6 +4,7 @@ use LDAP\Result;
 
     require_once './backend/Module/Connection.php';
     session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -27,9 +28,9 @@ use LDAP\Result;
                 </div>
                 <div class="manage">
                     <ul>
-                        <li><a href="./dashboard_statistique.php"><i class="fa-solid fa-chart-line"></i><span>Statistique</span></a></li>
+                        <li style="background: #212429;"><a href="./dashboard_statistique.php"><i class="fa-solid fa-chart-line"></i><span>Statistique</span></a></li>
                         <li><a href="./dashboard_membre.php"><i class="fa-solid fa-users"></i><span>Members</span></a></li>
-                        <li style="background: #212429;"><a href="./dashboard_clubs.php"><i class="fa-solid fa-house-user"></i><span>Clubs</span></a></li>
+                        <li><a href="./dashboard_clubs.php"><i class="fa-solid fa-house-user"></i><span>Clubs</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -40,7 +41,7 @@ use LDAP\Result;
             <div class="dash_container">
                 <div class="elements">
                     <div class="title">
-                        <h4><span>C</span>lubs</h4>
+                        <h4><span>D</span>ashboard</h4>
                     </div>
                     <div class="admin_icon">
                         <img src="./frontend/Sass/images/art 1.png" alt="" width="50px" class="admin">
@@ -50,43 +51,42 @@ use LDAP\Result;
             </div>
 
             <div class="tableaux_membre">
-                <div class="add" id="btn_add"><img src="./frontend/Sass/images/🦆 icon _plus_.png" alt=""></div>
-                <div class="table_club">
-                    <!-- table membres -->
+                <h2 style="color: white; text-align: center;">
+                    Welcome back 
                     <?php 
-                        // try and catch => check if there is an erreur in code php
-                        $sql = "SELECT * FROM clubs";
-
-                        $result = mysqli_query($conc, $sql);
-                        $checkResult = mysqli_num_rows($result);
-
-                        if($checkResult > 0){
-                            echo '<div class="club">';
-                            while ($row = mysqli_fetch_assoc($result)) {
-
-                                    echo '
-                                    <div class="club_container">
-                                        <div class="club_img">
-                                            <img src="./upload/'.$row['Image'].'" alt="club img" style="width: 200px; height:100%">
-                                        </div>
-                                        <div class="club_info">
-                                            <h3>'.$row['Clubname'].'</h3>
-                                            <p>Membres: '.$checkResult.'/20</p>
-                                            <p>'.$row['Description'] .'</p>
-                                            <div class="club_btn">
-                                                <a href="./updateClubForum.php?updateid='.$row['Id'].'&updateName='.$row['Clubname'].'&updateDescription='.$row['Description'].'&updateImage='.$row['Image'].' "><button> Update <i class="fa-regular fa-pen-to-square"></i></button></a>
-                                                <a href="./backend/Module/deleteClub.php?deletedid='.$row['Id'].'" ><button>Delete<i class="fa-solid fa-trash"></i></button></a>
-                                            </div>
-                                        </div>
-                                    </div>';
-                                }
-                            echo '</div>';
-                        } else {
-                            echo "<div style='color: white'>No membre exist</div>";
-                        }
+                        echo '<span style="color: #5EC2ED; text-transform: capitalize;">'.$_SESSION['UserName'];
                     ?>
+                </h2>
+
+                <div class="state">
+                    <div class="state_admin">
+
+                        <?php 
+                            $admin = mysqli_query($conc, "SELECT * FROM admin");
+                            $membres = mysqli_query($conc, "SELECT * FROM user");
+                            $clubs = mysqli_query($conc, "SELECT * FROM clubs");
+                            $countAdmin = mysqli_num_rows($admin);
+                            $countMembres = mysqli_num_rows($membres);
+                            $countClubs = mysqli_num_rows($clubs);
+
+                            echo '<span>Total Admin : '.$countAdmin.' </span><i class="fa-solid fa-house-user"></i>';
+                        ?>
+
+                    </div>
+                    <div class="state_membres">
+                        <?php 
+                            echo '<span>Total Membres : '.$countMembres.' </span><i class="fa-solid fa-users"></i>';
+                        ?>
+                    </div>
+                    <div class="state_clubs">
+                        <?php 
+                            echo '<span>Total Clubs : '.$countClubs.' </span><i class="fa-solid fa-chart-line"></i>';
+                        ?>
+                    </div>
                 </div>
+                
             </div>
+
         </section>
         <div class="pop_up pop" id="pop_up">
             <div class="form">

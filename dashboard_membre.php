@@ -1,5 +1,6 @@
 <?php
     require_once './backend/Module/Connection.php';
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -23,8 +24,9 @@
                 </div>
                 <div class="manage">
                     <ul>
-                        <li style="background-color: #212429;"><a href="./dashboard_membre.php"><img src="./frontend/Sass/images/🦆 icon _people outline_.png" alt="" width="30px"><span>Members</span></a></li>
-                        <li><a href="./dashboard_clubs.php"><img src="./frontend/Sass/images/🦆 icon _home outline_.png" alt="" width="30px"><span>Clubs</span></a></li>
+                        <li><a href="./dashboard_statistique.php"><i class="fa-solid fa-chart-line"></i><span>Statistique</span></a></li>
+                        <li style="background-color: #212429;"><a href="./dashboard_membre.php"><i class="fa-solid fa-users"></i><span>Members</span></a></li>
+                        <li><a href="./dashboard_clubs.php"><i class="fa-solid fa-house-user"></i><span>Clubs</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -39,13 +41,16 @@
                     </div>
                     <div class="admin_icon">
                         <img src="./frontend/Sass/images/art 1.png" alt="" width="50px" class="admin">
-                        <a href="./index.php"><div class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></div></a>
+                        <a href="./logout.php"><div class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></div></a>
                     </div>
                 </div>
             </div>
 
             <div class="tableaux_membre">
-                <div class="add" id="btn_add"><img src="./frontend/Sass/images/🦆 icon _plus_.png" alt=""></div>
+                
+                <div class="add" id="btn_add">
+                    <img src="./frontend/Sass/images/🦆 icon _plus_.png" alt="">
+                </div>
                 <div class="table">
                     <!-- table membres -->
                     <?php 
