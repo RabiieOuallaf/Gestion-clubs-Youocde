@@ -5,6 +5,6 @@
     $dbPassword = "";
     $dbName = "YOUCODECLUBS";
 
-    $conc = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
+    $conc = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName, 3307);
 
 ?>
