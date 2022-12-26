@@ -36,11 +36,10 @@
                         // Get memeber id 
 
                         $sql = "SELECT * FROM USER WHERE Id = $id";
-                        
+                        $sql = "SELECT * FROM clubs";
+
+                        $clubResult = mysqli_query($conc, $sql);
                         $Result = mysqli_query($conc , $sql);
-
-
-
 
                         echo '
                             
@@ -62,7 +61,15 @@
                         </div>
                         <div class="club">
                             <label for="club">Club</label>
-                            <input type="text" name="Club" id="club" value="'.$club.'" required>
+                            <select name="Club" id="club" required>
+                                <optgroup label="Clubs" focused>
+                                    '; 
+                                    while ($row = mysqli_fetch_assoc($clubResult)) {
+                                        echo '<option value="' . $row['Clubname'] . '"> '.$row['Clubname'] .'</option>';
+                                    }
+                                    echo '
+                                </optgroup>
+                            </select>
                         </div>
                         <div class="btns">
                             <input type="submit" id="submit" class="submit" value="Update">

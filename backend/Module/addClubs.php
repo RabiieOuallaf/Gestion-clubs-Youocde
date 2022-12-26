@@ -4,7 +4,7 @@
 
     // Fetch data
 
-    $name = $_POST['Clubname'];
+    $name = $_POST['Club'];
     $description = $_POST['Clubdescription'];
 
     $image_name = $_FILES['Image']['name'];

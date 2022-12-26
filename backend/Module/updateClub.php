@@ -5,7 +5,7 @@
     // fetch the data 
 
     $id = $_POST['id'];
-    $name = $_POST['Clubname'];
+    $name = $_POST['Club'];
     $description = $_POST['Description'];
     
     // $regEx = '/^([a-zA-Z0-9\.]+@+[a-zA-Z]+(\.)+[a-zA-Z]{2,3})$/';

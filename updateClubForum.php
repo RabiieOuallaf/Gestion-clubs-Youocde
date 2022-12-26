@@ -27,6 +27,10 @@
                         $image = $_GET['updateImage'];
                         $id = $_GET['updateid'];
 
+                        $sql = "SELECT * FROM clubs";
+
+                        $result = mysqli_query($conc, $sql);
+
                         echo '
 
                         <div class="Club id" style="display:none;">
@@ -38,7 +42,15 @@
                             
                             <div class="Club name">
                                 <label for="name">Club name</label>
-                                <input type="text" name="Clubname" id="name" value="'.$name.'" required>
+                                <select name="Club" id="club" required>
+                                    <optgroup label="Clubs" focused>
+                                        '; 
+                                        while ($row = mysqli_fetch_assoc($result)) {
+                                            echo '<option value="' . $row['Clubname'] . '"> '.$row['Clubname'] .'</option>';
+                                        }
+                                        echo '
+                                    </optgroup>
+                                </select>
                             </div>
                             
                             <!-- Add club description -->

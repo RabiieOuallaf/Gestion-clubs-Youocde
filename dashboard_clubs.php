@@ -94,8 +94,8 @@ use LDAP\Result;
 
                     <!-- Add club name -->
                     <div class="Club name">
-                        <label for="name">Club name</label>
-                        <input type="text" name="Clubname" id="name" placeholder="Full name" required>
+                        <label for="club">Club name</label>
+                        <input type="text" name="Club" id="" placeholder="club name">
                     </div>
                     
                     <!-- Add club description -->
