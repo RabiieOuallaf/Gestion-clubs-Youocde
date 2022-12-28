@@ -115,11 +115,13 @@
                         <label for="club">Club</label>
                         <select name="Club" id="club" required>
                             <optgroup label="Clubs" focused>
-                                <option value="Art">Art</option>
-                                <option value="Sport">Sport</option>
-                                <option value="It">It</option>
-                                <option value="Programming">Programming</option>
-                                <option value="Environement">Environement</option>
+                                <?php 
+                                    $sql = "SELECT * FROM clubs";
+                                    $clubResult = mysqli_query($conc, $sql);
+                                        while ($row = mysqli_fetch_assoc($clubResult)) {
+                                            echo '<option value="' . $row['Clubname'] . '"> '.$row['Clubname'] .'</option>';
+                                        }
+                                ?>
                             </optgroup>
                         </select>
                     </div>
